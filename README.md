@@ -92,9 +92,13 @@ Although your friend has an excellent understanding of property prices in her ow
 * In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
 
 ## Dashboard Design
+A dashboard will be designed in Stremlit to allow the client to under
 
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items that your dashboard library supports.
-* Eventually, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
+* A project summary page, showing the project dataset summary and the client's requirements.
+* A page listing your findings related to which features have the strongest correlation to the house sale price.
+* A page displaying the 4 houses' attributes and their respective predicted sale price. It should display a message informing the summed predicted price for all 4 inherited houses. You should add interactive input widgets that allow a user to provide real-time house data to predict the sale price.
+* A page indicating your project hypothesis(es) and how you validated it across the project.
+* A technical page displaying your model performance. If you deployed an ML pipeline, you have to display your pipeline steps.
 
 ## Unfixed Bugs
 
