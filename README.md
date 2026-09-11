@@ -10,7 +10,7 @@ The project will deliver a Streamlit dashboard that allows Lydia to explore the 
 
 ## 📊 Dataset Content
 
-The dataset was sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data) and contains housing records from **Ames, Iowa, USA**. It is used within a fictitious business scenario where predictive analytics can help estimate residential property values.
+The dataset was sourced from <a href="https://www.kaggle.com/codeinstitute/housing-prices-data" target="_blank">Kaggle</a> and contains housing records from **Ames, Iowa, USA**. It is used within a fictitious business scenario where predictive analytics can help estimate residential property values.
 
 ### 📋 Dataset Overview
 
