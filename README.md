@@ -8,37 +8,51 @@ The purpose of this project is to use historical housing data from Ames, Iowa, t
 
 The project will deliver a Streamlit dashboard that allows Lydia to explore the factors associated with house prices, view predicted sale prices for the four inherited properties, and predict the sale price of other houses in Ames.
 
-## Dataset Content
+## 📊 Dataset Content
 
-* The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
-* The dataset has almost 1.5 thousand rows and represents housing records from Ames, Iowa, indicating house profile (Floor Area, Basement, Garage, Kitchen, Lot, Porch, Wood Deck, Year Built) and its respective sale price for houses built between 1872 and 2010.
+The dataset was sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data) and contains housing records from **Ames, Iowa, USA**. It is used within a fictitious business scenario where predictive analytics can help estimate residential property values.
 
-|Variable|Meaning|Units|
-|:----|:----|:----|
-|1stFlrSF|First Floor square feet|334 - 4692|
-|2ndFlrSF|Second-floor square feet|0 - 2065|
-|BedroomAbvGr|Bedrooms above grade (does NOT include basement bedrooms)|0 - 8|
-|BsmtExposure|Refers to walkout or garden level walls|Gd: Good Exposure; Av: Average Exposure; Mn: Minimum Exposure; No: No Exposure; None: No Basement|
-|BsmtFinType1|Rating of basement finished area|GLQ: Good Living Quarters; ALQ: Average Living Quarters; BLQ: Below Average Living Quarters; Rec: Average Rec Room; LwQ: Low Quality; Unf: Unfinshed; None: No Basement|
-|BsmtFinSF1|Type 1 finished square feet|0 - 5644|
-|BsmtUnfSF|Unfinished square feet of basement area|0 - 2336|
-|TotalBsmtSF|Total square feet of basement area|0 - 6110|
-|GarageArea|Size of garage in square feet|0 - 1418|
-|GarageFinish|Interior finish of the garage|Fin: Finished; RFn: Rough Finished; Unf: Unfinished; None: No Garage|
-|GarageYrBlt|Year garage was built|1900 - 2010|
-|GrLivArea|Above grade (ground) living area square feet|334 - 5642|
-|KitchenQual|Kitchen quality|Ex: Excellent; Gd: Good; TA: Typical/Average; Fa: Fair; Po: Poor|
-|LotArea| Lot size in square feet|1300 - 215245|
-|LotFrontage| Linear feet of street connected to property|21 - 313|
-|MasVnrArea|Masonry veneer area in square feet|0 - 1600|
-|EnclosedPorch|Enclosed porch area in square feet|0 - 286|
-|OpenPorchSF|Open porch area in square feet|0 - 547|
-|OverallCond|Rates the overall condition of the house|10: Very Excellent; 9: Excellent; 8: Very Good; 7: Good; 6: Above Average; 5: Average; 4: Below Average; 3: Fair; 2: Poor; 1: Very Poor|
-|OverallQual|Rates the overall material and finish of the house|10: Very Excellent; 9: Excellent; 8: Very Good; 7: Good; 6: Above Average; 5: Average; 4: Below Average; 3: Fair; 2: Poor; 1: Very Poor|
-|WoodDeckSF|Wood deck area in square feet|0 - 736|
-|YearBuilt|Original construction date|1872 - 2010|
-|YearRemodAdd|Remodel date (same as construction date if no remodelling or additions)|1950 - 2010|
-|SalePrice|Sale Price|34900 - 755000|
+### 📋 Dataset Overview
+
+| | |
+|---|---|
+| **Number of records** | 1,460 properties |
+| **Number of variables** | 24 |
+| **Target variable** | `SalePrice` |
+| **Location** | Ames, Iowa, USA |
+| **Construction years represented** | 1872–2010 |
+| **Analysis type** | Regression / Predictive Analytics |
+
+The dataset describes a range of property characteristics, including floor area, basement and garage features, kitchen quality, lot dimensions, property condition and quality, construction dates, and sale price.
+
+### 🏠 Variable Definitions
+
+| **Variable** | **Meaning** | **Values / Range** |
+|---|---|---|
+| `1stFlrSF` | First-floor area in square feet | 334–4692 |
+| `2ndFlrSF` | Second-floor area in square feet | 0–2065 |
+| `BedroomAbvGr` | Bedrooms above grade (excluding basement bedrooms) | 0–8 |
+| `BsmtExposure` | Walkout or garden-level basement walls | Gd: Good; Av: Average; Mn: Minimum; No: No Exposure; None: No Basement |
+| `BsmtFinType1` | Rating of basement finished area | GLQ: Good Living Quarters; ALQ: Average; BLQ: Below Average; Rec: Average Rec Room; LwQ: Low Quality; Unf: Unfinished; None: No Basement |
+| `BsmtFinSF1` | Type 1 finished basement area in square feet | 0–5644 |
+| `BsmtUnfSF` | Unfinished basement area in square feet | 0–2336 |
+| `TotalBsmtSF` | Total basement area in square feet | 0–6110 |
+| `GarageArea` | Garage area in square feet | 0–1418 |
+| `GarageFinish` | Interior finish of the garage | Fin: Finished; RFn: Rough Finished; Unf: Unfinished; None: No Garage |
+| `GarageYrBlt` | Year garage was built | 1900–2010 |
+| `GrLivArea` | Above-ground living area in square feet | 334–5642 |
+| `KitchenQual` | Kitchen quality | Ex: Excellent; Gd: Good; TA: Typical/Average; Fa: Fair; Po: Poor |
+| `LotArea` | Lot size in square feet | 1300–215245 |
+| `LotFrontage` | Linear feet of street connected to property | 21–313 |
+| `MasVnrArea` | Masonry veneer area in square feet | 0–1600 |
+| `EnclosedPorch` | Enclosed porch area in square feet | 0–286 |
+| `OpenPorchSF` | Open porch area in square feet | 0–547 |
+| `OverallCond` | Overall condition of the house | 1: Very Poor – 10: Very Excellent |
+| `OverallQual` | Overall material and finish quality | 1: Very Poor – 10: Very Excellent |
+| `WoodDeckSF` | Wood deck area in square feet | 0–736 |
+| `YearBuilt` | Original construction year | 1872–2010 |
+| `YearRemodAdd` | Remodel year (same as construction year if not remodelled) | 1950–2010 |
+| `SalePrice` | Property sale price | 34,900–755,000 |
 
 ## Business Requirements
 
