@@ -49,9 +49,27 @@ Although your friend has an excellent understanding of property prices in her ow
 * 1 - The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualisations of the correlated variables against the sale price to show that.
 * 2 - The client is interested in predicting the house sale price from her four inherited houses and any other house in Ames, Iowa.
 
-## Hypothesis and how to validate?
+## Hypotheses and Validation
 
-* List here your project hypothesis(es) and how you envision validating it (them).
+The following hypotheses were defined to investigate factors that may influence house sale prices in Ames, Iowa.
+
+### Hypothesis 1 — Overall Property Quality
+
+**H1:** Properties with a higher overall quality rating are expected to achieve higher sale prices.
+
+**Validation:** The relationship between `OverallQual` and `SalePrice` will be assessed using correlation analysis and visualisation to determine whether higher quality ratings are associated with higher sale prices.
+
+### Hypothesis 2 — Above-Ground Living Area
+
+**H2:** Properties with a larger above-ground living area are expected to achieve higher sale prices.
+
+**Validation:** The relationship between `GrLivArea` and `SalePrice` will be assessed using correlation analysis and visualisation to determine whether larger living areas are associated with higher sale prices.
+
+### Hypothesis 3 — Property Age
+
+**H3:** More recently built properties are expected to achieve higher sale prices than older properties.
+
+**Validation:** The relationship between `YearBuilt` and `SalePrice` will be assessed using correlation analysis and visualisation to determine whether newer properties are generally associated with higher sale prices.
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
