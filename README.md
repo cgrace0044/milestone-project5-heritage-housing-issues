@@ -49,35 +49,43 @@ Although your friend has an excellent understanding of property prices in her ow
 * 1 - The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualisations of the correlated variables against the sale price to show that.
 * 2 - The client is interested in predicting the house sale price from her four inherited houses and any other house in Ames, Iowa.
 
-## Hypotheses and Validation
+## 🧪 Hypotheses and Validation
 
-The following hypotheses were defined to investigate factors that may influence house sale prices in Ames, Iowa.
+To better understand the factors that may influence house prices in Ames, Iowa, three hypotheses were defined for investigation.
 
-### Hypothesis 1 — Overall Property Quality
+| # | Hypothesis | Key Variable |
+|---|---|---|
+| 🏆 H1 | Higher overall property quality is associated with higher sale prices. | `OverallQual` |
+| 📐 H2 | Larger above-ground living areas are associated with higher sale prices. | `GrLivArea` |
+| 🏗️ H3 | More recently built properties are associated with higher sale prices. | `YearBuilt` |
 
-**H1:** Properties with a higher overall quality rating are expected to achieve higher sale prices.
+### 🏆 H1 — Overall Property Quality
 
-**Validation:** The relationship between `OverallQual` and `SalePrice` will be assessed using correlation analysis and visualisation to determine whether higher quality ratings are associated with higher sale prices.
+> **Hypothesis:** Properties with a higher overall quality rating are expected to achieve higher sale prices.
 
-### Hypothesis 2 — Above-Ground Living Area
+**Rationale:** Overall property quality reflects the standard of materials and finish of a house and may therefore be an important factor in determining its value.
 
-**H2:** Properties with a larger above-ground living area are expected to achieve higher sale prices.
+**Validation:** The relationship between `OverallQual` and `SalePrice` will be investigated using correlation analysis and visualisation.
 
-**Validation:** The relationship between `GrLivArea` and `SalePrice` will be assessed using correlation analysis and visualisation to determine whether larger living areas are associated with higher sale prices.
+---
 
-### Hypothesis 3 — Property Age
+### 📐 H2 — Above-Ground Living Area
 
-**H3:** More recently built properties are expected to achieve higher sale prices than older properties.
+> **Hypothesis:** Properties with a larger above-ground living area are expected to achieve higher sale prices.
 
-**Validation:** The relationship between `YearBuilt` and `SalePrice` will be assessed using correlation analysis and visualisation to determine whether newer properties are generally associated with higher sale prices.
+**Rationale:** Greater living space may increase the usefulness and desirability of a property and therefore contribute to a higher sale price.
 
-## The rationale to map the business requirements to the Data Visualisations and ML tasks
+**Validation:** The relationship between `GrLivArea` and `SalePrice` will be investigated using correlation analysis and visualisation.
 
-* List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+---
 
-## ML Business Case
+### 🏗️ H3 — Property Age
 
-* In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+> **Hypothesis:** More recently built properties are expected to achieve higher sale prices than older properties.
+
+**Rationale:** Newer properties may benefit from more modern construction, features and standards, which could contribute to a higher market value.
+
+**Validation:** The relationship between `YearBuilt` and `SalePrice` will be investigated using correlation analysis and visualisation.
 
 ## Dashboard Design
 A dashboard will be designed in Stremlit to allow the client to under
