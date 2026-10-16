@@ -70,6 +70,16 @@ Develop a machine learning model capable of predicting the sale price of the cli
 
 **Success criteria:** The model should provide reliable sale price predictions and its performance should be evaluated against an appropriate regression performance metric.
 
+### Prediction Error
+
+The client requires the predictive model to achieve an R² score of at least **0.75 on both the training and test datasets**.
+
+An R² score of 0.75 indicates that the model explains approximately 75% of the variation in house sale prices.
+
+The model is designed to provide an **estimated sale price rather than an exact property valuation** this is why 0.75 is deemed to be sufficient in this case.
+
+In other machine learning models, for example diagnostics a higher R² score would be required. 
+
 ## 🧪 Hypotheses and Validation
 
 To better understand the factors that may influence house prices in Ames, Iowa, three hypotheses were defined for investigation.
