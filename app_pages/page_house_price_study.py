@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -77,6 +76,13 @@ def page_house_price_study_body():
 
     # Individual plots
     if st.checkbox("Sale Price per Variable"):
+
+        st.write(
+            "Zero values are excluded from the garage and basement "
+            "scatter plots to make the relationships with sale price "
+            "easier to visualise."
+        )
+
         sale_price_per_variable(df_eda)
 
 
@@ -108,6 +114,10 @@ def plot_categorical(df, col, target_var):
 
 # Numerical plots
 def plot_numerical(df, col, target_var):
+
+    # Exclude zero values from selected scatter plots
+    if col in ["GarageArea", "GarageYrBlt", "TotalBsmtSF"]:
+        df = df[df[col] > 0]
 
     fig, ax = plt.subplots(figsize=(10, 5))
 
