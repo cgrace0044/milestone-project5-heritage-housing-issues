@@ -118,14 +118,48 @@ To better understand the factors that may influence house prices in Ames, Iowa, 
 
 **Validation:** The relationship between `YearBuilt` and `SalePrice` will be investigated using correlation analysis and visualisation.
 
-## Dashboard Design
-A dashboard will be designed in Stremlit to allow the client to under
+## Dashboard Design (Streamlit App User Interface)
 
-* A project summary page, showing the project dataset summary and the client's requirements.
-* A page listing your findings related to which features have the strongest correlation to the house sale price.
-* A page displaying the 4 houses' attributes and their respective predicted sale price. It should display a message informing the summed predicted price for all 4 inherited houses. You should add interactive input widgets that allow a user to provide real-time house data to predict the sale price.
-* A page indicating your project hypothesis(es) and how you validated it across the project.
-* A technical page displaying your model performance. If you deployed an ML pipeline, you have to display your pipeline steps.
+### Page 1: Quick Project Summary
+
+- Project overview, terms and jargon.
+- Description of the housing dataset.
+- Client's business requirements and project success criteria.
+
+### Page 2: House Sales Price Study
+
+- Address Business Requirement 1.
+- Checkboxes to inspect the historical and inherited housing datasets.
+- Interactive scatterplots and Pearson and Spearman correlation heatmaps.
+- Findings and conclusions about the attributes most correlated with `SalePrice`.
+
+### Page 3: Inherited Houses Valuation
+
+- Address Business Requirement 2.
+- Display the four inherited houses' attributes.
+- Predict the sale price of each house using the trained ML pipeline.
+- Display the combined estimated value of all four houses.
+
+### Page 4: Project Hypothesis and Validation
+
+- Present three hypotheses and their validation:
+  - **Overall quality:** Higher-quality houses have higher sale prices — Supported.
+  - **Living area:** Larger living areas are associated with higher sale prices — Supported.
+  - **Year built:** Newer houses have higher sale prices — Supported.
+- Conclusions supported by the House Sales Price Study.
+
+### Page 5: Predict a House Price
+
+- Address Business Requirement 2.
+- Interactive widgets to enter house attributes.
+- Predict and display the estimated sale price using the trained ML pipeline.
+
+### Page 6: ML Pipeline Performance
+
+- Display the trained regression pipeline steps and selected features.
+- Present model evaluation metrics for training and test datasets.
+- Checkbox to display the feature importance plot.
+- Summarise model performance against the project's success criteria.
 
 ## Unfixed Bugs
 
