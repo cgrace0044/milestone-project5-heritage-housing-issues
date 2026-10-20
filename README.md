@@ -200,8 +200,7 @@ To better understand the factors that may influence house prices in Ames, Iowa, 
 * The photos used on the home and sign-up page are from This Open Source site
 * The images used for the gallery page were taken from this other open-source site
 
-## Acknowledgements (optional)
+## Acknowledgements
 
-
-* In case you would like to thank the people that provided support through this project.
+I would like to thank my mentor, **Can Sücüllü**, for his guidance, support and valuable feedback throughout the development of this project.
 
