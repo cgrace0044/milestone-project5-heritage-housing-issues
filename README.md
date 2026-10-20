@@ -160,8 +160,8 @@ We will investigate these hypotheses through exploratory data analysis, using sc
 
 ## Credits
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
-* You can break the credits section up into Content and Media, depending on what you have included in your project.
+- **Code Institute:** The Churnometer walkthrough and course materials provided guidance and code examples, which were adapted to meet the requirements of the Heritage Housing Issues project.
+- **Dataset:** The housing dataset was provided by Code Institute and is available on [Kaggle](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data).
 
 ### Content
 
