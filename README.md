@@ -80,43 +80,17 @@ The model is designed to provide an **estimated sale price rather than an exact 
 
 In other machine learning models, for example diagnostics a higher R² score would be required. 
 
-## 🧪 Hypotheses and Validation
+## Hypotheses and How to Validate Them
 
-To better understand the factors that may influence house prices in Ames, Iowa, three hypotheses were defined for investigation.
+We developed three hypotheses about the factors influencing house sale prices in Ames, Iowa:
 
-| # | Hypothesis | Key Variable |
-|---|---|---|
-| 🏆 H1 | Higher overall property quality is associated with higher sale prices. | `OverallQual` |
-| 📐 H2 | Larger above-ground living areas are associated with higher sale prices. | `GrLivArea` |
-| 🏗️ H3 | More recently built properties are associated with higher sale prices. | `YearBuilt` |
+1. **Overall Quality:** I suspect houses with higher overall property quality have higher sale prices.
+2. **Living Area:** I suspect houses with larger above-ground living areas have higher sale prices.
+3. **Year Built:** I suspect newer houses have higher sale prices.
 
-### 🏆 H1 — Overall Property Quality
+**Validation Method**
 
-> **Hypothesis:** Properties with a higher overall quality rating are expected to achieve higher sale prices.
-
-**Rationale:** Overall property quality reflects the standard of materials and finish of a house and may therefore be an important factor in determining its value.
-
-**Validation:** The relationship between `OverallQual` and `SalePrice` will be investigated using correlation analysis and visualisation.
-
----
-
-### 📐 H2 — Above-Ground Living Area
-
-> **Hypothesis:** Properties with a larger above-ground living area are expected to achieve higher sale prices.
-
-**Rationale:** Greater living space may increase the usefulness and desirability of a property and therefore contribute to a higher sale price.
-
-**Validation:** The relationship between `GrLivArea` and `SalePrice` will be investigated using correlation analysis and visualisation.
-
----
-
-### 🏗️ H3 — Property Age
-
-> **Hypothesis:** More recently built properties are expected to achieve higher sale prices than older properties.
-
-**Rationale:** Newer properties may benefit from more modern construction, features and standards, which could contribute to a higher market value.
-
-**Validation:** The relationship between `YearBuilt` and `SalePrice` will be investigated using correlation analysis and visualisation.
+We will investigate these hypotheses through exploratory data analysis, using scatterplots and Pearson and Spearman correlation studies to examine the relationships between `OverallQual`, `GrLivArea`, `YearBuilt` and `SalePrice`.
 
 ## Dashboard Design (Streamlit App User Interface)
 
