@@ -56,19 +56,17 @@ The dataset describes a range of property characteristics, including floor area,
 
 ## 🎯 Business Requirements
 
-Based on the client's needs, the project focuses on two key business requirements:
+### Client Background
 
-### 📊 BR1 — Understand Sale Price Drivers
+As a good friend, you are requested by your friend, who has received an inheritance from a deceased great-grandfather located in Ames, Iowa, to help in maximising the sales price for the inherited properties.
 
-Identify which house attributes are most strongly associated with `SalePrice` and present these relationships through clear data visualisations.
+Although your friend has an excellent understanding of property prices in her own state and residential area, she fears that basing her estimates for property worth on her current knowledge might lead to inaccurate appraisals. What makes a house desirable and valuable where she comes from might not be the same in Ames, Iowa. She found a public dataset with house prices for Ames, Iowa, and will provide you with that.
 
-**Success criteria:** The client should be able to understand which property characteristics have the strongest relationships with house sale prices in Ames, Iowa.
+### Business Requirements
 
-### 🏠 BR2 — Predict House Sale Prices
+1. The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualisations of the correlated variables against the sale price to show that.
 
-Develop a machine learning model capable of predicting the sale price of the client's four inherited properties and other houses in Ames, Iowa.
-
-**Success criteria:** The model should provide reliable sale price predictions and its performance should be evaluated against an appropriate regression performance metric.
+2. The client is interested in predicting the house sale price from her four inherited houses and any other house in Ames, Iowa.
 
 ### Prediction Error
 
