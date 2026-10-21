@@ -98,7 +98,7 @@ We will investigate these hypotheses through exploratory data analysis, using sc
 - We will conduct a correlation study (Pearson and Spearman) to better understand how the variables are correlated with `SalePrice`.
 - We will plot the main variables against `SalePrice` to visualise insights.
 
-### Business Requirement 2:** Regression
+### Business Requirement 2: Supervised Machine Learning Regression Model
 
 - We want to build a supervised machine learning regression model that is capable of predicting house prices.
 - House attributes will be used to predict house price for both the four inherited houses and also any house in Ames Iowa.
