@@ -86,12 +86,12 @@ It has six steps which are outlined below. These steps are iterative rather than
 
 | Phase | Description |
 |---|---|
-| **1. Business Understanding** | Define the business problem, objectives, requirements and success criteria. |
+| **1. Business Understanding** | Define the business problem, objectives and business requirements. |
 | **2. Data Understanding** | Collect and explore the data, assess its quality and identify correlations. |
 | **3. Data Preparation** | Clean and prepare the data, handling missing values, errors and feature transformations. |
-| **4. Modelling** | Select machine learning techniques and train models |
-| **5. Evaluation** | Test the model on unseen data |
-| **6. Deployment** | Make the model accessible to users via a dashboard or an API |
+| **4. Modelling** | Select machine learning techniques and train models. |
+| **5. Evaluation** | Test the model on unseen data. |
+| **6. Deployment** | Make the model accessible to users via a dashboard or an API. |
 
 This framework works hand in hand with Agile development - creating user stories to help to organise task.
 
