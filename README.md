@@ -198,4 +198,3 @@ There are no unfixed bugs.
 ## Acknowledgements
 
 I would like to thank my mentor, **Can Sücüllü**, for his guidance, support and valuable feedback throughout the development of this project.
-
