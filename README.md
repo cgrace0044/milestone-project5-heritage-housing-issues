@@ -78,6 +78,23 @@ The model is designed to provide an **estimated sale price rather than an exact 
 
 In other machine learning models, for example diagnostics a higher R² score would be required.
 
+## CRISP-DM Workflow
+
+This project will be completed in line with CRISP-DM which is a framework used to plan and organise data science projects.
+
+It has six steps which are outlined below. These steps are iterative rather than linear. For example something might be identified in a later step which encourages the data practicioner to revisit a previous step.
+
+| Phase | Description |
+|---|---|
+| **1. Business Understanding** | Define the business problem, objectives, requirements and success criteria. |
+| **2. Data Understanding** | Collect and explore the data, assess its quality and identify correlations. |
+| **3. Data Preparation** | Clean and prepare the data, handling missing values, errors and feature transformations. |
+| **4. Modelling** | Select machine learning techniques and train models |
+| **5. Evaluation** | Test the model on unseen data |
+| **6. Deployment** | Make the model accessible to users via a dashboard or an API |
+
+This framework works hand in hand with Agile development - creating user stories to help to organise task.
+
 ## Hypotheses and How to Validate Them
 
 We developed three hypotheses about the factors influencing house sale prices in Ames, Iowa:
