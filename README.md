@@ -107,60 +107,22 @@ We will investigate these hypotheses through exploratory data analysis, using sc
   
 ## ML Business Case
 
-### 1. Business Requirements
+### Predict House Price
 
-The project has two business requirements:
+#### Regression Model
 
-| Requirement | Description |
-|---|---|
-| **Business Requirement 1** | Outline how house attributes correlate with sale prices. The client expects data visualizations of the correlated variables against the sale price. |
-| **Business Requirement 2** | Predict the house sale prices from the client´s 4 inherited houses, **and** any other house in Ames, Iowa. |
-
-### 2. Conventional Data Analysis
-
-Conventional data analysis will be used to investigate how house attributes correlate with sale prices (i.e. Business Requirement 1).
-
-### 3. Dashboard or API Endpoint
-
-The client requires a dashboard that answers both business requirements.
-
-### 4. Successful Project Outcome
-
-- A study showing the most relevant variables correlated to sale price.
-- A capability to predict the sale price for the 4 inherited houses, as well as any other house in Ames, Iowa.
-
-### 5. Project Epics
-
-The project is divided into five epics:
-
-1. Information gathering and data collection.
-2. Data visualisation, cleaning and preparation.
-3. Model training, optimisation and validation.
-4. Dashboard planning, design and development.
-5. Dashboard deployment and release.
-
-### 6. Ethical and Privacy Concerns
-
-No ethical or privacy concerns were identified, as the client found a publicly available dataset.
-
-### 7. Machine Learning Model
-
-The data suggests a regression model, where the target variable is `SalePrice`.
-
-### 8. Model Inputs and Outputs
-
-| | Description |
-|---|---|
-| **Inputs** | House attribute information. |
-| **Output** | Predicted house sale price. |
-
-### 9. Model Performance Goal
-
-The agreed performance goal is an R² score of at least **0.75 on both the training and test datasets**.
-
-### 10. Business Benefit
-
-The client will maximize the sales price for the inherited properties.
+- We want an ML model to predict house prices based on historical housing data from Ames, Iowa. The target variable is `SalePrice`, measured in US dollars.
+- Our ideal outcome is to provide our client with a reliable way to predict house prices with the lowest possible degree of error.
+- The model success metrics are:
+  - An R² score of at least **0.75 on both the training and test sets**.
+- The ML regression model is deemed unsuccessful if it does not meet this performance standard.
+- There will be a Streamlit dashboard with pages showing:
+  - The predicted sale prices of the four inherited properties.
+  - An interactive interface where users can enter house attributes to predict the sale price of a previously unseen property.
+- **Heuristics:** Currently, there is no established approach for predicting house prices. The client has good knowledge of the property market in her own area but not in Ames, Iowa.
+- The training data comes from the historical Ames, Iowa housing dataset provided by Code Institute.
+  - **Target:** `SalePrice`.
+  - **Features:** House attributes selected during the machine learning pipeline development.
 
 ## Dashboard Design (Streamlit App User Interface)
 
