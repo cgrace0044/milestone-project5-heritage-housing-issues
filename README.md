@@ -1,12 +1,22 @@
+
 # 🏠 Heritage Housing Issues
 
-## Project Overview
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
+![Portfolio Project 5](https://img.shields.io/badge/Portfolio_Project-5-237F82?style=flat-square)
+
+---
+
+## 🏠 Project Overview
 
 Lydia Doe has inherited four houses located in Ames, Iowa, USA. Although she has knowledge of property prices in her home country of Belgium, she is unfamiliar with the housing market in Ames and is concerned that this could lead to inaccurate property valuations.
 
 The purpose of this project is to use historical housing data from Ames, Iowa, to investigate the factors associated with house sale prices and develop a machine learning model capable of predicting property values.
 
 The project will deliver a Streamlit dashboard that allows Lydia to explore the factors associated with house prices, view predicted sale prices for the four inherited properties, and predict the sale price of other houses in Ames.
+
+---
 
 ## 📊 Dataset Content
 
@@ -27,6 +37,9 @@ The dataset describes a range of property characteristics, including floor area,
 
 ### 🏠 Variable Definitions
 
+<details>
+<summary><strong>Click to view the dataset variable definitions</strong></summary>
+
 |Variable|Meaning|Units|
 |:----|:----|:----|
 |1stFlrSF|First Floor square feet|334 - 4692|
@@ -42,8 +55,8 @@ The dataset describes a range of property characteristics, including floor area,
 |GarageYrBlt|Year garage was built|1900 - 2010|
 |GrLivArea|Above grade (ground) living area square feet|334 - 5642|
 |KitchenQual|Kitchen quality|Ex: Excellent; Gd: Good; TA: Typical/Average; Fa: Fair; Po: Poor|
-|LotArea| Lot size in square feet|1300 - 215245|
-|LotFrontage| Linear feet of street connected to property|21 - 313|
+|LotArea|Lot size in square feet|1300 - 215245|
+|LotFrontage|Linear feet of street connected to property|21 - 313|
 |MasVnrArea|Masonry veneer area in square feet|0 - 1600|
 |EnclosedPorch|Enclosed porch area in square feet|0 - 286|
 |OpenPorchSF|Open porch area in square feet|0 - 547|
@@ -53,6 +66,10 @@ The dataset describes a range of property characteristics, including floor area,
 |YearBuilt|Original construction date|1872 - 2010|
 |YearRemodAdd|Remodel date (same as construction date if no remodelling or additions)|1950 - 2010|
 |SalePrice|Sale Price|34900 - 755000|
+
+</details>
+
+---
 
 ## 🎯 Business Requirements
 
@@ -78,7 +95,9 @@ The model is designed to provide an **estimated sale price rather than an exact 
 
 In other machine learning models, for example diagnostics a higher R² score would be required.
 
-## CRISP-DM Workflow
+---
+
+## 🔄 CRISP-DM Workflow
 
 This project will be completed in line with CRISP-DM which is a framework used to plan and organise data science projects.
 
@@ -95,19 +114,25 @@ It has six steps which are outlined below. These steps are iterative rather than
 
 This framework works hand in hand with Agile development - creating user stories to help to organise task.
 
-## Hypotheses and How to Validate Them
+---
+
+## 🔬 Hypotheses and How to Validate Them
 
 We developed three hypotheses about the factors influencing house sale prices in Ames, Iowa:
 
 1. **Overall Quality:** I suspect houses with higher overall property quality have higher sale prices.
+
 2. **Living Area:** I suspect houses with larger above-ground living areas have higher sale prices.
+
 3. **Year Built:** I suspect newer houses have higher sale prices.
 
 ### Validation Method
 
 We will investigate these hypotheses through exploratory data analysis, using scatterplots and Pearson and Spearman correlation studies to examine the relationships between `OverallQual`, `GrLivArea`, `YearBuilt` and `SalePrice`.
 
-## Rationale for Mapping Business Requirements to Data Visualisations and ML Tasks
+---
+
+## 🧩 Rationale for Mapping Business Requirements to Data Visualisations and ML Tasks
 
 ### Business Requirement 1: Data Visualisation and Correlation Study
 
@@ -121,8 +146,10 @@ We will investigate these hypotheses through exploratory data analysis, using sc
 - House attributes will be used to predict house price for both the four inherited houses and also any house in Ames Iowa.
 - We will aim to achieve an R² score of at least 0.75 on both the training and test sets.
 - We will create an interactive dashboard whereby users can enter house attributes to obtain a predicted sale price.
-  
-## ML Business Case
+
+---
+
+## 🤖 ML Business Case
 
 ### Predict House Price
 
@@ -141,7 +168,9 @@ We will investigate these hypotheses through exploratory data analysis, using sc
   - **Target:** `SalePrice`.
   - **Features:** House attributes selected during the machine learning pipeline development.
 
-## Dashboard Design (Streamlit App User Interface)
+---
+
+## 🖥️ Dashboard Design (Streamlit App User Interface)
 
 ### Page 1: Quick Project Summary
 
@@ -184,11 +213,15 @@ We will investigate these hypotheses through exploratory data analysis, using sc
 - Checkbox to display the feature importance plot.
 - Summarise model performance against the project's success criteria.
 
-## Unfixed Bugs
+---
+
+## 🐛 Unfixed Bugs
 
 There are no unfixed bugs.
 
-## Deployment
+---
+
+## 🚀 Deployment
 
 ### Heroku
 
@@ -196,22 +229,28 @@ There are no unfixed bugs.
 * Set the .python-version Python version to a [Heroku-24](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 * The project was deployed to Heroku using the following steps.
 
-1. Log in to Heroku and create an App
+1. Log in to Heroku and create an App.
 2. At the Deploy tab, select GitHub as the deployment method.
 3. Select your repository name and click Search. Once it is found, click Connect.
 4. Select the branch you want to deploy, then click Deploy Branch.
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
 6. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
-## Main Data Analysis and Machine Learning Libraries
+---
+
+## 🛠️ Main Data Analysis and Machine Learning Libraries
 
 * Here you should list the libraries you used in the project and provide example(s) of how you used these libraries.
 
-## Credits
+---
+
+## 📚 Credits
 
 - **Code Institute:** The Churnometer walkthrough and course materials provided guidance and code examples, which were adapted to meet the requirements of the Heritage Housing Issues project.
 - **Dataset:** The housing dataset was provided by Code Institute and is available on [Kaggle](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data).
 
-## Acknowledgements
+---
+
+## 🙏 Acknowledgements
 
 I would like to thank my mentor, **Can Sücüllü**, for his guidance, support and valuable feedback throughout the development of this project.
