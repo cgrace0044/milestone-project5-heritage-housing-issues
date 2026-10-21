@@ -76,7 +76,7 @@ An R² score of 0.75 indicates that the model explains approximately 75% of the 
 
 The model is designed to provide an **estimated sale price rather than an exact property valuation** this is why 0.75 is deemed to be sufficient in this case.
 
-In other machine learning models, for example diagnostics a higher R² score would be required. 
+In other machine learning models, for example diagnostics a higher R² score would be required.
 
 ## Hypotheses and How to Validate Them
 
@@ -86,6 +86,25 @@ We developed three hypotheses about the factors influencing house sale prices in
 2. **Living Area:** I suspect houses with larger above-ground living areas have higher sale prices.
 3. **Year Built:** I suspect newer houses have higher sale prices.
 
+### Validation Method
+
+We will investigate these hypotheses through exploratory data analysis, using scatterplots and Pearson and Spearman correlation studies to examine the relationships between `OverallQual`, `GrLivArea`, `YearBuilt` and `SalePrice`.
+
+## Rationale for Mapping Business Requirements to Data Visualisations and ML Tasks
+
+### Business Requirement 1: Data Visualisation and Correlation Study
+
+- We will inspect the data related to historical housing prices.
+- We will conduct a correlation study (Pearson and Spearman) to better understand how the variables are correlated with `SalePrice`.
+- We will plot the main variables against `SalePrice` to visualise insights.
+
+### Business Requirement 2:** Regression
+
+- We want to build a supervised machine learning regression model that is capable of predicting house prices.
+- House attributes will be used to predict house price for both the four inherited houses and also any house in Ames Iowa.
+- We will aim to achieve an R² score of at least 0.75 on both the training and test sets.
+- We will create an interactive dashboard whereby users can enter house attributes to obtain a predicted sale price.
+  
 ## ML Business Case
 
 ### 1. Business Requirements
@@ -142,10 +161,6 @@ The agreed performance goal is an R² score of at least **0.75 on both the train
 ### 10. Business Benefit
 
 The client will maximize the sales price for the inherited properties.
-
-**Validation Method**
-
-We will investigate these hypotheses through exploratory data analysis, using scatterplots and Pearson and Spearman correlation studies to examine the relationships between `OverallQual`, `GrLivArea`, `YearBuilt` and `SalePrice`.
 
 ## Dashboard Design (Streamlit App User Interface)
 
