@@ -126,6 +126,16 @@ Each user story includes acceptance criteria, a task list and a MoSCoW priority.
 
 The [GitHub Project Board](https://github.com/users/cgrace0044/projects/6/views/1) provides an overview of the project's development and completed tasks.
 
+## 📋 Agile Methodology
+
+GitHub Projects was used to manage the development of this project using an Agile approach.
+
+The project was organised into five epics, represented by GitHub Milestones, and 12 user stories, represented by GitHub Issues.
+
+Each user story includes acceptance criteria, a task list and a MoSCoW priority. Completed tasks were marked as done, and all 12 user stories were moved to the Done column on the GitHub Project board.
+
+The [GitHub Project Board](https://github.com/users/cgrace0044/projects/6/views/1) provides an overview of the project's development and completed tasks.
+
 ### User Stories by Epic
 
 Click on each epic to view its user stories.
@@ -133,73 +143,42 @@ Click on each epic to view its user stories.
 <details>
 <summary><strong>Epic 1: Information Gathering and Data Collection</strong></summary>
 
-**[User Story 1 — Understanding the Business Case](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/1)**
-
-As a **data practitioner**, I want to understand the client's **business problem, objectives, requirements and success criteria** so that I can plan the project to meet the client's needs.
-
-**[User Story 2 — Collect and Explore the Data](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/2)**
-
-As a **data practitioner**, I want to **collect and explore the Heritage Housing data** so that I can assess its suitability for analysing house prices and developing a prediction model.
+- **[User Story 1 — Understanding the Business Case](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/1)** — As a data practitioner, I want to understand the client's business problem, objectives, requirements and success criteria so that I can plan the project to meet the client's needs.
+- **[User Story 2 — Collect and Explore the Data](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/2)** — As a data practitioner, I want to collect and explore the Heritage Housing data so that I can assess its suitability for analysing house prices and developing a prediction model.
 
 </details>
 
 <details>
 <summary><strong>Epic 2: Data Visualisation, Cleaning and Preparation</strong></summary>
 
-**[User Story 3 — Clean and Prepare Datasets](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/3)**
-
-As a **data practitioner**, I want to **clean and prepare** the Heritage Housing datasets so that they are suitable for analysis and regression machine learning.
-
-**[User Story 4 — Patterns and Correlations in the Data](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/4)**
-
-As a **data practitioner**, I want to **perform a correlation analysis and prepare data visualisations** so that I can advise the client which house attributes are most strongly associated with sale prices.
-
-**[User Story 5 — Feature Engineering](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/5)**
-
-As a **data practitioner**, I want to **perform feature engineering** so that the data is ready for training a regression machine learning model.
+- **[User Story 3 — Clean and Prepare Datasets](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/3)** — As a data practitioner, I want to clean and prepare the Heritage Housing datasets so that they are suitable for analysis and regression machine learning.
+- **[User Story 4 — Patterns and Correlations in the Data](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/4)** — As a data practitioner, I want to perform a correlation analysis and prepare data visualisations so that I can advise the client which house attributes are most strongly associated with sale prices.
+- **[User Story 5 — Feature Engineering](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/5)** — As a data practitioner, I want to perform feature engineering so that the data is ready for training a regression machine learning model.
 
 </details>
 
 <details>
 <summary><strong>Epic 3: Model Training, Optimisation and Validation</strong></summary>
 
-**[User Story 6 — Develop a Regression Model](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/6)**
-
-As a **data practitioner**, I want to **develop and compare regression machine learning models** so that I can identify a suitable method for predicting house sale prices.
-
-**[User Story 7 — Optimise Regression Machine Learning Model](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/7)**
-
-As a **data practitioner**, I want to **optimise the machine learning model** so that I can improve the selected model's performance.
+- **[User Story 6 — Develop a Regression Model](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/6)** — As a data practitioner, I want to develop and compare regression machine learning models so that I can identify a suitable method for predicting house sale prices.
+- **[User Story 7 — Optimise Regression Machine Learning Model](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/7)** — As a data practitioner, I want to optimise the machine learning model so that I can improve the selected model's performance.
 
 </details>
 
 <details>
 <summary><strong>Epic 4: Dashboard Planning, Design and Development</strong></summary>
 
-**[User Story 8 — Create Streamlit Dashboard](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/8)**
-
-As a **data practitioner**, I want to **design a Streamlit dashboard** so that the client can easily explore the answers to their two business requirements.
-
-**[User Story 9 — Develop Project Summary, House Price Study and Hypothesis Pages](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/9)**
-
-As a **data practitioner**, I want to **develop the Project Summary, House Price Study and Hypothesis pages** so that the client can understand the project and how house attributes correlate with sale prices.
-
-**[User Story 10 — Create Pages for House Price Prediction and ML Performance](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/10)**
-
-As a **data practitioner**, I want to **develop the house price prediction and ML performance pages** so that the client can estimate property values and understand the model's performance.
+- **[User Story 8 — Create Streamlit Dashboard](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/8)** — As a data practitioner, I want to design a Streamlit dashboard so that the client can easily explore the answers to their two business requirements.
+- **[User Story 9 — Develop Project Summary, House Price Study and Hypothesis Pages](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/9)** — As a data practitioner, I want to develop the Project Summary, House Price Study and Hypothesis pages so that the client can understand the project and how house attributes correlate with sale prices.
+- **[User Story 10 — Create Pages for House Price Prediction and ML Performance](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/10)** — As a data practitioner, I want to develop the house price prediction and ML performance pages so that the client can estimate property values and understand the model's performance.
 
 </details>
 
 <details>
 <summary><strong>Epic 5: Dashboard Deployment and Release</strong></summary>
 
-**[User Story 11 — Prepare Streamlit Dashboard for Deployment to Heroku](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/11)**
-
-As a **data practitioner**, I want to **deploy the Streamlit dashboard to Heroku** so that the client can access the dashboard online.
-
-**[User Story 12 — Complete Project Documentation and Testing](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/12)**
-
-As a **data practitioner**, I want to **complete the project documentation and perform final testing** to ensure that the project meets the client's requirements and is ready for submission.
+- **[User Story 11 — Prepare Streamlit Dashboard for Deployment to Heroku](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/11)** — As a data practitioner, I want to deploy the Streamlit dashboard to Heroku so that the client can access the dashboard online.
+- **[User Story 12 — Complete Project Documentation and Testing](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/12)** — As a data practitioner, I want to complete the project documentation and perform final testing to ensure that the project meets the client's requirements and is ready for submission.
 
 </details>
 
