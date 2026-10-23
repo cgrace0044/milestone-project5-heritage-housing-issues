@@ -126,26 +126,6 @@ Each user story includes acceptance criteria, a task list and a MoSCoW priority.
 
 The [GitHub Project Board](https://github.com/users/cgrace0044/projects/6/views/1) provides an overview of the project's development and completed tasks.
 
-## 📋 Agile Methodology
-
-GitHub Projects was used to manage the development of this project using an Agile approach.
-
-The project was organised into five epics, represented by GitHub Milestones, and 12 user stories, represented by GitHub Issues.
-
-Each user story includes acceptance criteria, a task list and a MoSCoW priority. Completed tasks were marked as done, and all 12 user stories were moved to the Done column on the GitHub Project board.
-
-The [GitHub Project Board](https://github.com/users/cgrace0044/projects/6/views/1) provides an overview of the project's development and completed tasks.
-
-## 📋 Agile Methodology
-
-GitHub Projects was used to manage the development of this project using an Agile approach.
-
-The project was organised into five epics, represented by GitHub Milestones, and 12 user stories, represented by GitHub Issues.
-
-Each user story includes acceptance criteria, a task list and a MoSCoW priority. Completed tasks were marked as done, and all 12 user stories were moved to the Done column on the GitHub Project board.
-
-The [GitHub Project Board](https://github.com/users/cgrace0044/projects/6/views/1) provides an overview of the project's development and completed tasks.
-
 ### User Stories by Epic
 
 Click on each epic to view its user stories.
