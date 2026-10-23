@@ -128,42 +128,20 @@ The [GitHub Project Board](https://github.com/users/cgrace0044/projects/6/views/
 
 ### User Stories by Epic
 
-#### Epic 1: Information Gathering and Data Collection
-
-| User Story | Link |
-| --- | --- |
-| User Story 1 — Understanding the Business Case | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/1) |
-| User Story 2 — Collect and Explore the Data | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/2) |
-
-#### Epic 2: Data Visualisation, Cleaning and Preparation
-
-| User Story | Link |
-| --- | --- |
-| User Story 3 — Clean and Prepare Datasets | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/3) |
-| User Story 4 — Patterns and Correlations in the Data | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/4) |
-| User Story 5 — Feature Engineering | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/5) |
-
-#### Epic 3: Model Training, Optimisation and Validation
-
-| User Story | Link |
-| --- | --- |
-| User Story 6 — Develop a Regression Model | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/6) |
-| User Story 7 — Optimise Regression Machine Learning Model | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/7) |
-
-#### Epic 4: Dashboard Planning, Design and Development
-
-| User Story | Link |
-| --- | --- |
-| User Story 8 — Create Streamlit Dashboard | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/8) |
-| User Story 9 — Develop Project Summary, House Price Study and Hypothesis Pages | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/9) |
-| User Story 10 — Create Pages for House Price Prediction and ML Performance | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/10) |
-
-#### Epic 5: Dashboard Deployment and Release
-
-| User Story | Link |
-| --- | --- |
-| User Story 11 — Prepare Streamlit Dashboard for Deployment to Heroku | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/11) |
-| User Story 12 — Complete Project Documentation and Testing | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/12) |
+| Epic | User Story | Link |
+| --- | --- | --- |
+| **Epic 1: Information Gathering and Data Collection** | User Story 1 — Understanding the Business Case | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/1) |
+| | User Story 2 — Collect and Explore the Data | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/2) |
+| **Epic 2: Data Visualisation, Cleaning and Preparation** | User Story 3 — Clean and Prepare Datasets | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/3) |
+| | User Story 4 — Patterns and Correlations in the Data | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/4) |
+| | User Story 5 — Feature Engineering | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/5) |
+| **Epic 3: Model Training, Optimisation and Validation** | User Story 6 — Develop a Regression Model | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/6) |
+| | User Story 7 — Optimise Regression Machine Learning Model | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/7) |
+| **Epic 4: Dashboard Planning, Design and Development** | User Story 8 — Create Streamlit Dashboard | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/8) |
+| | User Story 9 — Develop Project Summary, House Price Study and Hypothesis Pages | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/9) |
+| | User Story 10 — Create Pages for House Price Prediction and ML Performance | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/10) |
+| **Epic 5: Dashboard Deployment and Release** | User Story 11 — Prepare Streamlit Dashboard for Deployment to Heroku | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/11) |
+| | User Story 12 — Complete Project Documentation and Testing | [View Story](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/12) |
 
 ---
 
