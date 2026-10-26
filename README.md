@@ -298,6 +298,16 @@ There are no unfixed bugs.
 
 ## 🛠️ Main Data Analysis and Machine Learning Libraries
 
+- **[Pandas](https://pandas.pydata.org/docs/)** – Data cleaning and analysis.
+- **[NumPy](https://numpy.org/doc/stable/)** – Numerical operations.
+- **[Matplotlib](https://matplotlib.org/stable/)** – Data visualisation.
+- **[Seaborn](https://seaborn.pydata.org/)** – Statistical visualisations.
+- **[Scikit-learn](https://scikit-learn.org/stable/)** – Machine learning modelling and evaluation.
+- **[Feature-engine](https://feature-engine.trainindata.com/)** – Feature engineering and selection.
+- **[XGBoost](https://xgboost.readthedocs.io/en/stable/)** – Regression modelling.
+- **[Joblib](https://joblib.readthedocs.io/en/stable/)** – Model saving and loading.
+- **[Streamlit](https://docs.streamlit.io/)** – Interactive dashboard development.
+
 ---
 
 ## 📚 Credits
