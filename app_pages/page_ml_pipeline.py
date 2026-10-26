@@ -1,5 +1,4 @@
 
-
 import streamlit as st
 import pandas as pd
 import joblib
@@ -25,8 +24,8 @@ def page_ml_pipeline_body():
     # Model performance summary
     st.info(
         "The house price regression model achieved an "
-        "**R² score of 0.924 on the training dataset** "
-        "and **0.816 on the test dataset**. "
+        "**R² score of 0.915 on the training dataset** "
+        "and **0.812 on the test dataset**. "
         "Both scores exceed the project's minimum "
         "requirement of 0.75."
     )
@@ -62,14 +61,14 @@ def page_ml_pipeline_body():
             "Root Mean Squared Error (RMSE)"
         ],
         "Training": [
-            "0.924",
-            "$12,640",
-            "Not reported"
+            "0.915",
+            "$13,475",
+            "$22,842"
         ],
         "Test": [
-            "0.816",
-            "$19,245",
-            "$35,661"
+            "0.812",
+            "$19,533",
+            "$36,013"
         ]
     })
 
@@ -107,7 +106,7 @@ def page_ml_pipeline_body():
     st.write(
         "On the test dataset, the model's predictions "
         "differed from actual sale prices by approximately "
-        "**$19,245 on average**."
+        "**$19,533 on average**."
     )
 
     st.write(

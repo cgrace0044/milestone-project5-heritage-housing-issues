@@ -56,7 +56,7 @@ def DrawHouseInputsWidgets(df):
 
         X_live["GrLivArea"] = st.number_input(
             "Above-Ground Living Area (sq ft)",
-            min_value=0,
+            min_value=1,
             value=int(df["GrLivArea"].median()),
             step=50
         )
@@ -95,7 +95,7 @@ def DrawHouseInputsWidgets(df):
     with col3:
         X_live["1stFlrSF"] = st.number_input(
             "First-Floor Area (sq ft)",
-            min_value=0,
+            min_value=1,
             value=int(df["1stFlrSF"].median()),
             step=50
         )
