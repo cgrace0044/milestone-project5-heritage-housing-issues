@@ -298,7 +298,8 @@ There are no unfixed bugs.
 
 ## 🛠️ Main Data Analysis and Machine Learning Libraries
 
-* Here you should list the libraries you used in the project and provide example(s) of how you used these libraries.
+- **[Scikit-learn — ExtraTreesRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.ExtraTreesRegressor.html):** Used to develop the final regression model and investigate hyperparameter optimisation to improve house sale price predictions.
+- - **[Scikit-learn — RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html):** Used to investigate hyperparameter combinations during the initial regression model optimisation.
 
 ---
 
