@@ -71,6 +71,18 @@ The dataset describes a range of property characteristics, including floor area,
 
 ---
 
+## Project Terms & Jargon
+
+The following terms are used throughout the project and its Streamlit dashboard:
+
+- **SalePrice:** The price at which a house was sold. This is the target variable the machine learning model aims to predict.
+- **House attributes:** Property characteristics such as living area, overall quality, year built, garage area, basement size and kitchen quality.
+- **Correlation:** A statistical relationship between two variables, used in this project to investigate how house attributes relate to sale prices.
+- **Regression:** A machine learning technique used to predict numerical values, such as house sale prices.
+- **R² score:** A measure of how well the regression model explains variation in house sale prices.
+  
+---
+
 ## 🎯 Business Requirements
 
 ### Client Background
