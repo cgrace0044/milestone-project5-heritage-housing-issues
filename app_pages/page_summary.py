@@ -42,15 +42,17 @@ def page_summary_body():
         "* The project uses publicly available data."
     )
 
-    # Terminology
+    # Optional terminology
     with st.expander("📖 Project Terms & Jargon"):
         st.write(
             "* **SalePrice:** The price at which a house was sold.\n"
             "* **House attributes:** Property characteristics such as "
             "living area, overall quality, year built, garage area, "
             "basement size and kitchen quality.\n"
-            "* **Correlation:** The relationship between house "
-            "attributes and sale prices.\n"
+            "* **Correlation:** A statistical measure describing the "
+            "strength and direction of the relationship between two "
+            "variables. In this project, it helps identify which house "
+            "attributes are associated with higher or lower sale prices.\n"
             "* **Regression:** A machine learning technique used "
             "to predict numerical values, such as house prices."
         )
