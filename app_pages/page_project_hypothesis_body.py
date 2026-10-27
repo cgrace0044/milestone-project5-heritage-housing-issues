@@ -1,5 +1,3 @@
-
-
 import streamlit as st
 
 
@@ -18,14 +16,14 @@ def page_project_hypothesis_body():
     col1, col2 = st.columns([4, 1], vertical_alignment="center")
 
     with col1:
-        st.markdown("#### 🏡 Hypothesis 1")
+        st.markdown("#### 🏡 Hypothesis 1 — Overall Quality")
         st.write(
-            "I suspect houses with higher overall property "
-            "quality have higher sale prices."
+            "I suspect houses with **higher overall property "
+            "quality** have higher sale prices."
         )
-        st.caption(
-            "Validated through the positive correlation "
-            "between OverallQual and SalePrice."
+        st.write(
+            "**Validation:** Positive correlation between "
+            "`OverallQual` and `SalePrice`."
         )
 
     with col2:
@@ -37,14 +35,14 @@ def page_project_hypothesis_body():
     col1, col2 = st.columns([4, 1], vertical_alignment="center")
 
     with col1:
-        st.markdown("#### 📐 Hypothesis 2")
+        st.markdown("#### 📐 Hypothesis 2 — Living Area")
         st.write(
-            "I suspect houses with larger above-ground "
-            "living areas have higher sale prices."
+            "I suspect houses with **larger above-ground "
+            "living areas** have higher sale prices."
         )
-        st.caption(
-            "Validated through the positive correlation "
-            "between GrLivArea and SalePrice."
+        st.write(
+            "**Validation:** Positive correlation between "
+            "`GrLivArea` and `SalePrice`."
         )
 
     with col2:
@@ -56,13 +54,13 @@ def page_project_hypothesis_body():
     col1, col2 = st.columns([4, 1], vertical_alignment="center")
 
     with col1:
-        st.markdown("#### 📅 Hypothesis 3")
+        st.markdown("#### 📅 Hypothesis 3 — Year Built")
         st.write(
-            "I suspect newer houses have higher sale prices."
+            "I suspect **newer houses** have higher sale prices."
         )
-        st.caption(
-            "Validated through the positive correlation "
-            "between YearBuilt and SalePrice."
+        st.write(
+            "**Validation:** Positive correlation between "
+            "`YearBuilt` and `SalePrice`."
         )
 
     with col2:
