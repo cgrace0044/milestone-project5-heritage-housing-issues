@@ -8,7 +8,6 @@ import seaborn as sns
 sns.set_style("whitegrid")
 
 
-# Load original historical housing data
 @st.cache_data
 def load_original_data():
     return pd.read_csv(
@@ -16,7 +15,6 @@ def load_original_data():
     )
 
 
-# Create violin plots
 def plot_data_distributions(df):
 
     variables = {
@@ -41,7 +39,6 @@ def plot_data_distributions(df):
         ax.set_ylabel("")
 
     fig.tight_layout()
-
     st.pyplot(fig)
     plt.close(fig)
 
@@ -50,61 +47,41 @@ def page_data_cleaning_body():
 
     st.write("### 🧹 Data Cleaning")
 
-    st.write(
-        "Before analysing house prices, the historical "
-        "housing dataset was checked for missing information "
-        "and cleaned to prepare it for further analysis "
-        "and prediction."
+    st.markdown(
+        "- **Historical housing dataset:** Checked for missing "
+        "information and cleaned for further analysis.\n"
+        "- **Inherited housing dataset:** Contained no missing values."
     )
 
     st.divider()
 
-    # Cleaning summary
     st.write("### 🛠️ How the Data Was Cleaned")
 
     st.markdown(
         "- **Garage and basement data:** Missing values were "
-        "labelled as 'No Garage', 'No Basement' or 'Missing', "
-        "depending on the property's features.\n"
+        "labelled as 'No Garage', 'No Basement' or 'Missing'.\n"
         "- **Removed attributes:** Dropped `EnclosedPorch` "
         "(91% missing) and `WoodDeckSF` (89% missing).\n"
-        "- **Numerical data:** Missing values were filled using "
-        "median values after examining their distributions "
-        "(see violin plots below).\n"
-        "- **Garage construction year:** Used zero to indicate "
+        "- **Garage construction year:** Used zero for "
         "properties without garages (81 records).\n"
-        "- **Quality checks:** Confirmed no missing values "
-        "or duplicate records remained."
+        "- **Numerical data:** Missing values were filled "
+        "using medians after examining their distributions."
     )
 
-    st.divider()
-
-    # Violin plots
-    st.write("### 📊 Exploring Data Distributions")
-
-    st.write(
-        "The violin plots below show the distributions "
-        "of four property attributes used to guide "
-        "the treatment of missing numerical values."
-    )
-
-    with st.expander("📈 View Violin Plots"):
-
-        df = load_original_data()
-
-        plot_data_distributions(df)
+    with st.expander("📊 View Violin Plots — Numerical Data"):
 
         st.info(
-            "**Why Median Imputation?**\n\n"
-            "The violin plots show that some property attributes "
-            "have skewed distributions, extreme values or many zeros. "
-            "The median was chosen because it is less influenced by "
-            "unusually high or low values."
+            "**Median Imputation:** Some attributes have skewed "
+            "distributions or extreme values, so the median was "
+            "chosen to fill missing data because it is less "
+            "affected by outliers."
         )
+
+        df = load_original_data()
+        plot_data_distributions(df)
 
     st.divider()
 
-    # Cleaning outcome
     st.write("### ✅ Cleaning Outcome")
 
     col1, col2, col3 = st.columns(3)
@@ -119,9 +96,8 @@ def page_data_cleaning_body():
         st.metric("🔍 Missing Values", "0")
 
     st.success(
-        "The historical housing dataset was successfully "
-        "cleaned and prepared for the House Sales Price "
-        "Study and machine learning."
+        "The cleaned dataset is ready for the "
+        "House Sales Price Study and machine learning."
     )
 
 
