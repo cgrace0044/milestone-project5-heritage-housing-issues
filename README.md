@@ -124,6 +124,8 @@ It has six steps which are outlined below. These steps are iterative rather than
 | **5. Evaluation** | Test the model on unseen data. |
 | **6. Deployment** | Make the model accessible to users via a dashboard or an API. |
 
+![CRISP-DM Methodology](assets/crispdm.jpeg)
+
 This framework works hand in hand with Agile development - creating user stories to help to organise task.
 
 ---
