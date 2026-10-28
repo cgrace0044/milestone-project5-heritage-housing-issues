@@ -330,6 +330,7 @@ There are no unfixed bugs.
 - **Dataset:** The housing dataset was provided by Code Institute and is available on [Kaggle](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data).
 - **[Scikit-learn — ExtraTreesRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.ExtraTreesRegressor.html):** Used to develop the final regression model and investigate hyperparameter optimisation to improve house sale price predictions.
 - **[Scikit-learn — RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html):** Used to investigate hyperparameter combinations during the initial regression model optimisation.
+- **[Lucidchart](https://www.lucidchart.com/)** — Used to create the CRISP-DM methodology diagram featured in this README.
 
 ---
 
