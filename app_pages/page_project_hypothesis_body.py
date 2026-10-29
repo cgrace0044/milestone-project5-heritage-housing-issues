@@ -1,14 +1,10 @@
+
 import streamlit as st
 
 
 def page_project_hypothesis_body():
 
     st.write("### 🌿 Project Hypothesis and Validation")
-
-    st.write(
-        "Three hypotheses were investigated in the "
-        "House Sales Price Study."
-    )
 
     st.divider()
 
@@ -18,10 +14,8 @@ def page_project_hypothesis_body():
     with col1:
         st.markdown("#### 🏡 Hypothesis 1 — Overall Quality")
         st.write(
-            "I suspect houses with **higher overall property "
-            "quality** have higher sale prices."
-        )
-        st.write(
+            "Houses with **higher overall quality** are "
+            "expected to have higher sale prices.\n\n"
             "**Validation:** Positive correlation between "
             "`OverallQual` and `SalePrice`."
         )
@@ -37,10 +31,8 @@ def page_project_hypothesis_body():
     with col1:
         st.markdown("#### 📐 Hypothesis 2 — Living Area")
         st.write(
-            "I suspect houses with **larger above-ground "
-            "living areas** have higher sale prices."
-        )
-        st.write(
+            "Houses with **larger living areas** are "
+            "expected to have higher sale prices.\n\n"
             "**Validation:** Positive correlation between "
             "`GrLivArea` and `SalePrice`."
         )
@@ -56,9 +48,8 @@ def page_project_hypothesis_body():
     with col1:
         st.markdown("#### 📅 Hypothesis 3 — Year Built")
         st.write(
-            "I suspect **newer houses** have higher sale prices."
-        )
-        st.write(
+            "**Newer houses** are expected to have "
+            "higher sale prices.\n\n"
             "**Validation:** Positive correlation between "
             "`YearBuilt` and `SalePrice`."
         )
@@ -69,7 +60,10 @@ def page_project_hypothesis_body():
     st.divider()
 
     st.write(
-        "**Conclusion:** All three hypotheses were supported "
-        "by the correlation analysis in the "
-        "House Sales Price Study."
+        "**Conclusion:** All three hypotheses were "
+        "supported by the correlation analysis."
     )
+
+
+if __name__ == "__main__":
+    page_project_hypothesis_body()

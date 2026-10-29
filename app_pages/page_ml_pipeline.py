@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 import joblib
@@ -23,8 +24,8 @@ def page_ml_pipeline_body():
     # Model performance summary
     st.info(
         "The house price regression model achieved an "
-        "**R² score of 0.923 on the training dataset** "
-        "and **0.813 on the test dataset**. "
+        "**R² score of 0.912 on the training dataset** "
+        "and **0.808 on the test dataset**. "
         "Both scores exceed the project's minimum "
         "requirement of 0.75."
     )
@@ -37,10 +38,10 @@ def page_ml_pipeline_body():
     st.write(pipeline)
 
     st.caption(
-        "The pipeline uses 150 trees. Parameters set to their "
-        "default values (max_depth=None, max_features=1.0 and "
-        "min_impurity_decrease=0.0) are not shown in the pipeline "
-        "summary but are still applied."
+        "The final pipeline applies numerical transformations "
+        "and feature scaling before predicting house prices "
+        "using an ExtraTreesRegressor with 50 trees and "
+        "the optimised hyperparameters."
     )
 
     st.divider()
@@ -49,7 +50,7 @@ def page_ml_pipeline_body():
     st.write("#### Features Used to Train the Model")
 
     st.write(
-        "The model uses nine property attributes "
+        "The model uses seven property attributes "
         "to predict house sale prices."
     )
 
@@ -63,18 +64,15 @@ def page_ml_pipeline_body():
     performance = pd.DataFrame({
         "Metric": [
             "R² Score",
-            "Mean Absolute Error (MAE)",
-            "Root Mean Squared Error (RMSE)"
+            "Mean Absolute Error (MAE)"
         ],
         "Training": [
-            "0.923",
-            "$12,659",
-            "$21,711"
+            "0.912",
+            "$14,360"
         ],
         "Test": [
-            "0.813",
-            "$19,293",
-            "$35,892"
+            "0.808",
+            "$20,215"
         ]
     })
 
@@ -87,8 +85,8 @@ def page_ml_pipeline_body():
 
     st.write(
         "The feature importance chart shows which property "
-        "attributes have the greatest influence on the "
-        "model's house price predictions."
+        "attributes contribute most to the model's "
+        "house price predictions."
     )
 
     if st.checkbox("Show Feature Importance Plot"):
@@ -112,7 +110,7 @@ def page_ml_pipeline_body():
     st.write(
         "On the test dataset, the model's predictions "
         "differed from actual sale prices by approximately "
-        "**$19,293 on average**."
+        "**$20,215 on average**."
     )
 
     st.write(

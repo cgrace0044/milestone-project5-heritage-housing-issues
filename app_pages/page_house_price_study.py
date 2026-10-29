@@ -1,5 +1,7 @@
+
 import streamlit as st
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -7,34 +9,13 @@ import seaborn as sns
 sns.set_style("whitegrid")
 
 
-# Friendly labels for dataset variables
-VARIABLE_LABELS = {
-    "OverallQual": "Overall Property Quality",
-    "GrLivArea": "Above-Ground Living Area",
-    "GarageArea": "Garage Area",
-    "GarageYrBlt": "Garage Year Built",
-    "TotalBsmtSF": "Total Basement Area",
-    "1stFlrSF": "First-Floor Area",
-    "YearBuilt": "Year Built"
-}
-
-
-# Variables selected in the correlation study notebook
+# Variables selected in the House Sales Price Study notebook
 VARS_TO_STUDY = [
     "OverallQual",
     "GrLivArea",
     "GarageArea",
-    "GarageYrBlt",
     "TotalBsmtSF",
     "1stFlrSF",
-    "YearBuilt"
-]
-
-
-# Variables linked to the project hypotheses
-HYPOTHESIS_VARIABLES = [
-    "OverallQual",
-    "GrLivArea",
     "YearBuilt"
 ]
 
@@ -42,131 +23,100 @@ HYPOTHESIS_VARIABLES = [
 # Load historical housing data
 @st.cache_data
 def load_data():
-
     train = pd.read_csv(
         "outputs/datasets/cleaned/TrainSetCleaned.csv"
     )
-
     test = pd.read_csv(
         "outputs/datasets/cleaned/TestSetCleaned.csv"
     )
-
     return pd.concat([train, test], ignore_index=True)
 
 
-# Load the four inherited houses
+# Load inherited houses
 @st.cache_data
 def load_inherited_houses():
-
     return pd.read_csv(
         "outputs/datasets/collection/inherited_houses.csv"
     )
 
 
-# Scatterplot function
+# Scatterplot based on the Jupyter notebook
 def scatter_plot_for_eda(df, col, target_var):
 
-    plot_df = df.copy()
-
-    # Exclude zero values from selected scatterplots
-    if col in ["GarageArea", "GarageYrBlt", "TotalBsmtSF"]:
-        plot_df = plot_df[plot_df[col] > 0]
+    if col in ["GarageArea", "TotalBsmtSF"]:
+        df = df[df[col] > 0]
 
     fig, ax = plt.subplots(figsize=(10, 5))
 
     sns.scatterplot(
-        data=plot_df,
+        data=df,
         x=col,
         y=target_var,
-        ax=ax,
-        alpha=0.6
-    )
-
-    ax.set_title(
-        f"{VARIABLE_LABELS[col]} vs Sale Price",
-        fontsize=16
-    )
-
-    ax.set_xlabel(VARIABLE_LABELS[col])
-    ax.set_ylabel("Sale Price ($)")
-
-    ax.ticklabel_format(
-        style="plain",
-        axis="y"
-    )
-
-    fig.tight_layout()
-
-    st.pyplot(fig)
-    plt.close(fig)
-
-
-# Correlation heatmap function
-def heatmap_corr(df, method, threshold=0.4):
-
-    df_corr = df.corr(method=method)
-
-    # Replace technical variable names with friendly labels
-    df_corr = df_corr.rename(
-        index=VARIABLE_LABELS,
-        columns=VARIABLE_LABELS
-    )
-
-    fig, ax = plt.subplots(figsize=(11, 8))
-
-    sns.heatmap(
-        df_corr,
-        annot=True,
-        fmt=".2f",
-        cmap="viridis",
-        mask=abs(df_corr) < threshold,
-        annot_kws={"size": 9},
-        linewidths=0.5,
-        vmin=-1,
-        vmax=1,
         ax=ax
     )
 
     ax.set_title(
-        f"{method.capitalize()} Correlation Heatmap",
-        fontsize=16
+        f"{col} vs {target_var}",
+        fontsize=18
     )
-
-    plt.xticks(rotation=45, ha="right")
-    plt.yticks(rotation=0)
+    ax.set_xlabel(col, fontsize=13)
+    ax.set_ylabel(target_var, fontsize=13)
+    ax.tick_params(axis="both", labelsize=11)
 
     fig.tight_layout()
 
     st.pyplot(fig)
     plt.close(fig)
+
+
+# Heatmap function from the Jupyter notebook
+def heatmap_corr(df, threshold, figsize=(10, 8), font_annot=10):
+
+    if len(df.columns) > 1:
+
+        mask = np.zeros_like(df, dtype=bool)
+        mask[np.triu_indices_from(mask)] = True
+        mask[abs(df) < threshold] = True
+
+        fig, axes = plt.subplots(figsize=figsize)
+
+        sns.heatmap(
+            df,
+            annot=True,
+            xticklabels=True,
+            yticklabels=True,
+            mask=mask,
+            cmap="viridis",
+            annot_kws={"size": font_annot},
+            ax=axes,
+            linewidth=0.5
+        )
+
+        axes.set_yticklabels(df.columns, rotation=0)
+        plt.ylim(len(df.columns), 0)
+
+        st.pyplot(fig)
+        plt.close(fig)
 
 
 def page_house_price_study_body():
 
     st.write("### 🏠 House Sales Price Study")
 
-    # Business Requirement 1
     st.info(
-        "The client is interested in discovering how house "
-        "attributes correlate with sale prices. "
-        "Therefore, the client expects data visualisations "
-        "of the correlated variables against SalePrice."
+        "The client wants to understand how house "
+        "attributes relate to sale prices through "
+        "data visualisations."
     )
 
-    # Load historical housing data
     df = load_data()
 
-    st.divider()
-
     # Inspect datasets
-    st.write("### 📂 Inspect Housing Datasets")
-
-    with st.expander("Inspect Historical Housing Dataset"):
+    if st.checkbox("Inspect Historical Housing Dataset"):
 
         st.write(
-            f"The historical dataset contains "
-            f"**{df.shape[0]} houses** and "
-            f"**{df.shape[1]} columns**. "
+            f"The dataset contains **{df.shape[0]} houses** "
+            f"and **{df.shape[1]} columns**. "
             "The first 10 rows are shown below."
         )
 
@@ -175,14 +125,14 @@ def page_house_price_study_body():
             use_container_width=True
         )
 
-    with st.expander("Inspect Four Inherited Houses"):
+    if st.checkbox("Inspect Four Inherited Houses"):
 
         inherited_houses = load_inherited_houses()
 
         st.write(
-            f"The inherited housing dataset contains "
-            f"**{inherited_houses.shape[0]} houses** and "
-            f"**{inherited_houses.shape[1]} columns**."
+            f"The dataset contains "
+            f"**{inherited_houses.shape[0]} houses** "
+            f"and **{inherited_houses.shape[1]} columns**."
         )
 
         st.dataframe(
@@ -192,69 +142,46 @@ def page_house_price_study_body():
 
     st.divider()
 
-    # Correlation study summary
-    st.write("### 📊 Correlation Study Summary")
+    # Correlation study
+    st.write("### 📊 Correlation Study")
 
     st.write(
-        "Pearson and Spearman correlation studies were "
-        "conducted to identify the property attributes "
-        "most strongly associated with SalePrice. "
-        "The five strongest correlations from each method "
-        "were combined, resulting in seven unique variables "
-        "selected for further analysis."
+        "Pearson and Spearman correlation studies identified "
+        "six house attributes most strongly related to sale prices."
     )
 
     st.info(
-        "**Seven variables identified:**\n\n"
-        "- **Overall Property Quality** (`OverallQual`)\n"
-        "- **Above-Ground Living Area** (`GrLivArea`)\n"
-        "- Garage Area (`GarageArea`)\n"
-        "- Garage Year Built (`GarageYrBlt`)\n"
-        "- Total Basement Area (`TotalBsmtSF`)\n"
-        "- First-Floor Area (`1stFlrSF`)\n"
-        "- **Year Built** (`YearBuilt`)"
+        "The correlation results and plots indicate that:\n\n"
+        "- Houses with **higher overall quality** tend to sell "
+        "for higher prices (`OverallQual`).\n"
+        "- Houses with **larger living areas** tend to sell "
+        "for higher prices (`GrLivArea`).\n"
+        "- Houses with **larger garages** tend to sell "
+        "for higher prices (`GarageArea`).\n"
+        "- Houses with **larger basements** tend to sell "
+        "for higher prices (`TotalBsmtSF`).\n"
+        "- Houses with **larger first floors** tend to sell "
+        "for higher prices (`1stFlrSF`).\n"
+        "- **Newer houses** tend to sell for higher prices "
+        "(`YearBuilt`)."
     )
 
-    st.caption(
-        "The three highlighted variables — OverallQual, "
-        "GrLivArea and YearBuilt — are also investigated "
-        "on the Project Hypothesis and Validation page."
-    )
-
-    st.write(
-        "**Key finding:** Overall property quality and "
-        "above-ground living area showed the strongest "
-        "relationships with sale price across both "
-        "correlation methods."
-    )
+    df_eda = df[VARS_TO_STUDY + ["SalePrice"]]
 
     st.divider()
 
-    # Prepare data for visual analysis
-    df_eda = df[VARS_TO_STUDY + ["SalePrice"]]
-
-    # Individual scatterplots
+    # Scatterplots
     st.write("### 📈 Variables vs Sale Price")
 
-    st.write(
-        "Explore the relationships between the seven "
-        "selected property attributes and sale price. "
-        "Choose a variable below to display its scatterplot."
+    st.info(
+        "Select a house attribute below to explore "
+        "its relationship with sale price."
     )
 
     selected_variable = st.selectbox(
-        "Select a property attribute",
-        VARS_TO_STUDY,
-        format_func=lambda col: (
-            f"{VARIABLE_LABELS[col]} ({col})"
-        )
+        "Select a house attribute",
+        VARS_TO_STUDY
     )
-
-    if selected_variable in HYPOTHESIS_VARIABLES:
-        st.caption(
-            "🌿 This variable is also investigated in "
-            "the Project Hypothesis and Validation page."
-        )
 
     scatter_plot_for_eda(
         df_eda,
@@ -262,128 +189,91 @@ def page_house_price_study_body():
         "SalePrice"
     )
 
-    if selected_variable in [
-        "GarageArea",
-        "GarageYrBlt",
-        "TotalBsmtSF"
-    ]:
-        st.info(
-            "Zero values are excluded from this scatterplot "
-            "to focus on properties with a recorded positive "
-            "value for this attribute. The correlation "
-            "heatmaps retain the original dataset values."
+    # Interpretations based on the Jupyter notebook
+    if selected_variable == "GrLivArea":
+
+        interpretation = (
+            "Larger living areas are generally associated with "
+            "higher sale prices. However, a couple of very large "
+            "properties have relatively low sale prices."
         )
 
-    st.divider()
+    elif selected_variable == "GarageArea":
 
-    # Correlation heatmaps
-    st.write("### 🔥 Correlation Heatmaps")
+        interpretation = (
+            "Larger garages are generally associated with "
+            "higher sale prices. A small number of properties "
+            "have very large garages but relatively low sale prices."
+        )
 
-    st.write(
-        "Pearson and Spearman heatmaps show relationships "
-        "between the selected variables and SalePrice. "
-        "Correlations with an absolute value below 0.4 "
-        "are hidden for clarity."
-    )
+    elif selected_variable == "TotalBsmtSF":
 
-    heatmap_selection = st.radio(
-        "Choose a correlation method",
-        ["Spearman", "Pearson", "Both"],
-        horizontal=True
-    )
+        interpretation = (
+            "Larger basements are generally associated with "
+            "higher sale prices. One property has a particularly "
+            "large basement but a relatively low sale price."
+        )
 
-    if heatmap_selection in ["Spearman", "Both"]:
+    elif selected_variable == "OverallQual":
 
-        st.write("#### Spearman Correlation")
+        interpretation = (
+            "Properties with higher overall quality "
+            "generally have higher sale prices."
+        )
+
+    elif selected_variable == "1stFlrSF":
+
+        interpretation = (
+            "Properties with larger first-floor areas "
+            "generally have higher sale prices."
+        )
+
+    elif selected_variable == "YearBuilt":
+
+        interpretation = (
+            "Newer properties generally have higher sale prices."
+        )
+
+    st.success(f"**Graph interpretation:** {interpretation}")
+
+    if selected_variable in ["GarageArea", "TotalBsmtSF"]:
 
         st.caption(
-            "Spearman measures how consistently two variables "
-            "increase or decrease together, based on their ranks."
-        )
-
-        heatmap_corr(
-            df_eda,
-            method="spearman"
-        )
-
-    if heatmap_selection in ["Pearson", "Both"]:
-
-        st.write("#### Pearson Correlation")
-
-        st.caption(
-            "Pearson measures the strength and direction "
-            "of a linear relationship between two variables."
-        )
-
-        heatmap_corr(
-            df_eda,
-            method="pearson"
+            "Properties without a garage or basement are "
+            "excluded from this graph. These are not outliers."
         )
 
     st.divider()
 
-    # EDA interpretation
-    st.write("### 🔍 EDA Interpretation")
+    # Correlation heatmap
+    st.write("### 🔥 Correlation Heatmap")
 
-    st.write(
-        "The scatterplots support the positive relationships "
-        "identified in the correlation study. "
-        "The heatmaps also highlight relationships between "
-        "YearBuilt and GarageYrBlt, and between "
-        "TotalBsmtSF and 1stFlrSF."
+    st.info(
+        "This heatmap shows how strongly house attributes "
+        "are related to each other and to sale price. "
+        "Higher positive values indicate stronger relationships."
     )
 
-    with st.expander("View Outlier Findings"):
+    if st.checkbox("View Correlation Heatmap"):
 
-        st.write(
-            "The scatterplots highlight some unusual "
-            "observations in the historical dataset:"
+        df_corr_spearman = df_eda.corr(method="spearman")
+
+        heatmap_corr(
+            df=df_corr_spearman,
+            threshold=0.4
         )
 
-        st.markdown(
-            "- **Above-Ground Living Area (`GrLivArea`):** "
-            "A couple of very large properties have "
-            "relatively low sale prices.\n"
-            "- **Garage Area (`GarageArea`):** "
-            "A small number of properties have very large "
-            "garages and relatively low sale prices.\n"
-            "- **Total Basement Area (`TotalBsmtSF`):** "
-            "One property has a very large basement and "
-            "relatively low sale price."
+        st.success(
+            "**Heatmap interpretation:**\n\n"
+            "- **Overall quality** and **living area** show the "
+            "strongest relationships with sale price.\n"
+            "- **Garage size**, **basement area**, **first-floor area** "
+            "and **year built** also show positive relationships "
+            "with sale price.\n"
+            "- Some property attributes are related to each other. "
+            "For example, houses with larger basements often have "
+            "larger first-floor areas."
         )
-
-        st.write(
-            "Zero values in garage and basement attributes "
-            "are treated separately from these unusually "
-            "large-property observations. Their meaning "
-            "depends on how the original data was recorded "
-            "and cleaned."
-        )
-
-    st.divider()
-
-    # Study conclusions
-    st.write("### ✅ Study Conclusions")
-
-    st.success(
-        "The House Sales Price Study addressed "
-        "**Business Requirement 1** by identifying "
-        "seven property attributes associated with "
-        "house sale prices."
-    )
-
-    st.write(
-        "**OverallQual** and **GrLivArea** showed the "
-        "strongest relationships with SalePrice. "
-        "The analysis also supported the three project "
-        "hypotheses relating to **overall quality**, "
-        "**living area** and **year built**."
-    )
-
-    st.write(
-        "These findings informed the subsequent "
-        "feature engineering and machine learning stages."
-    )
 
 
 if __name__ == "__main__":

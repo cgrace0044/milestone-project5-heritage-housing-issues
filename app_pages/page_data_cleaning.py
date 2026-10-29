@@ -24,7 +24,7 @@ def plot_data_distributions(df):
         "2ndFlrSF": "Second-Floor Area"
     }
 
-    fig, axes = plt.subplots(2, 2, figsize=(11, 7))
+    fig, axes = plt.subplots(2, 2, figsize=(10, 6))
 
     for ax, (column, label) in zip(
         axes.flatten(),
@@ -47,34 +47,39 @@ def page_data_cleaning_body():
 
     st.write("### 🧹 Data Cleaning")
 
+    st.write(
+        "Data cleaning helps improve the reliability "
+        "of house price predictions."
+    )
+
     st.markdown(
-        "- **Historical housing dataset:** Checked for missing "
-        "information and cleaned for further analysis.\n"
-        "- **Inherited housing dataset:** Contained no missing values."
+        "- **Historical housing dataset:** Missing values "
+        "required cleaning.\n"
+        "- **Inherited housing dataset:** No missing values, "
+        "so no cleaning was needed."
     )
 
     st.divider()
 
-    st.write("### 🛠️ How the Data Was Cleaned")
+    st.write("#### 🛠️ How the Data Was Cleaned")
 
     st.markdown(
-        "- **Garage and basement data:** Missing values were "
-        "labelled as 'No Garage', 'No Basement' or 'Missing'.\n"
-        "- **Removed attributes:** Dropped `EnclosedPorch` "
-        "(91% missing) and `WoodDeckSF` (89% missing).\n"
-        "- **Garage construction year:** Used zero for "
-        "properties without garages (81 records).\n"
-        "- **Numerical data:** Missing values were filled "
-        "using medians after examining their distributions."
+        "- **Garage and basement:** Missing values were "
+        "labelled 'No Garage', 'No Basement' or 'Missing'.\n"
+        "- **Removed attributes:** `EnclosedPorch` (91% missing) "
+        "and `WoodDeckSF` (89% missing) were dropped.\n"
+        "- **Garage construction year:** `GarageYrBlt` was "
+        "dropped because it was strongly related to `YearBuilt`.\n"
+        "- **Numerical information:** Missing values for "
+        "`BedroomAbvGr`, `LotFrontage`, `MasVnrArea` "
+        "and `2ndFlrSF` were filled using median imputation."
     )
 
-    with st.expander("📊 View Violin Plots — Numerical Data"):
+    with st.expander("📊 View Numerical Data Distributions"):
 
         st.info(
-            "**Median Imputation:** Some attributes have skewed "
-            "distributions or extreme values, so the median was "
-            "chosen to fill missing data because it is less "
-            "affected by outliers."
+            "Median imputation was used because it is less "
+            "affected by unusually high or low values."
         )
 
         df = load_original_data()
@@ -82,24 +87,20 @@ def page_data_cleaning_body():
 
     st.divider()
 
-    st.write("### ✅ Cleaning Outcome")
+    st.write("#### ✅ Cleaning Outcome")
 
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.metric("🏠 Houses Retained", "1,460")
+        st.metric("Houses Retained", "1,460")
 
     with col2:
-        st.metric("📋 House Attributes", "21")
+        st.metric("Dataset Variables", "21")
 
     with col3:
-        st.metric("🔍 Missing Values", "0")
-
-    st.success(
-        "The cleaned dataset is ready for the "
-        "House Sales Price Study and machine learning."
-    )
+        st.metric("Missing Values", "0")
 
 
 if __name__ == "__main__":
     page_data_cleaning_body()
+
