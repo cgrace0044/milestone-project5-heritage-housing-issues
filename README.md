@@ -242,9 +242,9 @@ We will investigate these hypotheses through exploratory data analysis, using sc
 
 ---
 
-## 🖥️ Dashboard Design (Streamlit App User Interface)
+## 🏡 Dashboard Design (Streamlit App User Interface)
 
-### Page 1: Quick Project Summary
+### 📋 Page 1: Quick Project Summary
 
 - Quick project summary
 - Dataset overview
@@ -253,7 +253,7 @@ We will investigate these hypotheses through exploratory data analysis, using sc
 - Project success criteria.
 - Link to readme file
 
-### Page 2: House Sales Price Study
+### 📊 Page 2: House Sales Price Study
 
 - Address Business Requirement 1.
 - Checkboxes to inspect the historical and inherited housing datasets.
@@ -261,27 +261,27 @@ We will investigate these hypotheses through exploratory data analysis, using sc
 - Interactive scatterplots for the variables most correlated with `SalePrice`
 - Correlation Heatmap (just one was included so as not to confuse the client)
 
-### Page 3: Inherited Houses Valuation
+### 🏠 Page 3: Inherited Houses Valuation
 
 - Address Business Requirement 2.
 - Display the four inherited houses' attributes.
 - Predict the sale price of each house using the trained ML pipeline.
 - Display the combined estimated value of all four houses.
 
-### Page 4: Project Hypothesis and Validation
+### 🔍 Page 4: Project Hypothesis and Validation
 
 - Present three hypotheses and their validation:
   - **Overall quality:** Higher-quality houses have higher sale prices — Supported.
   - **Living area:** Larger living areas are associated with higher sale prices — Supported.
   - **Year built:** Newer houses have higher sale prices — Supported.
 
-### Page 5: Predict a House Price
+### 💰 Page 5: Predict a House Price
 
 - Address Business Requirement 2.
 - Interactive widgets to enter house attributes.
 - Predict and display the estimated sale price using the trained ML pipeline.
 
-### Page 6: ML Pipeline Performance
+### 🤖 Page 6: ML Pipeline Performance
 
 - Display the trained regression pipeline steps and the seven selected features.
 - Checkbox to display the feature importance plot.
