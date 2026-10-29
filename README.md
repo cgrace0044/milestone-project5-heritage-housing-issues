@@ -246,16 +246,20 @@ We will investigate these hypotheses through exploratory data analysis, using sc
 
 ### Page 1: Quick Project Summary
 
-- Project overview, terms and jargon.
-- Description of the housing dataset.
-- Client's business requirements and project success criteria.
+- Quick project summary
+- Dataset overview
+- Terms and jargon.
+- Client's business requirements
+- Project success criteria.
+- Link to readme file
 
 ### Page 2: House Sales Price Study
 
 - Address Business Requirement 1.
 - Checkboxes to inspect the historical and inherited housing datasets.
-- Interactive scatterplots and Pearson and Spearman correlation heatmaps.
-- Findings and conclusions about the attributes most correlated with `SalePrice`.
+- Correlation study findings
+- Interactive scatterplots for the variables most correlated with `SalePrice`
+- Correlation Heatmap (just one was included so as not to confuse the client)
 
 ### Page 3: Inherited Houses Valuation
 
@@ -270,7 +274,6 @@ We will investigate these hypotheses through exploratory data analysis, using sc
   - **Overall quality:** Higher-quality houses have higher sale prices — Supported.
   - **Living area:** Larger living areas are associated with higher sale prices — Supported.
   - **Year built:** Newer houses have higher sale prices — Supported.
-- Conclusions supported by the House Sales Price Study.
 
 ### Page 5: Predict a House Price
 
@@ -280,9 +283,11 @@ We will investigate these hypotheses through exploratory data analysis, using sc
 
 ### Page 6: ML Pipeline Performance
 
-- Display the trained regression pipeline steps and selected features.
-- Present model evaluation metrics for training and test datasets.
+- Display the trained regression pipeline steps and the seven selected features.
 - Checkbox to display the feature importance plot.
+- Present R² scores and MAE for the training and test datasets.
+- Checkbox to display actual versus predicted sale price plots.
+- Interpret the results.
 - Summarise model performance against the project's success criteria.
 
 ---
