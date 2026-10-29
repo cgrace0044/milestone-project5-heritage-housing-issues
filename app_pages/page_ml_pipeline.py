@@ -1,27 +1,33 @@
 
+
 import streamlit as st
 import pandas as pd
-import joblib
-from pathlib import Path
+import matplotlib.pyplot as plt
+
+from src.data_management import load_pkl_file
+from src.machine_learning.evaluate_reg import reg_performance
 
 
 def page_ml_pipeline_body():
 
-    st.write("### 🤖 ML Pipeline Performance")
-
-    # Load saved model artifacts
+    # Load saved pipeline files
     version = "v1"
-    model_path = Path(
-        f"outputs/ml_pipeline/predict_house_prices/{version}"
+    path = f"outputs/ml_pipeline/predict_house_prices/{version}"
+
+    pipeline = load_pkl_file(f"{path}/reg_pipeline.pkl")
+
+    feature_importance = plt.imread(
+        f"{path}/features_importance.png"
     )
 
-    pipeline = joblib.load(model_path / "reg_pipeline.pkl")
+    X_train = pd.read_csv(f"{path}/X_train.csv")
+    X_test = pd.read_csv(f"{path}/X_test.csv")
+    y_train = pd.read_csv(f"{path}/y_train.csv").squeeze("columns")
+    y_test = pd.read_csv(f"{path}/y_test.csv").squeeze("columns")
 
-    features = pd.read_csv(
-        model_path / "X_train.csv"
-    ).columns.to_list()
+    st.write("### 🤖 ML Pipeline Performance")
 
-    # Model performance summary
+    # Display pipeline training summary
     st.info(
         "The house price regression model achieved an "
         "**R² score of 0.912 on the training dataset** "
@@ -30,9 +36,9 @@ def page_ml_pipeline_body():
         "requirement of 0.75."
     )
 
-    st.divider()
+    st.write("---")
 
-    # Pipeline steps
+    # Show pipeline steps
     st.write("#### ML Pipeline Steps")
 
     st.write(pipeline)
@@ -40,13 +46,18 @@ def page_ml_pipeline_body():
     st.caption(
         "The final pipeline applies numerical transformations "
         "and feature scaling before predicting house prices "
-        "using an ExtraTreesRegressor with 50 trees and "
-        "the optimised hyperparameters."
+        "using an ExtraTreesRegressor."
     )
 
-    st.divider()
+    st.caption(
+        "Note: max_features=1.0 and min_impurity_decrease=0.0 "
+        "are not shown in the pipeline display because "
+        "they use their default values."
+    )
 
-    # Model features
+    st.write("---")
+
+    # Show selected features and their importance
     st.write("#### Features Used to Train the Model")
 
     st.write(
@@ -54,70 +65,37 @@ def page_ml_pipeline_body():
         "to predict house sale prices."
     )
 
-    st.write(features)
+    st.write(X_train.columns.to_list())
 
-    st.divider()
-
-    # Performance metrics
-    st.write("#### Model Evaluation Results")
-
-    performance = pd.DataFrame({
-        "Metric": [
-            "R² Score",
-            "Mean Absolute Error (MAE)"
-        ],
-        "Training": [
-            "0.912",
-            "$14,360"
-        ],
-        "Test": [
-            "0.808",
-            "$20,215"
-        ]
-    })
-
-    st.table(performance)
-
-    st.divider()
-
-    # Feature importance
     st.write("#### Feature Importance")
 
-    st.write(
+    st.info(
         "The feature importance chart shows which property "
         "attributes contribute most to the model's "
         "house price predictions."
     )
 
     if st.checkbox("Show Feature Importance Plot"):
-        st.image(
-            str(model_path / "features_importance.png"),
-            use_container_width=True
-        )
 
-    st.divider()
+        col1, col2, col3 = st.columns([1, 3, 1])
 
-    # Interpretation
-    st.write("#### Model Performance Interpretation")
+        with col2:
+            st.image(
+                feature_importance,
+                use_container_width=True
+            )
 
-    st.success(
-        "The model successfully met the project's "
-        "performance requirement, achieving an R² "
-        "score above 0.75 on both the training "
-        "and test datasets."
-    )
+    st.write("---")
 
-    st.write(
-        "On the test dataset, the model's predictions "
-        "differed from actual sale prices by approximately "
-        "**$20,215 on average**."
-    )
+    # Evaluate performance on both sets
+    st.write("### Pipeline Performance")
 
-    st.write(
-        "This means Lydia can use the model to estimate "
-        "house prices in Ames, Iowa, while understanding "
-        "that predictions are estimates rather than "
-        "guaranteed selling prices."
+    reg_performance(
+        X_train=X_train,
+        y_train=y_train,
+        X_test=X_test,
+        y_test=y_test,
+        pipeline=pipeline
     )
 
 
