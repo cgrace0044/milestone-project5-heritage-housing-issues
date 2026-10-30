@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from src.data_management import load_pkl_file
-from src.machine_learning.evaluate_reg import reg_performance
+from src.machine_learning.evaluate_reg import regression_performance
 
 
 def page_ml_pipeline_body():
@@ -35,12 +35,6 @@ def page_ml_pipeline_body():
     st.write(pipeline)
 
     st.caption(
-        "The final pipeline applies numerical transformations and "
-        "feature scaling before predicting house prices using an "
-        "ExtraTreesRegressor."
-    )
-
-    st.caption(
         "Note: max_features=1.0 and min_impurity_decrease=0.0 are not "
         "shown in the pipeline display because they use their default values."
     )
@@ -55,8 +49,8 @@ def page_ml_pipeline_body():
     st.write("#### Feature Importance")
 
     st.info(
-        "The feature importance chart shows which property attributes "
-        "contribute most to the model's house price predictions."
+    "The chart displays the seven features selected for "
+    "the final model, ranked by their importance."
     )
 
     if st.checkbox("Show Feature Importance Plot"):
@@ -69,10 +63,8 @@ def page_ml_pipeline_body():
 
     # Pipeline performance
     st.write("### Pipeline Performance")
-    reg_performance(X_train, y_train, X_test, y_test, pipeline)
+    regression_performance(X_train, y_train, X_test, y_test, pipeline)
 
 
 if __name__ == "__main__":
     page_ml_pipeline_body()
-
-

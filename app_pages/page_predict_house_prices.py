@@ -1,33 +1,16 @@
 
 import streamlit as st
 import pandas as pd
-import joblib
 from datetime import datetime
-
-
-@st.cache_resource
-def load_model():
-    return joblib.load(
-        "outputs/ml_pipeline/predict_house_prices/v1/reg_pipeline.pkl"
-    )
-
-
-@st.cache_data
-def load_model_features():
-    return pd.read_csv(
-        "outputs/ml_pipeline/predict_house_prices/v1/X_train.csv"
-    ).columns.to_list()
+from src.data_management import load_pkl_file
+from src.machine_learning.predictive_analysis_ui import predict_house_price
 
 
 @st.cache_data
 def load_historical_data():
-    train = pd.read_csv(
-        "outputs/datasets/cleaned/TrainSetCleaned.csv"
-    )
 
-    test = pd.read_csv(
-        "outputs/datasets/cleaned/TestSetCleaned.csv"
-    )
+    train = pd.read_csv("outputs/datasets/cleaned/TrainSetCleaned.csv")
+    test = pd.read_csv("outputs/datasets/cleaned/TestSetCleaned.csv")
 
     return pd.concat([train, test], ignore_index=True)
 
@@ -100,25 +83,6 @@ def DrawHouseInputsWidgets(df):
             step=50
         )
 
-        X_live["BsmtFinSF1"] = st.number_input(
-            "Finished Basement Area (sq ft)",
-            min_value=0,
-            value=int(df["BsmtFinSF1"].median()),
-            step=50
-        )
-
-        X_live["KitchenQual"] = st.selectbox(
-            "Kitchen Quality",
-            options=["Ex", "Gd", "TA", "Fa"],
-            index=2,
-            format_func=lambda value: {
-                "Ex": "Excellent",
-                "Gd": "Good",
-                "TA": "Typical / Average",
-                "Fa": "Fair"
-            }[value]
-        )
-
     return X_live
 
 
@@ -132,32 +96,26 @@ def page_predict_house_prices_body():
         "its property characteristics."
     )
 
-    pipeline = load_model()
-    features = load_model_features()
+    # Load pipeline and datasets
+    version = 'v1'
+    path = f"outputs/ml_pipeline/predict_house_prices/{version}"
+
+    pipeline = load_pkl_file(f"{path}/reg_pipeline.pkl")
+    features = pd.read_csv(f"{path}/X_train.csv").columns.to_list()
     historical_df = load_historical_data()
 
+    # Draw house input widgets
     X_live = DrawHouseInputsWidgets(historical_df)
-
-    # Match the model's training feature order
-    X_live = X_live[features]
 
     st.divider()
 
+    # Predict house price
     if st.button("Predict House Price"):
 
-        prediction = pipeline.predict(X_live)[0]
-
-        st.success("House price prediction completed.")
-
-        st.metric(
-            "Estimated House Sale Price",
-            f"${prediction:,.0f}"
-        )
-
-        st.write(
-            "This estimate is based on historical housing "
-            "data from Ames, Iowa. Actual sale prices "
-            "may differ."
+        predict_house_price(
+            X_live=X_live,
+            house_features=features,
+            pipeline=pipeline
         )
 
 

@@ -1,49 +1,32 @@
 
 import streamlit as st
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-
-from sklearn.metrics import r2_score, mean_absolute_error
+from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
 
 # Code adapted from the Modeling and Evaluation notebook
-def regression_metrics(y, prediction):
+def regression_performance(X_train, y_train, X_test, y_test, pipeline):
 
-    return {
-        "R² Score": f"{r2_score(y, prediction):.3f}",
-        "Mean Absolute Error (MAE)":
-            f"${mean_absolute_error(y, prediction):,.0f}"
-    }
-
-
-# Evaluate performance on training and test datasets
-def reg_performance(X_train, y_train, X_test, y_test, pipeline):
-
-    train_predictions = pipeline.predict(X_train)
-    test_predictions = pipeline.predict(X_test)
-
-    # Display performance metrics
     st.write("#### Model Evaluation Results")
 
-    train_metrics = regression_metrics(y_train, train_predictions)
-    test_metrics = regression_metrics(y_test, test_predictions)
+    train_results = regression_evaluation(X_train, y_train, pipeline)
+    test_results = regression_evaluation(X_test, y_test, pipeline)
 
     performance = pd.DataFrame({
-        "Metric": list(train_metrics.keys()),
-        "Training": list(train_metrics.values()),
-        "Test": list(test_metrics.values())
+        "Train Set": train_results,
+        "Test Set": test_results
     })
 
     st.table(performance)
 
-    test_mae = mean_absolute_error(y_test, test_predictions)
-
     st.success(
         "**Performance interpretation:** The model meets "
         "the required R² score of 0.75 on both datasets. "
-        f"On the test dataset, its predictions differ from "
-        f"actual sale prices by approximately ${test_mae:,.0f} "
+        "On the test dataset, its predictions differ from "
+        "actual sale prices by approximately $20,215 "
         "on average."
     )
 
@@ -60,43 +43,14 @@ def reg_performance(X_train, y_train, X_test, y_test, pipeline):
 
     if st.checkbox("Show Actual vs Predicted Plots"):
 
-        fig, axes = plt.subplots(1, 2, figsize=(12, 5))
-
-        sns.scatterplot(
-            x=y_train,
-            y=train_predictions,
-            alpha=0.5,
-            ax=axes[0]
+        regression_evaluation_plots(
+            X_train,
+            y_train,
+            X_test,
+            y_test,
+            pipeline,
+            alpha_scatter=0.5
         )
-
-        sns.scatterplot(
-            x=y_test,
-            y=test_predictions,
-            alpha=0.5,
-            ax=axes[1]
-        )
-
-        for ax, actual, predicted, title in [
-            (axes[0], y_train, train_predictions, "Training Dataset"),
-            (axes[1], y_test, test_predictions, "Test Dataset")
-        ]:
-            minimum = min(actual.min(), predicted.min())
-            maximum = max(actual.max(), predicted.max())
-
-            ax.plot(
-                [minimum, maximum],
-                [minimum, maximum],
-                color="red"
-            )
-
-            ax.set_title(title)
-            ax.set_xlabel("Actual Sale Price ($)")
-            ax.set_ylabel("Predicted Sale Price ($)")
-
-        fig.tight_layout()
-
-        st.pyplot(fig)
-        plt.close(fig)
 
         st.success(
             "**Graph interpretation:** Predictions generally "
@@ -105,3 +59,49 @@ def reg_performance(X_train, y_train, X_test, y_test, pipeline):
             "houses. The model also performs better on the training "
             "dataset than on unseen test data."
         )
+
+
+# Regression Evaluation function taken from Modelling and Evaluation Notebook
+def regression_evaluation(X, y, pipeline):
+
+    prediction = pipeline.predict(X)
+
+    return {
+        "R² Score": r2_score(y, prediction).round(3),
+        "Mean Absolute Error": mean_absolute_error(y, prediction).round(3),
+        "Mean Squared Error": mean_squared_error(y, prediction).round(3),
+        "Root Mean Squared Error":
+            np.sqrt(mean_squared_error(y, prediction)).round(3)
+    }
+
+
+# Regression Evaluation Plots function taken from Modelling and Evaluation Notebook
+def regression_evaluation_plots(
+    X_train, y_train, X_test, y_test, pipeline, alpha_scatter=0.5
+):
+
+    pred_train = pipeline.predict(X_train)
+    pred_test = pipeline.predict(X_test)
+
+    fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(12, 6))
+
+    sns.scatterplot(
+        x=y_train, y=pred_train,
+        alpha=alpha_scatter, ax=axes[0]
+    )
+    sns.lineplot(x=y_train, y=y_train, color='red', ax=axes[0])
+    axes[0].set_xlabel("Actual")
+    axes[0].set_ylabel("Predictions")
+    axes[0].set_title("Train Set")
+
+    sns.scatterplot(
+        x=y_test, y=pred_test,
+        alpha=alpha_scatter, ax=axes[1]
+    )
+    sns.lineplot(x=y_test, y=y_test, color='red', ax=axes[1])
+    axes[1].set_xlabel("Actual")
+    axes[1].set_ylabel("Predictions")
+    axes[1].set_title("Test Set")
+
+    st.pyplot(fig)
+    plt.close(fig)
