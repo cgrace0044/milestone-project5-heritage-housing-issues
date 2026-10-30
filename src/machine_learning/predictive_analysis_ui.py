@@ -1,6 +1,5 @@
 
 import streamlit as st
-import pandas as pd
 
 
 def predict_inherited_house_prices(X_live, house_features, pipeline):
@@ -12,31 +11,32 @@ def predict_inherited_house_prices(X_live, house_features, pipeline):
     house_predictions = pipeline.predict(X_live_house)
 
     # create a logic to display the results
-    results = pd.DataFrame({
-        "House": [f"House {i + 1}" for i in range(len(house_predictions))],
-        "Estimated Sale Price ($)": house_predictions
-    })
+    st.write("#### 🏠 Estimated Sale Prices")
 
-    st.success(
-        "The estimated sale prices of Lydia's "
-        "four inherited houses are:"
-    )
+    col1, col2, col3, col4 = st.columns(4)
 
-    st.dataframe(
-        results.style.format({
-            "Estimated Sale Price ($)": "${:,.0f}"
-        }),
-        hide_index=True
-    )
+    with col1:
+        st.write("**House 1**")
+        st.write(f"${house_predictions[0]:,.0f}")
 
-    st.metric(
-        "Total Estimated Value",
-        f"${house_predictions.sum():,.0f}"
-    )
+    with col2:
+        st.write("**House 2**")
+        st.write(f"${house_predictions[1]:,.0f}")
 
-    st.write(
-        "These values are estimates based on historical "
-        "house sales in Ames, Iowa. Actual sale prices may differ."
+    with col3:
+        st.write("**House 3**")
+        st.write(f"${house_predictions[2]:,.0f}")
+
+    with col4:
+        st.write("**House 4**")
+        st.write(f"${house_predictions[3]:,.0f}")
+
+    st.write("**Combined Estimated Value**")
+    st.markdown(f"### 💰 ${house_predictions.sum():,.0f}")
+
+    st.info(
+        "These estimates are based on historical house sales "
+        "in Ames, Iowa. Actual sale prices may differ."
     )
 
     return house_predictions

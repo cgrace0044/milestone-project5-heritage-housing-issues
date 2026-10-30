@@ -15,30 +15,52 @@ def page_inherited_houses_body():
         "to estimate the sale price of each property."
     )
 
-    # Load pipeline and datasets
+    # Load pipeline files
     version = 'v1'
     path = f"outputs/ml_pipeline/predict_house_prices/{version}"
 
     pipeline = load_pkl_file(f"{path}/reg_pipeline.pkl")
     features = pd.read_csv(f"{path}/X_train.csv").columns.to_list()
+
+    # Load inherited houses data
     inherited_houses = pd.read_csv(
         "outputs/datasets/collection/inherited_houses.csv"
     )
 
-    # Inspect the four inherited houses
-    if st.checkbox("Inspect Four Inherited Houses"):
+    st.write("---")
+
+    # Display inherited houses
+    st.write("#### 🏡 The Four Inherited Houses")
+
+    st.write(
+        "Explore the property details before generating "
+        "their estimated sale prices."
+    )
+
+    if st.checkbox("Show Inherited Houses Data"):
+
         st.write(
             f"The dataset contains {inherited_houses.shape[0]} "
             f"houses and {inherited_houses.shape[1]} attributes."
         )
 
-        st.dataframe(inherited_houses)
+        st.dataframe(inherited_houses, use_container_width=True)
 
-    st.divider()
+    st.write("---")
 
-    st.write("### 🏠 Predicted Sale Prices")
+    # Predict inherited house prices
+    st.write("#### 💰 Property Valuation")
 
-    if st.button("Predict Inherited House Prices"):
+    st.write(
+        "Click the button below to estimate the sale price "
+        "of each inherited house and their combined value."
+    )
+
+    if st.button(
+        "Predict House Prices",
+        icon=":material/house:",
+        type="secondary"
+    ):
 
         predict_inherited_house_prices(
             X_live=inherited_houses,
