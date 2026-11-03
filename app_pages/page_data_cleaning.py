@@ -1,8 +1,8 @@
-
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from sklearn.model_selection import train_test_split
 
 
 sns.set_style("whitegrid")
@@ -10,9 +10,19 @@ sns.set_style("whitegrid")
 
 @st.cache_data
 def load_original_data():
-    return pd.read_csv(
+
+    df = pd.read_csv(
         "outputs/datasets/collection/house_prices_records.csv"
     )
+
+    TrainSet, TestSet, _, __ = train_test_split(
+        df,
+        df['SalePrice'],
+        test_size=0.2,
+        random_state=0
+    )
+
+    return TrainSet
 
 
 def plot_data_distributions(df):
@@ -103,4 +113,3 @@ def page_data_cleaning_body():
 
 if __name__ == "__main__":
     page_data_cleaning_body()
-

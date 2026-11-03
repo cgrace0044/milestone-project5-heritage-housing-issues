@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -43,27 +42,13 @@ def load_inherited_houses():
 # Scatterplot based on the Jupyter notebook
 def scatter_plot_for_eda(df, col, target_var):
 
-    if col in ["GarageArea", "TotalBsmtSF"]:
+    # Exclude zero values from selected scatter plots
+    if col in ['GarageArea', 'TotalBsmtSF']:
         df = df[df[col] > 0]
 
-    fig, ax = plt.subplots(figsize=(10, 5))
-
-    sns.scatterplot(
-        data=df,
-        x=col,
-        y=target_var,
-        ax=ax
-    )
-
-    ax.set_title(
-        f"{col} vs {target_var}",
-        fontsize=18
-    )
-    ax.set_xlabel(col, fontsize=13)
-    ax.set_ylabel(target_var, fontsize=13)
-    ax.tick_params(axis="both", labelsize=11)
-
-    fig.tight_layout()
+    fig = plt.figure(figsize=(12, 6))
+    sns.scatterplot(data=df, x=col, y=target_var)
+    plt.title(f"{col} vs {target_var}", fontsize=20, y=1.05)
 
     st.pyplot(fig)
     plt.close(fig)

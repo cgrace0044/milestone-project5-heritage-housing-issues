@@ -11,7 +11,7 @@ def page_inherited_houses_body():
 
     st.info(
         "Lydia Doe has inherited four houses in Ames, Iowa. "
-        "This page uses the trained machine learning model "
+        "This page uses the regression machine learning model "
         "to estimate the sale price of each property."
     )
 
@@ -33,16 +33,10 @@ def page_inherited_houses_body():
     st.write("#### 🏡 The Four Inherited Houses")
 
     st.write(
-        "Explore the property details before generating "
-        "their estimated sale prices."
+        "Explore the property details by clicking on the checkbox."
     )
 
     if st.checkbox("Show Inherited Houses Data"):
-
-        st.write(
-            f"The dataset contains {inherited_houses.shape[0]} "
-            f"houses and {inherited_houses.shape[1]} attributes."
-        )
 
         st.dataframe(inherited_houses, use_container_width=True)
 
