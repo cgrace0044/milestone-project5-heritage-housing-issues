@@ -22,12 +22,14 @@ def regression_performance(X_train, y_train, X_test, y_test, pipeline):
 
     st.table(performance)
 
-    st.success(
-        "**Performance interpretation:** The model meets "
-        "the required R² score of 0.75 on both datasets. "
-        "On the test dataset, its predictions differ from "
-        "actual sale prices by approximately $20,215 "
-        "on average."
+    st.write(
+    "**Performance interpretation:**\n\n"
+    "- **R²:** The model explains approximately 81% of the variation "
+    "in sale prices for unseen houses.\n"
+    "- **Prediction error:** Estimated prices differ from actual "
+    "sale prices by approximately 20,215 on average.\n"
+    "- **Reliability:** The model performs better on training data "
+    "than on test data, so predictions should be treated as estimates "
     )
 
     st.write("---")
@@ -52,12 +54,10 @@ def regression_performance(X_train, y_train, X_test, y_test, pipeline):
             alpha_scatter=0.5
         )
 
-        st.success(
-            "**Graph interpretation:** Predictions generally "
-            "follow actual sale prices, but the model is less "
-            "accurate when predicting the prices of more expensive "
-            "houses. The model also performs better on the training "
-            "dataset than on unseen test data."
+        st.write(
+        "**Graph interpretation:** Predictions generally follow actual "
+        "sale prices, although errors are larger for more expensive houses. "
+        "The model performs better on training data than on unseen test data."
         )
 
 

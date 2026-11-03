@@ -1,69 +1,100 @@
-
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+
 from src.data_management import load_pkl_file
 from src.machine_learning.evaluate_reg import regression_performance
 
 
 def page_ml_pipeline_body():
 
-    # Load pipeline files
-    version = 'v1'
-    path = f"outputs/ml_pipeline/predict_house_prices/{version}"
-
-    pipeline = load_pkl_file(f"{path}/reg_pipeline.pkl")
-    features_importance = plt.imread(f"{path}/features_importance.png")
-    X_train = pd.read_csv(f"{path}/X_train.csv")
-    X_test = pd.read_csv(f"{path}/X_test.csv")
-    y_train = pd.read_csv(f"{path}/y_train.csv").squeeze("columns")
-    y_test = pd.read_csv(f"{path}/y_test.csv").squeeze("columns")
-
     st.write("### 🤖 ML Pipeline Performance")
 
     st.info(
-        "The house price regression model achieved an "
-        "**R² score of 0.912 on the training dataset** "
-        "and **0.808 on the test dataset**. "
-        "Both scores exceed the project's minimum requirement of 0.75."
+        "**Performance interpretation:**\n\n"
+        "- **R²:** The model achieved 0.91 on the training set "
+        "and 0.81 on the test set, meeting the client's "
+        "minimum requirement of 0.75.\n"
+        "- **Prediction error:** The average absolute error was "
+        "approximately 14,360 on the training set and 20,215 "
+        "on the test set. The higher RMSE indicates some "
+        "larger prediction errors.\n"
+        "- **Prediction plots:** The model performs better on "
+        "lower-priced properties but is less accurate for "
+        "some expensive houses."
     )
+
+    version = "v1"
+    path = f"outputs/ml_pipeline/predict_house_prices/{version}"
+
+    pipeline = load_pkl_file(f"{path}/reg_pipeline.pkl")
+
+    X_train = pd.read_csv(f"{path}/X_train.csv")
+    X_test = pd.read_csv(f"{path}/X_test.csv")
+
+    y_train = pd.read_csv(f"{path}/y_train.csv").squeeze("columns")
+    y_test = pd.read_csv(f"{path}/y_test.csv").squeeze("columns")
 
     st.write("---")
 
-    # ML pipeline
-    st.write("#### ML Pipeline Steps")
-    st.write(pipeline)
+    # ML Pipeline
+    st.write("#### ⚙️ ML Pipeline")
 
-    st.caption(
-        "Note: max_features=1.0 and min_impurity_decrease=0.0 are not "
-        "shown in the pipeline display because they use their default values."
+    st.write(
+        "The final model uses **ExtraTreesRegressor** with optimised "
+        "hyperparameters and the seven most important house attributes."
     )
+
+    if st.checkbox("View ML Pipeline"):
+
+        st.write(pipeline)
+
+        st.caption(
+            "The hyperparameters `max_features=1.0` and "
+            "`min_impurity_decrease=0.0` do not appear above because "
+            "they match the default values of ExtraTreesRegressor. "
+            "Both were explicitly defined during optimisation."
+        )
 
     st.write("---")
 
-    # Features
-    st.write("#### Features Used to Train the Model")
-    st.write("The model uses seven property attributes to predict house sale prices.")
-    st.write(X_train.columns.to_list())
+    # Selected features
+    st.write("#### 🏡 Selected House Attributes")
 
-    st.write("#### Feature Importance")
-
-    st.info(
-    "The chart displays the seven features selected for "
-    "the final model, ranked by their importance."
+    st.write(
+        "- Overall Quality (`OverallQual`)\n"
+        "- Above-Ground Living Area (`GrLivArea`)\n"
+        "- Year Built (`YearBuilt`)\n"
+        "- Garage Area (`GarageArea`)\n"
+        "- Total Basement Area (`TotalBsmtSF`)\n"
+        "- First-Floor Area (`1stFlrSF`)\n"
+        "- Year Last Remodelled (`YearRemodAdd`)"
     )
 
-    if st.checkbox("Show Feature Importance Plot"):
-        col1, col2, col3 = st.columns([1, 3, 1])
+    if st.checkbox("View Feature Importance"):
 
-        with col2:
-            st.image(features_importance, use_container_width=True)
+        col1, col2 = st.columns([3, 1])
+
+        with col1:
+            st.image(f"{path}/features_importance.png")
+
+        st.success(
+            "**Feature importance interpretation:** "
+            "Overall quality was the most important feature "
+            "by a considerable margin."
+        )
 
     st.write("---")
 
-    # Pipeline performance
-    st.write("### Pipeline Performance")
-    regression_performance(X_train, y_train, X_test, y_test, pipeline)
+    # Model evaluation
+    st.write("#### 📊 Model Evaluation Results")
+
+    regression_performance(
+        X_train,
+        y_train,
+        X_test,
+        y_test,
+        pipeline
+    )
 
 
 if __name__ == "__main__":

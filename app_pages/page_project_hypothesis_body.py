@@ -6,10 +6,10 @@ def page_project_hypothesis_body():
     st.write("### 🌿 Project Hypothesis and Validation")
 
     st.info(
-        "Three hypotheses were tested using Pearson and "
-        "Spearman correlation analysis and scatterplots "
-        "to investigate relationships between house "
-        "attributes and sale prices."
+        "Three hypotheses were tested using correlation analysis "
+        "and scatterplots. The Spearman correlation heatmap and "
+        "supporting scatterplots are available on the "
+        "**House Sales Price Study** page."
     )
 
     st.write("---")
@@ -23,10 +23,8 @@ def page_project_hypothesis_body():
     )
 
     st.write(
-        "**Validation:** Correlation analysis and scatterplots "
-        "showed a strong positive relationship between "
-        "`OverallQual` and `SalePrice`. Higher-quality houses "
-        "generally achieved higher sale prices."
+        "**Validation:** `OverallQual` had the strongest positive "
+        "correlation with `SalePrice` (0.81)."
     )
 
     st.success("✓ Supported")
@@ -42,11 +40,8 @@ def page_project_hypothesis_body():
     )
 
     st.write(
-        "**Validation:** Correlation analysis and scatterplots "
-        "showed a positive relationship between `GrLivArea` "
-        "and `SalePrice`. Prices generally increased with "
-        "living area, although some unusually large houses "
-        "had lower sale prices."
+        "**Validation:** `GrLivArea` had the second strongest "
+        "positive correlation with `SalePrice` (0.73)."
     )
 
     st.success("✓ Supported")
@@ -61,22 +56,12 @@ def page_project_hypothesis_body():
     )
 
     st.write(
-        "**Validation:** Correlation analysis and scatterplots "
-        "showed a positive relationship between `YearBuilt` "
-        "and `SalePrice`. Newer houses generally sold for "
-        "higher prices than older houses."
+        "**Validation:** `YearBuilt` had a positive correlation "
+        "with `SalePrice` (0.65), joint third strongest "
+        "with `GarageArea`."
     )
 
     st.success("✓ Supported")
-
-    st.write("---")
-
-    st.write(
-        "**Conclusion:** All three hypotheses were supported "
-        "by the correlation analysis and scatterplots. "
-        "The supporting visualisations can be explored on "
-        "the **House Sales Price Study** page."
-    )
 
 
 if __name__ == "__main__":
