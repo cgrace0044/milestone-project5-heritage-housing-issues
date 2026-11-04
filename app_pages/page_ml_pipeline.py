@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 
@@ -10,17 +11,10 @@ def page_ml_pipeline_body():
     st.write("### 🤖 ML Pipeline Performance")
 
     st.info(
-        "**Performance interpretation:**\n\n"
-        "- **R²:** The model achieved 0.91 on the training set "
-        "and 0.81 on the test set, meeting the client's "
-        "minimum requirement of 0.75.\n"
-        "- **Prediction error:** The average absolute error was "
-        "approximately 14,360 on the training set and 20,215 "
-        "on the test set. The higher RMSE indicates some "
-        "larger prediction errors.\n"
-        "- **Prediction plots:** The model performs better on "
-        "lower-priced properties but is less accurate for "
-        "some expensive houses."
+        "The final machine learning pipeline predicts house sale prices "
+        "using seven selected property attributes. This page presents "
+        "the pipeline, feature importance, and model performance "
+        "on the training and test datasets."
     )
 
     version = "v1"

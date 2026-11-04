@@ -10,8 +10,6 @@ from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 # Code adapted from the Modeling and Evaluation notebook
 def regression_performance(X_train, y_train, X_test, y_test, pipeline):
 
-    st.write("#### Model Evaluation Results")
-
     train_results = regression_evaluation(X_train, y_train, pipeline)
     test_results = regression_evaluation(X_test, y_test, pipeline)
 
@@ -22,14 +20,15 @@ def regression_performance(X_train, y_train, X_test, y_test, pipeline):
 
     st.table(performance)
 
-    st.write(
-    "**Performance interpretation:**\n\n"
-    "- **R²:** The model explains approximately 81% of the variation "
-    "in sale prices for unseen houses.\n"
-    "- **Prediction error:** Estimated prices differ from actual "
-    "sale prices by approximately 20,215 on average.\n"
-    "- **Reliability:** The model performs better on training data "
-    "than on test data, so predictions should be treated as estimates "
+    st.info(
+        "**Performance interpretation:**\n\n"
+        "- **R²:** The model achieved 0.91 on the training set "
+        "and 0.81 on the test set, meeting the client's "
+        "minimum requirement of 0.75.\n"
+        "- **Prediction error:** The average absolute error was "
+        "approximately 14,360 on the training set and 20,215 "
+        "on the test set. The higher RMSE indicates some "
+        "larger prediction errors.\n"
     )
 
     st.write("---")
@@ -55,9 +54,9 @@ def regression_performance(X_train, y_train, X_test, y_test, pipeline):
         )
 
         st.write(
-        "**Graph interpretation:** Predictions generally follow actual "
-        "sale prices, although errors are larger for more expensive houses. "
-        "The model performs better on training data than on unseen test data."
+            "**Graph interpretation:** Predictions generally follow actual "
+            "sale prices, although errors are larger for more expensive houses. "
+            "The model performs better on training data than on unseen test data."
         )
 
 
