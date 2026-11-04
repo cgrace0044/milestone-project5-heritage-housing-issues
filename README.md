@@ -20,7 +20,7 @@ The project will deliver a Streamlit dashboard that allows Lydia to explore the 
 
 ## 📊 Dataset Content
 
-The dataset was sourced from <a href="https://www.kaggle.com/codeinstitute/housing-prices-data" target="_blank">Kaggle</a> and contains housing records from **Ames, Iowa, USA**. It is used within a fictitious business scenario where predictive analytics can help estimate residential property values.
+The dataset was sourced from <a href="https://www.kaggle.com/codeinstitute/housing-prices-data" target="_blank">Kaggle</a> and contains housing records from **Ames, Iowa, USA**.
 
 ### 📋 Dataset Overview
 
@@ -32,8 +32,6 @@ The dataset was sourced from <a href="https://www.kaggle.com/codeinstitute/housi
 | **Location** | Ames, Iowa, USA |
 | **Construction years represented** | 1872–2010 |
 | **Analysis type** | Regression / Predictive Analytics |
-
-The dataset describes a range of property characteristics, including floor area, basement and garage features, kitchen quality, lot dimensions, property condition and quality, construction dates, and sale price.
 
 ### 🏠 Variable Definitions
 
@@ -71,15 +69,13 @@ The dataset describes a range of property characteristics, including floor area,
 
 ---
 
-## Project Terms & Jargon
+### Project Terms & Jargon
 
-The following terms are used throughout the project and its Streamlit dashboard:
-
-- **SalePrice:** The price at which a house was sold. This is the target variable the machine learning model aims to predict.
-- **House attributes:** Property characteristics such as living area, overall quality, year built, garage area, basement size and kitchen quality.
-- **Correlation:** A statistical relationship between two variables, used in this project to investigate how house attributes relate to sale prices.
-- **Regression:** A machine learning technique used to predict numerical values, such as house sale prices.
-- **R² score:** A measure of how well the regression model explains variation in house sale prices.
+    - SalePrice: The price at which a house was sold.
+    - House attributes: Property characteristics such as living area, overall quality, year built, garage area and basement size.
+    - Correlation: A measure of how strongly two variables are related. It helps identify which house attributes are associated with sale prices.
+    - Regression: A machine learning technique used to predict numerical values, such as house prices.
+    - R² Score: A measure of how well the model explains differences in house prices. A higher score generally indicates better performance.
   
 ---
 
