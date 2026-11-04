@@ -1,3 +1,4 @@
+
 import streamlit as st
 
 
@@ -6,10 +7,10 @@ def page_project_hypothesis_body():
     st.write("### 🌿 Project Hypothesis and Validation")
 
     st.info(
-        "Three hypotheses were tested using correlation analysis "
-        "and scatterplots. The Spearman correlation heatmap and "
-        "supporting scatterplots are available on the "
-        "**House Sales Price Study** page."
+        "Three hypotheses were tested using Pearson and Spearman "
+        "correlation analysis, scatterplots, and heatmaps. "
+        "The **House Sales Price Study** page presents these "
+        "findings in detail."
     )
 
     st.write("---")
@@ -23,8 +24,8 @@ def page_project_hypothesis_body():
     )
 
     st.write(
-        "**Validation:** `OverallQual` had the strongest positive "
-        "correlation with `SalePrice` (0.81)."
+        "**Validation:** `OverallQual` showed the strongest positive "
+        "correlation with `SalePrice` (0.81) of all variables studied."
     )
 
     st.success("✓ Supported")
@@ -40,7 +41,7 @@ def page_project_hypothesis_body():
     )
 
     st.write(
-        "**Validation:** `GrLivArea` had the second strongest "
+        "**Validation:** `GrLivArea` showed the second strongest "
         "positive correlation with `SalePrice` (0.73)."
     )
 
@@ -56,9 +57,9 @@ def page_project_hypothesis_body():
     )
 
     st.write(
-        "**Validation:** `YearBuilt` had a positive correlation "
-        "with `SalePrice` (0.65), joint third strongest "
-        "with `GarageArea`."
+        "**Validation:** `YearBuilt` showed a positive correlation "
+        "with `SalePrice` (0.65), although this relationship was "
+        "weaker than those observed for overall quality and living area."
     )
 
     st.success("✓ Supported")
