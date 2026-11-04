@@ -8,11 +8,13 @@ def page_summary_body():
 
     # Project introduction
     st.write(
-        "Lydia Doe has inherited four houses in Ames, Iowa, USA. "
-        "She wants to understand their value before selling them. "
-        "This project explores how house attributes relate to sale prices "
-        "and uses machine learning to predict the value of her "
-        "inherited properties."
+        "Lydia Doe has inherited four houses in Ames, Iowa, USA, "
+        "and wants to understand their value before selling them. "
+        "She found a public dataset containing historical house sale "
+        "prices in the area. This project explores how house "
+        "attributes relate to sale prices and uses machine learning "
+        "to predict the value of her four inherited properties "
+        "and other houses in Ames."
     )
 
     st.divider()
@@ -53,12 +55,13 @@ def page_summary_body():
 
     st.success(
         "The project has **2 business requirements**:\n\n"
-        "* **1 -** The client wants to understand how "
-        "**house attributes correlate with sale prices**, "
-        "using data visualisations.\n\n"
-        "* **2 -** The client wants to **predict sale prices** "
-        "for her **4 inherited houses** and other houses "
-        "in Ames, Iowa."
+        "**BR1 —** The client is interested in discovering how the "
+        "**house attributes correlate with the sale price**. "
+        "Therefore, the client expects **data visualisations** of the "
+        "correlated variables against the sale price to show that.\n\n"
+        "**BR2 —** The client is interested in **predicting the house "
+        "sales price** from her **four inherited houses**, and any "
+        "other house in Ames, Iowa."
     )
 
     st.divider()
