@@ -327,15 +327,18 @@ There are no unfixed bugs.
 
 ### Heroku
 
-* The App live link is: <https://project5-heritage-housing-25399c2d2f27.herokuapp.com/>
-* Set the .python-version Python version to a [Heroku-24](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
+- **GitHub repository:** [Heritage Housing Issues](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues)
+- **Live application:** [Heritage Housing Issues](YOUR_HEROKU_APP_URL)
+- Set the Python version in `.python-version` to a version supported by the [Heroku-24 stack](https://devcenter.heroku.com/articles/python-support#supported-runtimes).
 
-1. Log in to Heroku and create an App.
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select main, then click Deploy Branch.
+The project was deployed to Heroku using the following steps:
 
+1. Log in to Heroku and create a new app.
+2. In the **Deploy** tab, select **GitHub** as the deployment method.
+3. Search for the `milestone-project5-heritage-housing-issues` repository and click **Connect**.
+4. Select the branch to deploy and click **Deploy Branch**.
+5. Once deployment is complete, click **Open App** to access the application.
+6. If the slug size is too large, add unnecessary large files to `.slugignore`.
 
 ---
 
