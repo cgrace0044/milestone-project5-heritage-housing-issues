@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -15,9 +16,10 @@ def load_original_data():
         "outputs/datasets/collection/house_prices_records.csv"
     )
 
+    # Recreate the original training split as we want to show data prior to cleaning.
     TrainSet, TestSet, _, __ = train_test_split(
         df,
-        df['SalePrice'],
+        df["SalePrice"],
         test_size=0.2,
         random_state=0
     )
@@ -25,30 +27,23 @@ def load_original_data():
     return TrainSet
 
 
-def plot_data_distributions(df):
+# Plotting code adapted from the Data Cleaning Jupyter notebook.
+def plot_data_distributions(TrainSet):
 
-    variables = {
-        "BedroomAbvGr": "Number of Bedrooms",
-        "LotFrontage": "Street Frontage",
-        "MasVnrArea": "Masonry Veneer Area",
-        "2ndFlrSF": "Second-Floor Area"
-    }
+    variables = [
+        "BedroomAbvGr",
+        "LotFrontage",
+        "MasVnrArea",
+        "2ndFlrSF"
+    ]
 
-    fig, axes = plt.subplots(2, 2, figsize=(10, 6))
+    fig, axes = plt.subplots(2, 2, figsize=(12, 8))
 
-    for ax, (column, label) in zip(
-        axes.flatten(),
-        variables.items()
-    ):
-        sns.violinplot(
-            y=df[column].dropna(),
-            ax=ax
-        )
+    for ax, col in zip(axes.flatten(), variables):
+        sns.violinplot(y=TrainSet[col].dropna(), ax=ax)
+        ax.set_title(col)
 
-        ax.set_title(label, fontsize=12)
-        ax.set_ylabel("")
-
-    fig.tight_layout()
+    plt.tight_layout()
     st.pyplot(fig)
     plt.close(fig)
 
@@ -57,20 +52,19 @@ def page_data_cleaning_body():
 
     st.write("### 🧹 Data Cleaning")
 
+    # Introduction
     st.write(
-        "Data cleaning helps improve the reliability "
-        "of house price predictions."
-    )
-
-    st.markdown(
-        "- **Historical housing dataset:** Missing values "
-        "required cleaning.\n"
-        "- **Inherited housing dataset:** No missing values, "
-        "so no cleaning was needed."
+        "The historical housing dataset contained missing values "
+        "and some attributes that were not needed for modelling. "
+        "Data cleaning was carried out to address these issues, "
+        "improve data quality and prepare the dataset for machine "
+        "learning. The inherited housing dataset did not require "
+        "any cleaning as there were no missing values."
     )
 
     st.divider()
 
+    # Cleaning methods
     st.write("#### 🛠️ How the Data Was Cleaned")
 
     st.markdown(
@@ -85,18 +79,22 @@ def page_data_cleaning_body():
         "and `2ndFlrSF` were filled using median imputation."
     )
 
+    # Numerical distributions
     with st.expander("📊 View Numerical Data Distributions"):
 
         st.info(
-            "Median imputation was used because it is less "
-            "affected by unusually high or low values."
+            "Median imputation replaces missing numerical values "
+            "with the median (middle value) of each attribute. "
+            "It was chosen because it is less affected by "
+            "unusually high or low values."
         )
 
-        df = load_original_data()
-        plot_data_distributions(df)
+        TrainSet = load_original_data()
+        plot_data_distributions(TrainSet)
 
     st.divider()
 
+    # Cleaning outcome
     st.write("#### ✅ Cleaning Outcome")
 
     col1, col2, col3 = st.columns(3)
