@@ -192,29 +192,11 @@ Click on each epic to view its user stories.
 
 Three hypotheses were tested using Pearson and Spearman correlation analysis, scatterplots, and heatmaps. The **House Sales Price Study** page presents these findings in detail.
 
-#### 🏡 Hypothesis 1 — Overall Quality
-
-Houses with **higher overall quality** are expected to have higher sale prices.
-
-**Validation:** `OverallQual` showed the strongest positive correlation with `SalePrice` (0.81) of all variables studied.
-
-**✓ Supported**
-
-#### 📐 Hypothesis 2 — Living Area
-
-Houses with **larger living areas** are expected to have higher sale prices.
-
-**Validation:** `GrLivArea` showed the second strongest positive correlation with `SalePrice` (0.73).
-
-**✓ Supported**
-
-#### 📅 Hypothesis 3 — Year Built
-
-**Newer houses** are expected to have higher sale prices.
-
-**Validation:** `YearBuilt` showed a positive correlation with `SalePrice` (0.65), although this relationship was weaker than those observed for overall quality and living area.
-
-**✓ Supported**
+| Hypothesis | Expected Relationship | Validation | Outcome |
+|---|---|---|---|
+| 🏡 **1. Overall Quality** | Houses with **higher overall quality** are expected to have higher sale prices. | `OverallQual` showed the strongest positive correlation with `SalePrice` (0.81) of all variables studied. | ✓ Supported |
+| 📐 **2. Living Area** | Houses with **larger living areas** are expected to have higher sale prices. | `GrLivArea` showed the second strongest positive correlation with `SalePrice` (0.73). | ✓ Supported |
+| 📅 **3. Year Built** | **Newer houses** are expected to have higher sale prices. | `YearBuilt` showed a positive correlation with `SalePrice` (0.65), although this relationship was weaker than those observed for overall quality and living area. | ✓ Supported |
 
 ---
 
