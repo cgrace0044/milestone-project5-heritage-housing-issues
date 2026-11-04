@@ -20,7 +20,7 @@ The project will deliver a Streamlit dashboard that allows Lydia to explore the 
 
 ## 📊 Dataset Content
 
-The dataset was sourced from <a href="https://www.kaggle.com/codeinstitute/housing-prices-data" target="_blank">Kaggle</a> and contains housing records from **Ames, Iowa, USA**.
+The dataset was sourced from <a href="https://www.kaggle.com/codeinstitute/housing-prices-data" target="_blank">Kaggle</a> and contains housing records from **Ames, Iowa, USA**. This is a publicly souced dataset so there are no privacy concerns.
 
 ### 📋 Dataset Overview
 
@@ -81,27 +81,11 @@ The dataset was sourced from <a href="https://www.kaggle.com/codeinstitute/housi
 
 ## 🎯 Business Requirements
 
-### Client Background
-
-As a good friend, you are requested by your friend, who has received an inheritance from a deceased great-grandfather located in Ames, Iowa, to help in maximising the sales price for the inherited properties.
-
-Although your friend has an excellent understanding of property prices in her own state and residential area, she fears that basing her estimates for property worth on her current knowledge might lead to inaccurate appraisals. What makes a house desirable and valuable where she comes from might not be the same in Ames, Iowa. She found a public dataset with house prices for Ames, Iowa, and will provide you with that.
-
 ### Business Requirements
 
 1. The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualisations of the correlated variables against the sale price to show that.
 
 2. The client is interested in predicting the house sale price from her four inherited houses and any other house in Ames, Iowa.
-
-### Prediction Error
-
-The client requires the predictive model to achieve an R² score of at least **0.75 on both the training and test datasets**.
-
-An R² score of 0.75 indicates that the model explains approximately 75% of the variation in house sale prices.
-
-The model is designed to provide an **estimated sale price rather than an exact property valuation** this is why 0.75 is deemed to be sufficient in this case.
-
-In other machine learning models, for example diagnostics a higher R² score would be required.
 
 ---
 
