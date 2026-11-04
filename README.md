@@ -1,5 +1,7 @@
 # 🏠 Heritage Housing Issues
 
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white) ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white) ![Portfolio Project 5](https://img.shields.io/badge/Portfolio_Project-5-237F82?style=flat-square)
+
 ---
 
 ## 🏠 Project Overview
@@ -30,7 +32,6 @@ The dataset was sourced from <a href="https://www.kaggle.com/codeinstitute/housi
 ### 🏠 Variable Definitions
 
 <details>
-
 <summary><strong>Click to view the dataset variable definitions</strong></summary>
 
 | Variable | Meaning | Values / Range |
@@ -59,7 +60,6 @@ The dataset was sourced from <a href="https://www.kaggle.com/codeinstitute/housi
 |YearBuilt|Original construction date|1872 - 2010|
 |YearRemodAdd|Remodel date (same as construction date if no remodelling or additions)|1950 - 2010|
 |SalePrice|Sale Price|34900 - 755000|
-
 </details>
 
 ### Project Terms & Jargon
@@ -118,57 +118,36 @@ The [GitHub Project Board](https://github.com/users/cgrace0044/projects/6/views/
 Click on each epic to view its user stories.
 
 <details>
-
 <summary><strong>📋 Epic 1: Information Gathering and Data Collection</strong></summary>
 
 - **[User Story 1 — Understanding the Business Case](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/1)** — As a data practitioner, I want to understand the client's business problem, objectives, requirements and success criteria so that I can plan the project to meet the client's needs.
-
 - **[User Story 2 — Collect and Explore the Data](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/2)** — As a data practitioner, I want to collect and explore the Heritage Housing data so that I can assess its suitability for analysing house prices and developing a prediction model.
-
 </details>
-
 <details>
-
 <summary><strong>📊 Epic 2: Data Visualisation, Cleaning and Preparation</strong></summary>
 
 - **[User Story 3 — Clean and Prepare Datasets](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/3)** — As a data practitioner, I want to clean and prepare the Heritage Housing datasets so that they are suitable for analysis and regression machine learning.
-
 - **[User Story 4 — Patterns and Correlations in the Data](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/4)** — As a data practitioner, I want to perform a correlation analysis and prepare data visualisations so that I can advise the client which house attributes are most strongly associated with sale prices.
-
 - **[User Story 5 — Feature Engineering](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/5)** — As a data practitioner, I want to perform feature engineering so that the data is ready for training a regression machine learning model.
-
 </details>
-
 <details>
-
 <summary><strong>🤖 Epic 3: Model Training, Optimisation and Validation</strong></summary>
 
 - **[User Story 6 — Develop a Regression Model](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/6)** — As a data practitioner, I want to develop and compare regression machine learning models so that I can identify a suitable method for predicting house sale prices.
-
 - **[User Story 7 — Optimise Regression Machine Learning Model](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/7)** — As a data practitioner, I want to optimise the machine learning model so that I can improve the selected model's performance.
-
 </details>
-
 <details>
-
 <summary><strong>🖥️ Epic 4: Dashboard Planning, Design and Development</strong></summary>
 
 - **[User Story 8 — Create Streamlit Dashboard](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/8)** — As a data practitioner, I want to design a Streamlit dashboard so that the client can easily explore the answers to their two business requirements.
-
 - **[User Story 9 — Develop Project Summary, House Price Study and Hypothesis Pages](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/9)** — As a data practitioner, I want to develop the Project Summary, House Price Study and Hypothesis pages so that the client can understand the project and how house attributes correlate with sale prices.
-
 - **[User Story 10 — Create Pages for House Price Prediction and ML Performance](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/10)** — As a data practitioner, I want to develop the house price prediction and ML performance pages so that the client can estimate property values and understand the model's performance.
-
 </details>
-
 <details>
-
 <summary><strong>🚀 Epic 5: Dashboard Deployment and Release</strong></summary>
 
 - **[User Story 11 — Prepare Streamlit Dashboard for Deployment to Heroku](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/11)** — As a data practitioner, I want to deploy the Streamlit dashboard to Heroku so that the client can access the dashboard online.
-
 - **[User Story 12 — Complete Project Documentation and Testing](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/12)** — As a data practitioner, I want to complete the project documentation and perform final testing to ensure that the project meets the client's requirements and is ready for submission.
-
 </details>
 
 ---
@@ -190,19 +169,14 @@ Three hypotheses were tested using Pearson and Spearman correlation analysis, sc
 ### Business Requirement 1: Data Visualisation and Correlation Study
 
 - We will inspect the data related to historical housing prices.
-
 - We will conduct a correlation study (Pearson and Spearman) to better understand how the variables are correlated with `SalePrice`.
-
 - We will plot the main variables against `SalePrice` to visualise insights.
 
 ### Business Requirement 2: Supervised Machine Learning Regression Model
 
 - We want to build a supervised machine learning regression model that is capable of predicting house prices.
-
 - House attributes will be used to predict house price for both the four inherited houses and also any house in Ames, Iowa.
-
 - We will aim to achieve an R² score of at least 0.75 on both the training and test sets.
-
 - We will create an interactive dashboard whereby users can enter house attributes to obtain a predicted sale price.
 
 ---
@@ -214,27 +188,16 @@ Three hypotheses were tested using Pearson and Spearman correlation analysis, sc
 #### Regression Model
 
 - We want an ML model to predict house prices based on historical housing data from Ames, Iowa. The target variable is `SalePrice`, measured in US dollars.
-
 - Our ideal outcome is to provide our client with a reliable way to predict house prices with the lowest possible degree of error.
-
 - The model success metrics are:
-
   - An R² score of at least **0.75 on both the training and test sets**.
-
 - The ML regression model is deemed unsuccessful if it does not meet this performance standard.
-
 - There will be a Streamlit dashboard with pages showing:
-
   - The predicted sale prices of the four inherited properties.
-
   - An interactive interface where users can enter house attributes to predict the sale price of a previously unseen property.
-
 - **Heuristics:** Currently, there is no established approach for predicting house prices. The client has good knowledge of the property market in her own area but not in Ames, Iowa.
-
 - The training data comes from the historical Ames, Iowa housing dataset provided by Code Institute.
-
   - **Target:** `SalePrice`.
-
   - **Features:** House attributes selected during the machine learning pipeline development.
 
 ---
@@ -248,87 +211,64 @@ The Heritage Housing dashboard was built using Streamlit and deployed to Heroku.
 ### Page 1: Quick Project Summary
 
 - Introduces the project.
-
 - Provides an overview of the dataset.
-
 - Outlines project terms and jargon.
-
 - Lists business requirements and project success criteria.
-
 - Provides a link to the README file.
 
 <details>
-
 <summary>View Quick Project Summary Page</summary>
 
 ![Quick Project Summary](assets/projectsummary.png)
-
 </details>
 
 ### Page 2: Data Cleaning
 
 - Explains why data cleaning is necessary.
-
 - Outlines the data cleaning performed, which includes a violin plot section.
-
 - Displays the outcome of data cleaning.
 
 <details>
-
 <summary>View Data Cleaning Page</summary>
 
 ![Data Cleaning](assets/datacleaning.png)
-
 </details>
 
 ### Page 3: House Sales Price Study
 
 - Allows users to inspect the historical housing dataset and four inherited houses.
-
 - Identifies six house attributes strongly correlated with sale price.
-
 - Displays interactive scatterplots with interpretations.
-
 - Provides a Spearman correlation heatmap.
 
 <details>
-
 <summary>View House Sales Price Study Page</summary>
 
 ![House Sales Price Study](assets/salespricestudy.png)
-
 </details>
 
 ### Page 4: Project Hypothesis and Validation
 
 - Presents three hypotheses relating house attributes to sale prices.
-
 - Outlines the validation for each hypothesis.
-
 - Shows whether each hypothesis was supported.
 
 <details>
-
 <summary>View Project Hypothesis Page</summary>
 
 ![Project Hypothesis and Validation](assets/hypothesis.png)
-
 </details>
 
 ### Page 5: Inherited Houses Valuation
 
 - Allows the user to inspect the details of the four inherited houses.
-
 - Predicts sale prices for the four inherited houses.
-
 - Displays the combined predicted sale price.
 
 <details>
-
 <summary>View Inherited Houses Valuation Page</summary>
 
 ![Inherited Houses Valuation](assets/inheritedhouses.png)
-
 </details>
 
 ### Page 6: Predict a House Price
@@ -336,29 +276,22 @@ The Heritage Housing dashboard was built using Streamlit and deployed to Heroku.
 - Allows users to enter property attributes to generate predictions for other houses in Ames, Iowa.
 
 <details>
-
 <summary>View Predict a House Page</summary>
 
 ![House Price Prediction](assets/predicthouseprice.png)
-
 </details>
 
 ### Page 7: ML Pipeline Performance
 
 - Displays the final ExtraTreesRegressor pipeline and the steps involved.
-
 - Displays the features used to train the model, together with a feature importance plot.
-
 - Shows the model evaluation results for both the training and test sets.
-
 - Outlines actual vs. predicted sale price plots.
 
 <details>
-
 <summary>View ML Pipeline Page</summary>
 
 ![ML Pipeline Performance](assets/mlpipeline.png)
-
 </details>
 
 ---
@@ -368,9 +301,7 @@ The Heritage Housing dashboard was built using Streamlit and deployed to Heroku.
 ### Heroku
 
 - **GitHub repository:** [Heritage Housing Issues](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues)
-
 - **Live application:** [Heritage Housing Issues](https://project5-heritage-housing-25399c2d2f27.herokuapp.com/)
-
 - Set the Python version in `.python-version` to a version supported by the [Heroku-24 stack](https://devcenter.heroku.com/articles/python-support#supported-runtimes).
 
 The project was deployed to Heroku using the following steps:
@@ -392,21 +323,13 @@ The project was deployed to Heroku using the following steps:
 ## 🛠️ Main Data Analysis and Machine Learning Libraries
 
 - **[Pandas](https://pandas.pydata.org/docs/)** – Data cleaning and analysis.
-
 - **[NumPy](https://numpy.org/doc/stable/)** – Numerical operations.
-
 - **[Matplotlib](https://matplotlib.org/stable/)** – Data visualisation.
-
 - **[Seaborn](https://seaborn.pydata.org/)** – Statistical visualisations.
-
 - **[Scikit-learn](https://scikit-learn.org/stable/)** – Machine learning modelling and evaluation.
-
 - **[Feature-engine](https://feature-engine.trainindata.com/)** – Feature engineering and selection.
-
 - **[XGBoost](https://xgboost.readthedocs.io/en/stable/)** – Regression modelling.
-
 - **[Joblib](https://joblib.readthedocs.io/en/stable/)** – Model saving and loading.
-
 - **[Streamlit](https://docs.streamlit.io/)** – Interactive dashboard development.
 
 ---
@@ -420,13 +343,9 @@ There are no unfixed bugs.
 ## 📚 Credits
 
 - **Code Institute:** The Churnometer walkthrough and course materials provided guidance and code examples, which were adapted to meet the requirements of the Heritage Housing Issues project.
-
 - **Dataset:** The housing dataset was provided by Code Institute and is available on [Kaggle](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data).
-
 - **[Scikit-learn — ExtraTreesRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.ExtraTreesRegressor.html):** Used to develop the final regression model and investigate hyperparameter optimisation to improve house sale price predictions.
-
 - **[Scikit-learn — RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html):** Used to investigate hyperparameter combinations during the initial regression model optimisation.
-
 - **[Lucidchart](https://www.lucidchart.com/)** — Used to create the CRISP-DM methodology diagram featured in this README.
 
 ---
