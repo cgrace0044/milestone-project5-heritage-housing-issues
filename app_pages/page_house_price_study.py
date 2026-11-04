@@ -1,10 +1,11 @@
-import streamlit as st
-import pandas as pd
+
 import numpy as np
+import streamlit as st
+from src.data_management import load_housing_study_data
+
+import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-
-
 sns.set_style("whitegrid")
 
 
@@ -19,18 +20,6 @@ VARS_TO_STUDY = [
 ]
 
 
-# Load historical housing data
-@st.cache_data
-def load_data():
-    train = pd.read_csv(
-        "outputs/datasets/cleaned/TrainSetCleaned.csv"
-    )
-    test = pd.read_csv(
-        "outputs/datasets/cleaned/TestSetCleaned.csv"
-    )
-    return pd.concat([train, test], ignore_index=True)
-
-
 # Load inherited houses
 @st.cache_data
 def load_inherited_houses():
@@ -43,7 +32,7 @@ def load_inherited_houses():
 def scatter_plot_for_eda(df, col, target_var):
 
     # Exclude zero values from selected scatter plots
-    if col in ['GarageArea', 'TotalBsmtSF']:
+    if col in ["GarageArea", "TotalBsmtSF"]:
         df = df[df[col] > 0]
 
     fig = plt.figure(figsize=(12, 6))
@@ -94,7 +83,8 @@ def page_house_price_study_body():
         "data visualisations."
     )
 
-    df = load_data()
+    # Load historical housing data
+    df = load_housing_study_data()
 
     # Inspect datasets
     if st.checkbox("Inspect Historical Housing Dataset"):
@@ -225,7 +215,7 @@ def page_house_price_study_body():
 
         st.caption(
             "Properties without a garage or basement are "
-            "excluded from this graph. These are not outliers."
+            "excluded from this graph."
         )
 
     st.divider()
