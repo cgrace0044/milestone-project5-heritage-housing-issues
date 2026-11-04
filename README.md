@@ -242,55 +242,105 @@ We will investigate these hypotheses through exploratory data analysis, using sc
 
 ---
 
-## 🏡 Dashboard Design (Streamlit App User Interface)
 
-### 📋 Page 1: Quick Project Summary
+## Dashboard Design
 
-- Quick project summary
-- Dataset overview
-- Terms and jargon.
-- Client's business requirements
-- Project success criteria.
-- Link to readme file
+The Heritage Housing dashboard was built using Streamlit and deployed to Heroku.
 
-### 📊 Page 2: House Sales Price Study
+[View the Live Dashboard](https://project5-heritage-housing-25399c2d2f27.herokuapp.com/)
 
-- Address Business Requirement 1.
-- Checkboxes to inspect the historical and inherited housing datasets.
-- Correlation study findings
-- Interactive scatterplots for the variables most correlated with `SalePrice`
-- Correlation Heatmap (just one was included so as not to confuse the client)
+### Page 1: Quick Project Summary
 
-### 🏠 Page 3: Inherited Houses Valuation
+- Introduces the project.
+- Provides an overview of the dataset.
+- Outlines project terms and jargon.
+- Lists business requirements and project success criteria.
+- Provides a link to the README file.
 
-- Address Business Requirement 2.
-- Display the four inherited houses' attributes.
-- Predict the sale price of each house using the trained ML pipeline.
-- Display the combined estimated value of all four houses.
+<details>
+<summary>View Quick Project Summary Page</summary>
 
-### 🔍 Page 4: Project Hypothesis and Validation
+![Quick Project Summary](assets/projectsummary.png)
 
-- Present three hypotheses and their validation:
-  - **Overall quality:** Higher-quality houses have higher sale prices — Supported.
-  - **Living area:** Larger living areas are associated with higher sale prices — Supported.
-  - **Year built:** Newer houses have higher sale prices — Supported.
+</details>
 
-### 💰 Page 5: Predict a House Price
+### Page 2: Data Cleaning
 
-- Address Business Requirement 2.
-- Interactive widgets to enter house attributes.
-- Predict and display the estimated sale price using the trained ML pipeline.
+- Explains why data cleaning is necessary.
+- Outlines the data cleaning performed, which includes a violin plot section.
+- Displays the outcome of data cleaning.
 
-### 🤖 Page 6: ML Pipeline Performance
+<details>
+<summary>View Data Cleaning Page</summary>
 
-- Display the trained regression pipeline steps and the seven selected features.
-- Checkbox to display the feature importance plot.
-- Present R² scores and MAE for the training and test datasets.
-- Checkbox to display actual versus predicted sale price plots.
-- Interpret the results.
-- Summarise model performance against the project's success criteria.
+![Data Cleaning](assets/datacleaning.png)
 
----
+</details>
+
+### Page 3: House Sales Price Study
+
+- Allows users to inspect the historical housing dataset and four inherited houses.
+- Identifies six house attributes strongly correlated with sale price.
+- Displays interactive scatterplots with interpretations.
+- Provides a Spearman correlation heatmap.
+
+<details>
+<summary>View House Sales Price Study Page</summary>
+
+![House Sales Price Study](assets/salespricestudy.png)
+
+</details>
+
+### Page 4: Project Hypothesis and Validation
+
+- Presents three hypotheses relating house attributes to sale prices.
+- Outlines the validation for each hypothesis.
+- Shows whether each hypothesis was supported.
+
+<details>
+<summary>View Project Hypothesis Page</summary>
+
+![Project Hypothesis and Validation](assets/hypothesis.png)
+
+</details>
+
+### Page 5: Inherited Houses Valuation
+
+- Allows the user to inspect the details of the four inherited houses.
+- Predicts sale prices for the four inherited houses.
+- Displays the combined predicted sale price.
+
+<details>
+<summary>View Inherited Houses Valuation Page</summary>
+
+![Inherited Houses Valuation](assets/inheritedhouses.png)
+
+</details>
+
+### Page 6: Predict a House Price
+
+- Allows users to enter property attributes to generate predictions for other houses in Ames, Iowa.
+
+<details>
+<summary>View Predict a House Page</summary>
+
+![House Price Prediction](assets/predicthouseprice.png)
+
+</details>
+
+### Page 7: ML Pipeline Performance
+
+- Displays the final ExtraTreesRegressor pipeline and the steps involved.
+- Displays the features used to train the model, together with a feature importance plot.
+- Shows the model evaluation results for both the training and test sets.
+- Outlines actual vs. predicted sale price plots.
+
+<details>
+<summary>View ML Pipeline Page</summary>
+
+![ML Pipeline Performance](assets/mlpipeline.png)
+
+</details>
 
 ## 🐛 Unfixed Bugs
 
