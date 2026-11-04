@@ -188,19 +188,33 @@ Click on each epic to view its user stories.
 
 ---
 
-## 🔬 Hypotheses and How to Validate Them
+### 🌿 Project Hypothesis and Validation
 
-We developed three hypotheses about the factors influencing house sale prices in Ames, Iowa:
+Three hypotheses were tested using Pearson and Spearman correlation analysis, scatterplots, and heatmaps. The **House Sales Price Study** page presents these findings in detail.
 
-1. **Overall Quality:** I suspect houses with higher overall property quality have higher sale prices.
+#### 🏡 Hypothesis 1 — Overall Quality
 
-2. **Living Area:** I suspect houses with larger above-ground living areas have higher sale prices.
+Houses with **higher overall quality** are expected to have higher sale prices.
 
-3. **Year Built:** I suspect newer houses have higher sale prices.
+**Validation:** `OverallQual` showed the strongest positive correlation with `SalePrice` (0.81) of all variables studied.
 
-### Validation Method
+**✓ Supported**
 
-We will investigate these hypotheses through exploratory data analysis, using scatterplots and Pearson and Spearman correlation studies to examine the relationships between `OverallQual`, `GrLivArea`, `YearBuilt` and `SalePrice`.
+#### 📐 Hypothesis 2 — Living Area
+
+Houses with **larger living areas** are expected to have higher sale prices.
+
+**Validation:** `GrLivArea` showed the second strongest positive correlation with `SalePrice` (0.73).
+
+**✓ Supported**
+
+#### 📅 Hypothesis 3 — Year Built
+
+**Newer houses** are expected to have higher sale prices.
+
+**Validation:** `YearBuilt` showed a positive correlation with `SalePrice` (0.65), although this relationship was weaker than those observed for overall quality and living area.
+
+**✓ Supported**
 
 ---
 
@@ -241,7 +255,6 @@ We will investigate these hypotheses through exploratory data analysis, using sc
   - **Features:** House attributes selected during the machine learning pipeline development.
 
 ---
-
 
 ## Dashboard Design
 
