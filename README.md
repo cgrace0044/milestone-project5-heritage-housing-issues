@@ -214,13 +214,13 @@ Three hypotheses were tested using Pearson and Spearman correlation analysis, sc
 
 This section summarises how the project was implemented and links to the detailed Jupyter notebooks.
 
-| Stage | Description |
-|---|---|
-| 📥 **1. Data Collection** | Downloading and inspecting the datasets |
-| 🧹 **2. Data Cleaning** | Treating missing values and preparing the data |
-| 📊 **3. Correlation Analysis** | Identifying relationships with `SalePrice` |
-| ⚙️ **4. Feature Engineering** | Selecting appropriate data transformations |
-| 🤖 **5. Model Development** | Comparing, optimising and evaluating regression models |
+| Stage | Description | Notebook |
+|---|---|---|
+| 📥 **1. Data Collection** | Downloading and inspecting the datasets | [View Notebook](jupyter_notebooks/01%20-%20DataCollection.ipynb) |
+| 🧹 **2. Data Cleaning** | Treating missing values and preparing the data | [View Notebook](jupyter_notebooks/02_DataCleaning.ipynb) |
+| 📊 **3. Correlation Analysis** | Identifying relationships with `SalePrice` | [View Notebook](jupyter_notebooks/03_HousePriceStudy.ipynb) |
+| ⚙️ **4. Feature Engineering** | Selecting appropriate data transformations | [View Notebook](jupyter_notebooks/04_FeatureEngineering.ipynb) |
+| 🤖 **5. Model Development** | Comparing, optimising and evaluating regression models | [View Notebook](jupyter_notebooks/05_Modeling%20and%20Evaluation%20Predict%20SalePrice.ipynb) |
 
 <details>
 <summary><strong>📥 1. Data Collection</strong></summary>
