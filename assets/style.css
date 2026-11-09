@@ -1,16 +1,29 @@
+
 /* Main dashboard background */
 .stApp {
     background-color: #F8F5EF;
+    color: #244D38;
 }
 
 /* Main headings */
 h1, h2, h3 {
-    color: #2F6B4F;
+    color: #2F6B4F !important;
+}
+
+/* Main body text - fixes invisible mobile text */
+[data-testid="stMarkdownContainer"] p,
+[data-testid="stMarkdownContainer"] li {
+    color: #244D38 !important;
 }
 
 /* Metric values */
 [data-testid="stMetricValue"] {
     color: #2F6B4F;
+}
+
+/* Metric labels */
+[data-testid="stMetricLabel"] {
+    color: #244D38;
 }
 
 /* Sidebar */
@@ -27,7 +40,7 @@ h1, h2, h3 {
 
 /* Text inside information boxes */
 [data-testid="stAlert"] * {
-    color: #244D38;
+    color: #244D38 !important;
 }
 
 /* Links - forest green */
@@ -37,4 +50,9 @@ a {
 
 a:hover {
     color: #1D4935 !important;
+}
+
+/* Keep browser-native controls in light mode */
+:root {
+    color-scheme: light;
 }
