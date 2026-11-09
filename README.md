@@ -98,7 +98,7 @@ It has six steps which are outlined below. These steps are iterative rather than
 | **6. Deployment** | Make the model accessible to users via a dashboard or an API. |
 
 <p align="center">
-  <img src="assets/crispdm.jpeg" alt="CRISP-DM Methodology" width="450">
+  <img src="assets/crispdm.jpeg" alt="CRISP-DM Methodology" width="600">
 </p>
 
 This framework works hand in hand with Agile development — creating user stories to help to organise tasks.
