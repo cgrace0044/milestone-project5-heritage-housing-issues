@@ -469,6 +469,7 @@ There are no unfixed bugs.
 - **Code Institute**: The Predictive Analytics course materials and Churnometer walkthrough provided guidance on data collection, cleaning, feature engineering, machine learning pipelines, model evaluation and Streamlit dashboard development. Relevant examples were adapted to meet the requirements of this project.
 - **Dataset:** The housing dataset was provided by Code Institute and is available on [Kaggle](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data).
 - **[Scikit-learn — ExtraTreesRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.ExtraTreesRegressor.html):** Used to develop the final regression model and investigate hyperparameter optimisation to improve house sale price predictions.
+- **[Scikit-learn – RandomizedSearchCV Documentation](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html):** Referenced when implementing randomised hyperparameter optimisation for the ExtraTreesRegressor model.
 - **[Lucidchart](https://www.lucidchart.com/)** — Used to create the CRISP-DM methodology diagram featured in this README.
 - **[Streamlit Documentation](https://docs.streamlit.io/):** Referenced when developing the interactive dashboard, including page layouts, widgets and data visualisations.
 
