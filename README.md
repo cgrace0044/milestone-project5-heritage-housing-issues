@@ -97,7 +97,9 @@ It has six steps which are outlined below. These steps are iterative rather than
 | **5. Evaluation** | Test the model on unseen data. |
 | **6. Deployment** | Make the model accessible to users via a dashboard or an API. |
 
-![CRISP-DM Methodology](assets/crispdm.jpeg)
+<p align="center">
+  <img src="assets/crispdm.jpeg" alt="CRISP-DM Methodology" width="450">
+</p>
 
 This framework works hand in hand with Agile development — creating user stories to help to organise tasks.
 
@@ -464,11 +466,11 @@ There are no unfixed bugs.
 
 ## 📚 Credits
 
-- **Code Institute:** The Churnometer walkthrough and course materials provided guidance and code examples, which were adapted to meet the requirements of the Heritage Housing Issues project.
+- **Code Institute**: The Predictive Analytics course materials and Churnometer walkthrough provided guidance on data collection, cleaning, feature engineering, machine learning pipelines, model evaluation and Streamlit dashboard development. Relevant examples were adapted to meet the requirements of this project.
 - **Dataset:** The housing dataset was provided by Code Institute and is available on [Kaggle](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data).
 - **[Scikit-learn — ExtraTreesRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.ExtraTreesRegressor.html):** Used to develop the final regression model and investigate hyperparameter optimisation to improve house sale price predictions.
-- **[Scikit-learn — RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html):** Used to investigate hyperparameter combinations during the initial regression model optimisation.
 - **[Lucidchart](https://www.lucidchart.com/)** — Used to create the CRISP-DM methodology diagram featured in this README.
+- **[Streamlit Documentation](https://docs.streamlit.io/):** Referenced when developing the interactive dashboard, including page layouts, widgets and data visualisations.
 
 ---
 
