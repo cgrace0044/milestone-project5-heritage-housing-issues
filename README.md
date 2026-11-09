@@ -244,10 +244,12 @@ The Heritage Housing dashboard was built using Streamlit and deployed to Heroku.
 
 ### Page 3: House Sales Price Study
 
+*Addresses Business Requirement 1 — Data Visualisation and Correlation Study.*
+
 - Allows users to inspect the historical housing dataset and four inherited houses.
-- Identifies six house attributes strongly correlated with sale price.
-- Displays interactive scatterplots with interpretations.
-- Provides a Spearman correlation heatmap.
+- Identifies six house attributes strongly correlated with `SalePrice`.
+- Displays interactive scatterplots with interpretations of the relationships.
+- Provides a Spearman correlation heatmap to visualise correlations between house attributes and sale prices.
 
 <details>
 <summary>View House Sales Price Study Page</summary>
@@ -269,6 +271,8 @@ The Heritage Housing dashboard was built using Streamlit and deployed to Heroku.
 
 ### Page 5: Inherited Houses Valuation
 
+*Addresses Business Requirement 2 — Supervised Machine Learning Regression Model.*
+
 - Allows the user to inspect the details of the four inherited houses.
 - Predicts sale prices for the four inherited houses.
 - Displays the combined predicted sale price.
@@ -277,13 +281,17 @@ The Heritage Housing dashboard was built using Streamlit and deployed to Heroku.
 <summary>View Inherited Houses Valuation Page</summary>
 
 ![Inherited Houses Valuation](assets/inheritedhouses.png)
+
 </details>
 
 ### Page 6: Predict a House Price
 
+*Addresses Business Requirement 2 — Supervised Machine Learning Regression Model.*
+
 - Allows users to enter property attributes to generate predictions for other houses in Ames, Iowa.
 
 <details>
+
 <summary>View Predict a House Page</summary>
 
 ![House Price Prediction](assets/predicthouseprice.png)
