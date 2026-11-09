@@ -210,6 +210,45 @@ Three hypotheses were tested using Pearson and Spearman correlation analysis, sc
 
 ---
 
+## 🛠️ Project Implementation and Results
+
+This section summarises how the project was implemented and links to the detailed Jupyter notebook pages.
+
+### Data Collection Summary
+
+- The datasets were downloaded from the Code Institute Kaggle repository.
+- An initial inspection was carried out on both the historical housing dataset and the inherited housing dataset.
+- Both datasets were checked for missing values and duplicate rows.
+- **No duplicate rows** were identified.
+- Missing values were identified in the historical housing dataset but were left untreated at this stage, as they would be addressed during data cleaning.
+- Both datasets were saved to the `outputs` folder for use in subsequent notebooks.
+
+**Notebook:** Data Collection — jupyter_notebooks/05_Modeling and Evaluation Predict SalePrice.ipynb
+
+### 2. Data Cleaning
+
+
+
+**Notebook:** Data Cleaning — 
+
+### 3. Correlation Analysis
+
+
+
+**Notebook:** Correlation Analysis — 
+
+### 4. Feature Engineering
+
+
+
+**Notebook:** Feature Engineering — 
+
+### 5. Machine Learning Model Development and Evaluation
+
+
+
+**Notebook:** Predict House Prices — 
+
 ## Dashboard Design
 
 The Heritage Housing dashboard was built using Streamlit and deployed to Heroku.
