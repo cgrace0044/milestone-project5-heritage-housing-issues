@@ -214,7 +214,16 @@ Three hypotheses were tested using Pearson and Spearman correlation analysis, sc
 
 This section summarises how the project was implemented and links to the detailed Jupyter notebooks.
 
-### 1. Data Collection Summary
+| Stage | Description |
+|---|---|
+| 📥 **1. Data Collection** | Downloading and inspecting the datasets |
+| 🧹 **2. Data Cleaning** | Treating missing values and preparing the data |
+| 📊 **3. Correlation Analysis** | Identifying relationships with `SalePrice` |
+| ⚙️ **4. Feature Engineering** | Selecting appropriate data transformations |
+| 🤖 **5. Model Development** | Comparing, optimising and evaluating regression models |
+
+<details>
+<summary><strong>📥 1. Data Collection</strong></summary>
 
 - The datasets were downloaded from the Code Institute Kaggle repository.
 - An initial inspection was carried out on both the historical housing dataset and the inherited housing dataset.
@@ -223,9 +232,12 @@ This section summarises how the project was implemented and links to the detaile
 - Missing values were identified in the historical housing dataset but were left untreated at this stage.
 - Both datasets were saved to the `outputs` folder for use in subsequent notebooks.
 
-**Notebook:** [Data Collection](jupyter_notebooks/01%20-%20DataCollection.ipynb)
+**📓 Notebook:** [Data Collection](jupyter_notebooks/01%20-%20DataCollection.ipynb)
 
-### 2. Data Cleaning
+</details>
+
+<details>
+<summary><strong>🧹 2. Data Cleaning</strong></summary>
 
 The Heritage Housing dataset was cleaned in preparation for subsequent notebooks.
 
@@ -236,9 +248,12 @@ The Heritage Housing dataset was cleaned in preparation for subsequent notebooks
 - No missing values or duplicates remain.
 - The cleaned training and test sets were saved to the `outputs` folder.
 
-**Notebook:** [Data Cleaning](jupyter_notebooks/02_DataCleaning.ipynb)
+**📓 Notebook:** [Data Cleaning](jupyter_notebooks/02_DataCleaning.ipynb)
 
-### 3. Correlation Analysis
+</details>
+
+<details>
+<summary><strong>📊 3. Correlation Analysis</strong></summary>
 
 A correlation analysis was performed using Pearson and Spearman correlation methods.
 
@@ -247,9 +262,12 @@ A correlation analysis was performed using Pearson and Spearman correlation meth
 - The scatterplots identified a small number of outliers, which are to be expected.
 - The heatmaps highlighted strong correlations between some of the property features, particularly `TotalBsmtSF` and `1stFlrSF`.
 
-**Notebook:** [Correlation Analysis](jupyter_notebooks/03_HousePriceStudy.ipynb)
+**📓 Notebook:** [Correlation Analysis](jupyter_notebooks/03_HousePriceStudy.ipynb)
 
-### 4. Feature Engineering
+</details>
+
+<details>
+<summary><strong>⚙️ 4. Feature Engineering</strong></summary>
 
 - An initial feature engineering assessment was carried out based on the Y-Data Profiling Report.
 - The distribution of each variable was analysed.
@@ -264,20 +282,25 @@ A correlation analysis was performed using Pearson and Spearman correlation meth
 | **Power Transformation** | `BsmtUnfSF`, `TotalBsmtSF` |
 | **Smart Correlation Analysis** | Spearman correlation, threshold `0.6`; no features removed |
 
-**Notebook:** [Feature Engineering](jupyter_notebooks/04_FeatureEngineering.ipynb)
+**📓 Notebook:** [Feature Engineering](jupyter_notebooks/04_FeatureEngineering.ipynb)
 
-### 5. Machine Learning Model Development and Evaluation
+</details>
+
+<details>
+<summary><strong>🤖 5. Machine Learning Model Development and Evaluation</strong></summary>
 
 - Multiple regression algorithms were compared to identify a suitable model for predicting house sale prices.
 - The R² score was used to evaluate the various algorithms.
 - Linear Regression and Extra Trees Regression were identified as the top-performing algorithms following an initial model comparison and were investigated further.
 - Feature importances identified the seven most important features, and these were used to train the initial model.
 - Linear Regression was rejected as it achieved an R² score below the minimum requirement.
-- Extra Trees Regression achieved a test R² of 0.778 prior to further hyperparameter optimisation.
+- Extra Trees Regression achieved a test R² of **0.778** prior to further hyperparameter optimisation.
 - `SmartCorrelatedSelection` replaced feature importances as an experiment, but it reduced the model's performance and was therefore rejected.
-- A more extensive grid search covering six hyperparameters, with three values each, was subsequently introduced to evaluate all 729 combinations.
+- A more extensive grid search covering six hyperparameters, with three values each, was subsequently introduced to evaluate all **729 combinations**.
 
-**Notebook:** [Predict House Prices](jupyter_notebooks/05_Modeling%20and%20Evaluation%20Predict%20SalePrice.ipynb)
+**📓 Notebook:** [Predict House Prices](jupyter_notebooks/05_Modeling%20and%20Evaluation%20Predict%20SalePrice.ipynb)
+
+</details>
 
 ## Dashboard Design
 
