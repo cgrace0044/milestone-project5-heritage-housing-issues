@@ -262,6 +262,10 @@ A correlation analysis was performed using Pearson and Spearman correlation meth
 - The scatterplots identified a small number of outliers, which are to be expected.
 - The heatmaps highlighted strong correlations between some of the property features, particularly `TotalBsmtSF` and `1stFlrSF`.
 
+<p align="center">
+  <img src="assets/heatmap.png" alt="Correlation Heatmap" width="650">
+</p>
+
 **📓 Notebook:** [Correlation Analysis](jupyter_notebooks/03_HousePriceStudy.ipynb)
 
 </details>
@@ -293,6 +297,11 @@ A correlation analysis was performed using Pearson and Spearman correlation meth
 - The R² score was used to evaluate the various algorithms.
 - Linear Regression and Extra Trees Regression were identified as the top-performing algorithms following an initial model comparison and were investigated further.
 - Feature importances identified the seven most important features, and these were used to train the initial model.
+
+<p align="center">
+  <img src="assets/featureimportance.png" alt="Feature Importance Plot" width="650">
+</p>
+
 - Linear Regression was rejected as it achieved an R² score below the minimum requirement.
 - Extra Trees Regression achieved a test R² of **0.778** prior to further hyperparameter optimisation.
 - `SmartCorrelatedSelection` replaced feature importances as an experiment, but it reduced the model's performance and was therefore rejected.
