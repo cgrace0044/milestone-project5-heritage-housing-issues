@@ -173,13 +173,17 @@ Three hypotheses were tested using Pearson and Spearman correlation analysis, sc
 - We will conduct a correlation study (Pearson and Spearman) to better understand how the variables are correlated with `SalePrice`.
 - We will plot the main variables against `SalePrice` to visualise insights using both scatterplots and heatmaps.
 
+**Related User Stories:** [US2 — Data Collection](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/2), [US3 — Data Cleaning](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/3), [US4 — Correlation Analysis](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/4) and [US9 — Dashboard Analysis Pages](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/9).
+
 ### Business Requirement 2: Supervised Machine Learning Regression Model
 
-- We want to build a supervised machine learning regression model that is capable of predicting house prices.
-- House attributes will be used to predict house price for both the four inherited houses and also any house in Ames, Iowa.
-- We will perform feature engineering to prepare the data for the machine learning model.
+- We will develop a supervised machine learning regression model capable of predicting house sale prices.
+- We will prepare and select house attributes to use as features for model training.
+- We will compare and optimise regression models to identify a suitable model for predicting `SalePrice`.
 - We will aim to achieve an R² score of at least 0.75 on both the training and test sets.
-- We will create an interactive dashboard whereby users can enter house attributes to obtain a predicted sale price both for the four inherited properties and for unseen properties.
+- We will create an interactive dashboard that predicts sale prices for the four inherited houses and allows users to enter house attributes to predict prices for other houses in Ames, Iowa.
+
+**Related User Stories:** [US3 — Data Cleaning](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/3), [US5 — Feature Engineering](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/5), [US6 — Regression Model Development](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/6), [US7 — Model Optimisation](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/7) and [US10 — Prediction and ML Performance Pages](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/10).
 
 ---
 
