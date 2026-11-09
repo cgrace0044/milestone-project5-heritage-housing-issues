@@ -22,11 +22,11 @@ def regression_performance(X_train, y_train, X_test, y_test, pipeline):
 
     st.info(
         "**Performance interpretation:**\n\n"
-        "- **R²:** The model achieved 0.91 on the training set "
-        "and 0.81 on the test set, meeting the client's "
+        "- **R²:** The model achieved 0.925 on the training set "
+        "and 0.825 on the test set, meeting the client's "
         "minimum requirement of 0.75.\n"
         "- **Prediction error:** The average absolute error was "
-        "approximately 14,360 on the training set and 20,215 "
+        "approximately 13,489 on the training set and 19,714 "
         "on the test set. The higher RMSE indicates some "
         "larger prediction errors.\n"
     )

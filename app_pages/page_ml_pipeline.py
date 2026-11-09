@@ -42,13 +42,6 @@ def page_ml_pipeline_body():
 
         st.write(pipeline)
 
-        st.caption(
-            "The hyperparameters `max_features=1.0` and "
-            "`min_impurity_decrease=0.0` do not appear above because "
-            "they match the default values of ExtraTreesRegressor. "
-            "Both were explicitly defined during optimisation."
-        )
-
     st.write("---")
 
     # Selected features
