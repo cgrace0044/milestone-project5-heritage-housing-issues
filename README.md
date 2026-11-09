@@ -245,6 +245,11 @@ The Heritage Housing dataset was cleaned in preparation for subsequent notebooks
 - `EnclosedPorch` and `WoodDeckSF` were removed due to their very high levels of missing data.
 - `GarageYrBlt` was dropped because it is strongly correlated with `YearBuilt`.
 - Missing values in `BedroomAbvGr`, `LotFrontage`, `MasVnrArea` and `2ndFlrSF` were handled using median imputation.
+
+<p align="center">
+  <img src="assets/violinplots.png" alt="Violin plots of numerical variables investigated during data cleaning" width="750">
+</p>
+
 - No missing values or duplicates remain.
 - The cleaned training and test sets were saved to the `outputs` folder.
 
