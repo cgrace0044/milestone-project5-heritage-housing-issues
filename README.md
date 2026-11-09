@@ -169,15 +169,17 @@ Three hypotheses were tested using Pearson and Spearman correlation analysis, sc
 ### Business Requirement 1: Data Visualisation and Correlation Study
 
 - We will inspect the data related to historical housing prices.
+- We will perform data cleaning on the historical housing data where appropriate.
 - We will conduct a correlation study (Pearson and Spearman) to better understand how the variables are correlated with `SalePrice`.
-- We will plot the main variables against `SalePrice` to visualise insights.
+- We will plot the main variables against `SalePrice` to visualise insights using both scatterplots and heatmaps.
 
 ### Business Requirement 2: Supervised Machine Learning Regression Model
 
 - We want to build a supervised machine learning regression model that is capable of predicting house prices.
 - House attributes will be used to predict house price for both the four inherited houses and also any house in Ames, Iowa.
+- We will perform feature engineering to prepare the data for the machine learning model.
 - We will aim to achieve an R² score of at least 0.75 on both the training and test sets.
-- We will create an interactive dashboard whereby users can enter house attributes to obtain a predicted sale price.
+- We will create an interactive dashboard whereby users can enter house attributes to obtain a predicted sale price both for the four inherited properties and for unseen properties.
 
 ---
 
@@ -188,15 +190,17 @@ Three hypotheses were tested using Pearson and Spearman correlation analysis, sc
 #### Regression Model
 
 - We want an ML model to predict house prices based on historical housing data from Ames, Iowa. The target variable is `SalePrice`, measured in US dollars.
-- Our ideal outcome is to provide our client with a reliable way to predict house prices with the lowest possible degree of error.
+- We consider a supervised unidimensional regression model.
+- Our ideal outcome is to provide our client with a reliable way to predict house prices.
+- We would like for there to be a very low degree of error between actual sale prices and the values predicted by the model.
 - The model success metrics are:
   - An R² score of at least **0.75 on both the training and test sets**.
-- The ML regression model is deemed unsuccessful if it does not meet this performance standard.
+- The ML regression model is deemed unsuccessful if it does not meet this expectation.
 - There will be a Streamlit dashboard with pages showing:
   - The predicted sale prices of the four inherited properties.
-  - An interactive interface where users can enter house attributes to predict the sale price of a previously unseen property.
+  - An interactive interface where users can enter house attributes to predict the sale price of a previously unseen property in Ames, Iowa.
 - **Heuristics:** Currently, there is no established approach for predicting house prices. The client has good knowledge of the property market in her own area but not in Ames, Iowa.
-- The training data comes from the historical Ames, Iowa housing dataset provided by Code Institute.
+- The training data comes from the historical Ames, Iowa housing dataset provided by Code Institute. It contains 1,460 housing records.
   - **Target:** `SalePrice`.
   - **Features:** House attributes selected during the machine learning pipeline development.
 
