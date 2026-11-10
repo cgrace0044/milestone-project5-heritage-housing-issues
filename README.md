@@ -117,8 +117,6 @@ The project was organised into five epics, represented by GitHub Milestones, and
 
 Each user story includes acceptance criteria, a task list and a MoSCoW priority. Completed tasks were marked as done, and all 12 user stories were moved to the Done column on the GitHub Project board.
 
-The [GitHub Project Board](https://github.com/users/cgrace0044/projects/6/views/1) provides an overview of the project's development and completed tasks.
-
 ### User Stories by Epic
 
 The [GitHub Project Board](https://github.com/users/cgrace0044/projects/6/views/1) provides an overview of the project's development and completed tasks.
