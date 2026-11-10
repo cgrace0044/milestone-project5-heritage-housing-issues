@@ -534,6 +534,7 @@ There are no other known unfixed bugs.
 - **Dataset:** The housing dataset was provided by Code Institute and is available on [Kaggle](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data).
 - **[Scikit-learn — ExtraTreesRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.ExtraTreesRegressor.html):** Used to develop the final regression model and investigate hyperparameter optimisation to improve house sale price predictions.
 - **[Scikit-learn – RandomizedSearchCV Documentation](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html):** Referenced when implementing randomised hyperparameter optimisation for the ExtraTreesRegressor model.
+- [Scikit-learn – RandomizedSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html) – For guidance on using randomised hyperparameter searches to improve the machine learning model.
 - **[Lucidchart](https://www.lucidchart.com/)** — Used to create the CRISP-DM methodology diagram featured in this README.
 - **[Streamlit Documentation](https://docs.streamlit.io/):** Referenced when developing the interactive dashboard, including page layouts, widgets and data visualisations.
 
