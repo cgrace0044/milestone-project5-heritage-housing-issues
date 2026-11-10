@@ -1,19 +1,19 @@
 
+/* =========================================
+   HERITAGE HOUSING ISSUES
+   Custom Dashboard Styling
+   ========================================= */
+
 /* Main dashboard background */
 .stApp {
     background-color: #F8F5EF;
-    color: #244D38;
 }
 
-/* Main headings */
-h1, h2, h3 {
-    color: #2F6B4F !important;
-}
-
-/* Main body text - fixes invisible mobile text */
-[data-testid="stMarkdownContainer"] p,
-[data-testid="stMarkdownContainer"] li {
-    color: #244D38 !important;
+/* Main headings - forest green */
+.stApp h1,
+.stApp h2,
+.stApp h3 {
+    color: #2F6B4F;
 }
 
 /* Metric values */
@@ -26,33 +26,34 @@ h1, h2, h3 {
     color: #244D38;
 }
 
-/* Sidebar */
+/* Sidebar - soft sage green */
 [data-testid="stSidebar"] {
     background-color: #DDE9DF;
 }
 
-/* Information boxes - soft sage green */
+/* Information boxes */
 [data-testid="stAlert"] {
     background-color: #E6EEE5;
     border: 1px solid #CBDDCE;
     border-radius: 12px;
 }
 
-/* Text inside information boxes */
+/* Information box text */
 [data-testid="stAlert"] * {
-    color: #244D38 !important;
+    color: #244D38;
 }
 
 /* Links - forest green */
-a {
-    color: #2F6B4F !important;
+.stApp a {
+    color: #2F6B4F;
 }
 
-a:hover {
-    color: #1D4935 !important;
+.stApp a:hover {
+    color: #1D4935;
 }
 
-/* Keep browser-native controls in light mode */
-:root {
-    color-scheme: light;
+/* Quick Project Summary text */
+.stApp [data-testid="stMarkdownContainer"] p,
+.stApp [data-testid="stMarkdownContainer"] li {
+    color: #244D38;
 }
