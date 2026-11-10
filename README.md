@@ -10,9 +10,9 @@ Lydia Doe has inherited four houses located in Ames, Iowa, USA. Although she has
 
 The purpose of this project is to use historical housing data from Ames, Iowa, to investigate the factors associated with house sale prices and develop a machine learning model capable of predicting property values.
 
-The project will deliver a Streamlit dashboard that allows Lydia to explore the factors associated with house prices, view predicted sale prices for the four inherited properties, and predict the sale price of other houses in Ames.
+The project delivers a Streamlit dashboard that allows Lydia to explore the factors associated with house prices, view predicted sale prices for the four inherited properties, and predict the sale price of other houses in Ames.
 
-The live application can be accessed here [View the Live Dashboard](https://project5-heritage-housing-25399c2d2f27.herokuapp.com/)
+The live application can be accessed here — [View the Live Dashboard](https://project5-heritage-housing-25399c2d2f27.herokuapp.com/).
 
 ![Responsive](assets/responsiveness.png)
 
