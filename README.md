@@ -500,6 +500,12 @@ The project was deployed to Heroku using the following steps:
 
 ---
 
+## Testing
+
+Testing and results can be found [here](/testing.md)
+
+---
+
 ## 🛠️ Main Data Analysis and Machine Learning Libraries
 
 - **[Pandas](https://pandas.pydata.org/docs/)** – Data cleaning and analysis.
@@ -537,6 +543,7 @@ There are no other known unfixed bugs.
 - [Scikit-learn – RandomizedSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html) – For guidance on using randomised hyperparameter searches to improve the machine learning model.
 - **[Lucidchart](https://www.lucidchart.com/)** — Used to create the CRISP-DM methodology diagram featured in this README.
 - **[Streamlit Documentation](https://docs.streamlit.io/):** Referenced when developing the interactive dashboard, including page layouts, widgets and data visualisations.
+- **[Responsive Test Tool](https://responsivetesttool.com/)** – Used to test how the dashboard displays on different screen sizes and devices.
 
 ---
 
