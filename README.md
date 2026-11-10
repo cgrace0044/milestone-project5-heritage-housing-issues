@@ -27,7 +27,8 @@ The dataset was sourced from <a href="https://www.kaggle.com/codeinstitute/housi
 | | |
 |---|---|
 | **Number of records** | 1,460 properties |
-| **Number of variables** | 24 |
+| **Number of variables (original dataset)** | 24 |
+| **Number of variables (after cleaning)** | 21 |
 | **Target variable** | `SalePrice` |
 | **Location** | Ames, Iowa, USA |
 | **Construction years represented** | 1872–2010 |
@@ -68,17 +69,15 @@ The dataset was sourced from <a href="https://www.kaggle.com/codeinstitute/housi
 
 ### Project Terms & Jargon
 
-    - SalePrice: The price at which a house was sold.
-    - House attributes: Property characteristics such as living area, overall quality, year built, garage area and basement size.
-    - Correlation: A measure of how strongly two variables are related. It helps identify which house attributes are associated with sale prices.
-    - Regression: A machine learning technique used to predict numerical values, such as house prices.
-    - R² Score: A measure of how well the model explains differences in house prices. A higher score generally indicates better performance.
+- SalePrice: The price at which a house was sold.
+- House attributes: Property characteristics such as living area, overall quality, year built, garage area and basement size.
+- Correlation: A measure of how strongly two variables are related. It helps identify which house attributes are associated with sale prices.
+- Regression: A machine learning technique used to predict numerical values, such as house prices.
+- R² Score: A measure of how well the model explains differences in house prices. A higher score generally indicates better performance.
 
 ---
 
 ## 🎯 Business Requirements
-
-### Business Requirements
 
 1. The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualisations of the correlated variables against the sale price to show that.
 
@@ -88,7 +87,7 @@ The dataset was sourced from <a href="https://www.kaggle.com/codeinstitute/housi
 
 ## 🔄 CRISP-DM Workflow
 
-This project will be completed in line with CRISP-DM, which is a framework used to plan and organise data science projects.
+This project was developed in line with CRISP-DM, a framework used to plan and organise data science projects.
 
 It has six steps which are outlined below. These steps are iterative rather than linear. For example, something might be identified in a later step which encourages the data practitioner to revisit a previous step.
 
@@ -176,20 +175,20 @@ Three hypotheses were tested using Pearson and Spearman correlation analysis, sc
 
 ### Business Requirement 1: Data Visualisation and Correlation Study
 
-- We will inspect the data related to historical housing prices.
-- We will perform data cleaning on the historical housing data where appropriate.
-- We will conduct a correlation study (Pearson and Spearman) to better understand how the variables are correlated with `SalePrice`.
-- We will plot the main variables against `SalePrice` to visualise insights using both scatterplots and heatmaps.
+- We inspected the data related to historical housing prices.
+- We performed data cleaning on the historical housing data where appropriate.
+- We conducted a correlation study (Pearson and Spearman) to better understand how the variables are correlated with `SalePrice`.
+- We plotted the main variables against `SalePrice` to visualise insights using both scatterplots and heatmaps.
 
 **Related User Stories:** [US2 — Data Collection](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/2), [US3 — Data Cleaning](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/3), [US4 — Correlation Analysis](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/4) and [US9 — Dashboard Analysis Pages](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/9).
 
 ### Business Requirement 2: Supervised Machine Learning Regression Model
 
-- We will develop a supervised machine learning regression model capable of predicting house sale prices.
-- We will prepare and select house attributes to use as features for model training.
-- We will compare and optimise regression models to identify a suitable model for predicting `SalePrice`.
-- We will aim to achieve an R² score of at least 0.75 on both the training and test sets.
-- We will create an interactive dashboard that predicts sale prices for the four inherited houses and allows users to enter house attributes to predict prices for other houses in Ames, Iowa.
+- We developed a supervised machine learning regression model capable of predicting house sale prices.
+- We prepared and selected house attributes to use as features for model training.
+- We compared and optimised regression models to identify a suitable model for predicting `SalePrice`.
+- We aimed to achieve an R² score of at least 0.75 on both the training and test sets.
+- We created an interactive dashboard that predicts sale prices for the four inherited houses and allows users to enter house attributes to predict prices for other houses in Ames, Iowa.
 
 **Related User Stories:** [US3 — Data Cleaning](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/3), [US5 — Feature Engineering](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/5), [US6 — Regression Model Development](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/6), [US7 — Model Optimisation](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/7) and [US10 — Prediction and ML Performance Pages](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/10).
 
@@ -334,7 +333,7 @@ A correlation analysis was performed using Pearson and Spearman correlation meth
 
 </details>
 
-## Dashboard Design
+## 🖥️ Dashboard Design
 
 The Heritage Housing dashboard was built using Streamlit and deployed to Heroku.
 
@@ -436,7 +435,7 @@ The Heritage Housing dashboard was built using Streamlit and deployed to Heroku.
 
 ---
 
-## Design
+## 🎨 Design
 
 When choosing the colours for the dashboard, I wanted to create a clean and simple design that would make the data visualisations easy to read and understand.
 
@@ -500,7 +499,7 @@ The project was deployed to Heroku using the following steps:
 
 ---
 
-## Forking this Repository
+## 🍴 Forking this Repository
 
 To fork the repository:
 
@@ -510,7 +509,7 @@ To fork the repository:
 
 ---
 
-## Cloning this Repository
+## 📥 Cloning this Repository
 
 To clone the repository to your local machine:
 
@@ -527,16 +526,16 @@ To clone the repository to your local machine:
 
 ---
 
-## Languages
+## 💻 Languages
 
 - Python
 - Markdown
 
 ---
 
-## Testing
+## ✅ Testing
 
-Testing and results can be found [here](/testing.md)
+Full details of the manual dashboard testing, PEP8 validation and Jupyter notebook Ruff checks are available in the [Testing Documentation](testing.md).
 
 ---
 
@@ -574,7 +573,6 @@ There are no other known unfixed bugs.
 - **Dataset:** The housing dataset was provided by Code Institute and is available on [Kaggle](https://www.kaggle.com/datasets/codeinstitute/housing-prices-data).
 - **[Scikit-learn — ExtraTreesRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.ExtraTreesRegressor.html):** Used to develop the final regression model and investigate hyperparameter optimisation to improve house sale price predictions.
 - **[Scikit-learn – RandomizedSearchCV Documentation](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html):** Referenced when implementing randomised hyperparameter optimisation for the ExtraTreesRegressor model.
-- [Scikit-learn – RandomizedSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html) – For guidance on using randomised hyperparameter searches to improve the machine learning model.
 - **[Lucidchart](https://www.lucidchart.com/)** — Used to create the CRISP-DM methodology diagram featured in this README.
 - **[Streamlit Documentation](https://docs.streamlit.io/):** Referenced when developing the interactive dashboard, including page layouts, widgets and data visualisations.
 - **[Responsive Test Tool](https://responsivetesttool.com/)** – Used to test how the dashboard displays on different screen sizes and devices.
