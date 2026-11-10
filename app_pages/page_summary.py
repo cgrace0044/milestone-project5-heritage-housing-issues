@@ -71,8 +71,8 @@ def page_summary_body():
 
     st.success(
         "**Target:** R² ≥ 0.75 on both datasets.\n\n"
-        "* **Training R²:** 0.912 ✅\n"
-        "* **Test R²:** 0.808 ✅\n\n"
+        "* **Training R²:** 0.925 ✅\n"
+        "* **Test R²:** 0.825 ✅\n\n"
         "**Outcome:** Both performance targets achieved."
     )
 
