@@ -16,7 +16,8 @@ def load_original_data():
         "outputs/datasets/collection/house_prices_records.csv"
     )
 
-    # Recreate the original training split as we want to show data prior to cleaning.
+    # Recreate the original training split as we want to show
+    # data prior to cleaning.
     TrainSet, TestSet, _, __ = train_test_split(
         df,
         df["SalePrice"],
