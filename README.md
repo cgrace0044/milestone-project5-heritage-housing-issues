@@ -121,6 +121,10 @@ The [GitHub Project Board](https://github.com/users/cgrace0044/projects/6/views/
 
 ### User Stories by Epic
 
+The [GitHub Project Board](https://github.com/users/cgrace0044/projects/6/views/1) provides an overview of the project's development and completed tasks.
+
+![GitHub Project Board](assets/projectboard.png)
+
 Click on each epic to view its user stories.
 
 <details>
