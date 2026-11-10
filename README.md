@@ -500,6 +500,40 @@ The project was deployed to Heroku using the following steps:
 
 ---
 
+## Forking this Repository
+
+To fork the repository:
+
+1. Visit the repository: [Heritage Housing Issues](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues).
+2. Click the **Fork** button in the upper-right corner of the page.
+3. This will create a copy of the repository under your own GitHub account.
+
+---
+
+## Cloning this Repository
+
+To clone the repository to your local machine:
+
+1. Go to the repository: [Heritage Housing Issues](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues).
+2. On the main page, click the **Code** button.
+3. Copy the provided URL (use HTTPS or SSH).
+4. Open your **Terminal** or **Command Prompt**.
+5. Navigate to the directory where you want the cloned folder to be created.
+6. Run the following command:
+
+   ```bash
+   git clone https://github.com/cgrace0044/milestone-project5-heritage-housing-issues.git
+   ```
+
+---
+
+## Languages
+
+- Python
+- Markdown
+
+---
+
 ## Testing
 
 Testing and results can be found [here](/testing.md)
