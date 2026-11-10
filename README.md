@@ -472,6 +472,18 @@ Care was taken to ensure good contrast between the background and text colours, 
 - **Live application:** [Heritage Housing Issues](https://project5-heritage-housing-25399c2d2f27.herokuapp.com/)
 - Set the Python version in `.python-version` to a version supported by the [Heroku-24 stack](https://devcenter.heroku.com/articles/python-support#supported-runtimes).
 
+### Heroku Configuration
+
+The project includes a `Procfile` and a `setup.sh` file to configure and launch the Streamlit dashboard on Heroku.
+
+The `Procfile` contains the following command:
+
+```text
+web: sh setup.sh && streamlit run app.py
+```
+
+The `setup.sh` file configures Streamlit to run on Heroku using the correct port and settings.
+
 The project was deployed to Heroku using the following steps:
 
 1. Log in to Heroku and create a new app.
