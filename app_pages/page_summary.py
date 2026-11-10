@@ -84,7 +84,8 @@ def page_summary_body():
     st.write(
         "For more information, visit the "
         "[Project README]"
-        "(https://github.com/cgrace0044/milestone-project5-heritage-housing-issues)."
+        "(https://github.com/cgrace0044/"
+        "milestone-project5-heritage-housing-issues)."
     )
 
 
