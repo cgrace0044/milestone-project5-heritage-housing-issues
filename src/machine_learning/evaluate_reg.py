@@ -4,7 +4,11 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
+from sklearn.metrics import (
+    r2_score,
+    mean_squared_error,
+    mean_absolute_error
+)
 
 
 # Code adapted from the Modeling and Evaluation notebook
@@ -54,9 +58,11 @@ def regression_performance(X_train, y_train, X_test, y_test, pipeline):
         )
 
         st.write(
-            "**Graph interpretation:** Predictions generally follow actual "
-            "sale prices, although errors are larger for more expensive houses. "
-            "The model performs better on training data than on unseen test data."
+            "**Graph interpretation:** Predictions generally "
+            "follow actual sale prices, although errors are "
+            "larger for more expensive houses. The model "
+            "performs better on training data than on unseen "
+            "test data."
         )
 
 
@@ -74,7 +80,8 @@ def regression_evaluation(X, y, pipeline):
     }
 
 
-# Regression Evaluation Plots function taken from Modelling and Evaluation Notebook
+# Regression Evaluation Plots function taken from
+# Modelling and Evaluation Notebook
 def regression_evaluation_plots(
     X_train, y_train, X_test, y_test, pipeline, alpha_scatter=0.5
 ):
