@@ -516,7 +516,15 @@ The project was deployed to Heroku using the following steps:
 
 ## 🐛 Unfixed Bugs
 
-There are no unfixed bugs.
+During the machine learning model optimisation, I tried to run `GridSearchCV` using six hyperparameters with three values for each.
+
+However, this kept causing Jupyter Notebook to crash after around 30 minutes. I tried several times but couldn't get the search to complete.
+
+Instead, I used `RandomizedSearchCV`, which tested 60 different combinations using five-fold cross-validation.
+
+This worked well and improved the model's performance. The final model achieved an R² score of **0.925 on the training set** and **0.825 on the test set**, meeting the client's requirements.
+
+There are no other known unfixed bugs.
 
 ---
 
