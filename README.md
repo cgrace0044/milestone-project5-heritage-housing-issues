@@ -318,7 +318,19 @@ A correlation analysis was performed using Pearson and Spearman correlation meth
 - Linear Regression was rejected as it achieved an R² score below the minimum requirement.
 - Extra Trees Regression achieved a test R² of **0.778** prior to further hyperparameter optimisation.
 - `SmartCorrelatedSelection` replaced feature importances as an experiment, but it reduced the model's performance and was therefore rejected.
-- A more extensive grid search covering six hyperparameters, with three values each, was subsequently introduced to evaluate all **729 combinations**.
+- A more extensive grid search covering six hyperparameters, with three values each was attempted using grid search. However, it kept failing due to computational power needed.
+- `RandomizedSearchCV` was used instead, evaluating 60 hyperparameter combinations.
+- The optimised Extra Trees Regression model achieved an R² score of **0.925 on the training set and 0.825 on the test set**.
+- The final pipeline was refitted using the seven most important features and the optimised hyperparameters.
+
+**Final Model Performance**
+
+| Metric | Train Set | Test Set |
+|---|---:|---:|
+| R² Score | 0.925 | 0.825 |
+| Mean Absolute Error (MAE) | $13,488.72 | $19,713.84 |
+
+**📓 Notebook:** [Predict House Prices](jupyter_notebooks/05_Modeling%20and%20Evaluation%20Predict%20SalePrice.ipynb)
 
 **📓 Notebook:** [Predict House Prices](jupyter_notebooks/05_Modeling%20and%20Evaluation%20Predict%20SalePrice.ipynb)
 
