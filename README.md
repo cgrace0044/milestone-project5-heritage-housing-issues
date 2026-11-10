@@ -332,8 +332,6 @@ A correlation analysis was performed using Pearson and Spearman correlation meth
 
 **📓 Notebook:** [Predict House Prices](jupyter_notebooks/05_Modeling%20and%20Evaluation%20Predict%20SalePrice.ipynb)
 
-**📓 Notebook:** [Predict House Prices](jupyter_notebooks/05_Modeling%20and%20Evaluation%20Predict%20SalePrice.ipynb)
-
 </details>
 
 ## Dashboard Design
