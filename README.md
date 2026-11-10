@@ -424,6 +424,34 @@ The Heritage Housing dashboard was built using Streamlit and deployed to Heroku.
 
 ---
 
+## Design
+
+When choosing the colours for the dashboard, I wanted to create a clean and simple design that would make the data visualisations easy to read and understand.
+
+I chose a neutral cream background with variations of green for the headings, sidebar and information boxes. The colours are quite subtle, allowing the charts and data to stand out without making the dashboard look too busy.
+
+### Colour Scheme
+
+Colour palette created using the colours selected for the dashboard.
+
+![Colour Palette](assets/colourpallette.png)
+
+| Hex Code | Colour |
+|---|---|
+| `#F8F5EF` | Warm Cream |
+| `#2F6B4F` | Forest Green |
+| `#244D38` | Dark Forest Green |
+| `#DDE9DF` | Soft Sage Green |
+| `#E6EEE5` | Pale Sage Green |
+| `#CBDDCE` | Sage Border Green |
+| `#1D4935` | Deep Forest Green |
+
+The colours I chose are quite neutral. I have predominantly kept the background cream and used variations of green for headings, text and other dashboard elements.
+
+Care was taken to ensure good contrast between the background and text colours, making the dashboard easier to read across different screen sizes.
+
+---
+
 ## 🚀 Deployment
 
 ### Heroku
