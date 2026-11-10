@@ -12,6 +12,10 @@ The purpose of this project is to use historical housing data from Ames, Iowa, t
 
 The project will deliver a Streamlit dashboard that allows Lydia to explore the factors associated with house prices, view predicted sale prices for the four inherited properties, and predict the sale price of other houses in Ames.
 
+The live application can be accessed here [View the Live Dashboard](https://project5-heritage-housing-25399c2d2f27.herokuapp.com/)
+
+![Responsive](assets/responsiveness.png)
+
 ---
 
 ## 📊 Dataset Content
