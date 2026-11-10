@@ -11,12 +11,15 @@ def page_predict_house_prices_body():
     # load predict house price files
     version = 'v1'
     pipeline = load_pkl_file(
-        f"outputs/ml_pipeline/predict_house_prices/{version}/reg_pipeline.pkl")
-    features = (pd.read_csv(
-        f"outputs/ml_pipeline/predict_house_prices/{version}/X_train.csv")
+        f"outputs/ml_pipeline/predict_house_prices/{version}/reg_pipeline.pkl"
+    )
+    features = (
+        pd.read_csv(
+            f"outputs/ml_pipeline/predict_house_prices/{version}/X_train.csv"
+        )
         .columns
         .to_list()
-        )
+    )
 
     st.write("### 🏠 Predict a House Price")
 
