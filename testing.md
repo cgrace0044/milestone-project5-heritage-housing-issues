@@ -162,6 +162,12 @@ All five Jupyter notebooks were checked using **Ruff** in GitHub Codespaces for 
 
 Ruff validates code quality; it does not execute the notebooks.
 
-## Testing Outcome
+### CSS
+No errors were found when passing my CSS file through the official [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
 
-All **46 documented manual dashboard checks**, **11 Python files** and **5 Jupyter notebooks** passed their respective validations. Notebook execution testing has not been recorded as completed.
+ <details>
+
+ <summary>CSS</summary>
+
+![CSS Validation](assets/cssvalidation.png)
+ </details>
