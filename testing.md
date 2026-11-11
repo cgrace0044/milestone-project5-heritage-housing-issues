@@ -6,23 +6,25 @@ This document records testing carried out for the **Heritage Housing Issues** pr
 
 ## User Story Testing
 
-The 12 user stories defined in the README were used to guide the
-development of the project.
 
-| User Story | Business Requirement | Implementation and Evidence |
-|---|---|---|
-| [US1 — Understanding the Business Case](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/1) | BR1, BR2 | [README](README.md) — Business Requirements, ML Business Case and project rationale |
-| [US2 — Collect and Explore the Data](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/2) | BR1, BR2 | [Data Collection Notebook](jupyter_notebooks/01%20-%20DataCollection.ipynb) — data collection and initial exploration |
-| [US3 — Clean and Prepare Datasets](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/3) | BR1, BR2 | [Data Cleaning Notebook](jupyter_notebooks/02_DataCleaning.ipynb) and [Data Cleaning Dashboard Page](app_pages/page_data_cleaning.py) |
-| [US4 — Patterns and Correlations in the Data](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/4) | BR1 | [House Price Study Notebook](jupyter_notebooks/03_HousePriceStudy.ipynb) and [House Price Study Dashboard Page](app_pages/page_house_price_study.py) |
-| [US5 — Feature Engineering](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/5) | BR2 | [Feature Engineering Notebook](jupyter_notebooks/04_FeatureEngineering.ipynb) — feature transformations and analysis |
-| [US6 — Develop a Regression Model](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/6) | BR2 | [Model Development Notebook](jupyter_notebooks/05_Modeling%20and%20Evaluation%20Predict%20SalePrice.ipynb) — regression model development and comparison |
-| [US7 — Optimise Regression Machine Learning Model](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/7) | BR2 | [Model Development Notebook](jupyter_notebooks/05_Modeling%20and%20Evaluation%20Predict%20SalePrice.ipynb) — hyperparameter optimisation and model evaluation |
-| [US8 — Create Streamlit Dashboard](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/8) | BR1, BR2 | [Streamlit Application](app.py) and [Manual Dashboard Testing](#manual-dashboard-testing) |
-| [US9 — Develop Project Summary, House Price Study and Hypothesis Pages](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/9) | BR1, BR2 | [Project Summary](app_pages/page_summary.py), [House Price Study](app_pages/page_house_price_study.py) and [Hypothesis Validation](app_pages/page_project_hypothesis_body.py) |
-| [US10 — Create Pages for House Price Prediction and ML Performance](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/10) | BR1, BR2 | [House Price Prediction](app_pages/page_predict_house_prices.py), [Inherited Houses](app_pages/page_inherited_houses.py) and [ML Performance](app_pages/page_ml_pipeline.py) |
-| [US11 — Prepare Streamlit Dashboard for Deployment to Heroku](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/11) | BR1, BR2 | [README](README.md) — deployment instructions; [Manual Dashboard Testing](#manual-dashboard-testing) and [Cross-Browser Testing](#cross-browser-compatibility-testing) |
-| [US12 — Complete Project Documentation and Testing](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/12) | BR1, BR2 | [README](README.md), [Manual Dashboard Testing](#manual-dashboard-testing), [PEP8 Validation](#pep8-code-validation) and [Notebook Validation](#jupyter-notebook-code-validation) |
+### 🧪 User Story 1: Understanding the Business Case
+
+**As a data practitioner, I want to understand the client's
+business problem, objectives, requirements and success criteria
+so that I can plan the project to meet the client's needs.**
+
+- The client's business problem and both business requirements
+  (BR1 and BR2) are documented in the README.
+- The ML Business Case defines the regression objective and
+  success criteria, including an R² score of at least 0.75
+  on both training and test datasets.
+
+**Evidence:** [README — Business Requirements and ML Business Case](README.md)
+
+**Result:** ✅ Complete
+
+[View GitHub Issue #1](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/1)
+
 
 ## Manual Dashboard Testing
 
