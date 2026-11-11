@@ -64,6 +64,21 @@ def page_project_hypothesis_body():
 
     st.success("✓ Supported")
 
+    st.write("---")
+
+    # Overall conclusion
+    st.write("#### 📊 Overall Conclusion")
+
+    st.write(
+        "The correlation analysis supports all three hypotheses. "
+        "Overall quality (0.81) showed the strongest positive "
+        "relationship with sale price, followed by above-ground "
+        "living area (0.73) and year built (0.65). "
+        "These findings suggest that higher-quality, larger and "
+        "newer houses tend to achieve higher sale prices in Ames, Iowa. "
+    )
+
 
 if __name__ == "__main__":
     page_project_hypothesis_body()
+

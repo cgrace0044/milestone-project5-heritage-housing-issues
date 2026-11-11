@@ -476,7 +476,7 @@ Care was taken to ensure good contrast between the background and text colours, 
 
 - **GitHub repository:** [Heritage Housing Issues](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues)
 - **Live application:** [Heritage Housing Issues](https://project5-heritage-housing-25399c2d2f27.herokuapp.com/)
-- Set the Python version in `.python-version` to a version supported by the [Heroku-24 stack](https://devcenter.heroku.com/articles/python-support#supported-runtimes).
+- **Python Runtime Configuration** The application uses `.python-version` to specify the Python version for Heroku deployment. This replaces the older `runtime.txt` approach, which caused deployment issues.
 
 ### Heroku Configuration
 
