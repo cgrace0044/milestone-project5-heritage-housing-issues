@@ -182,7 +182,9 @@ Three hypotheses were tested using Pearson and Spearman correlation analysis, sc
 
 The correlation heatmap supports the three project hypotheses by showing the positive relationships between `SalePrice` and `OverallQual`, `GrLivArea` and `YearBuilt`.
 
-![Correlation Heatmap](assets/heatmap.png)
+<p align="center">
+  <img src="assets/heatmap.png" alt="Correlation Heatmap" width="650">
+</p>
 
 ---
 
