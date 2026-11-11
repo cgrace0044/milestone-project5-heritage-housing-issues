@@ -6,11 +6,11 @@ This document records testing carried out for the **Heritage Housing Issues** pr
 
 | Testing area | Scope | Result |
 | --- | --- | :---: |
-| Manual Dashboard Testing | 45 checks across 9 test groups | ✅ Pass |
-| PEP8 Code Validation | 11 Python files/components | ✅ Pass |
-| Jupyter Notebook Code Validation | 5 notebooks checked with Ruff | ✅ Pass |
-| CSS Validation | W3C CSS Validator | ✅ Pass |
-| Cross-Browser Compatibility | Chrome, Safari and Firefox | ✅ Pass |
+| Manual Dashboard Testing | 45 checks across 9 test groups | ✓ |
+| PEP8 Code Validation | 11 Python files/components | ✓ |
+| Jupyter Notebook Code Validation | 5 notebooks checked with Ruff | ✓ |
+| CSS Validation | W3C CSS Validator | ✓ |
+| Cross-Browser Compatibility | Chrome, Safari and Firefox | ✓ |
 
 ---
 
@@ -182,7 +182,7 @@ All five Jupyter notebooks were checked using **Ruff** in GitHub Codespaces for 
 | `02_DataCleaning.ipynb` | ✓ |
 | `03_HousePriceStudy.ipynb` | ✓ |
 | `04_FeatureEngineering.ipynb` | ✓ |
-| `05_Modeling and Evaluation Predict SalePrice.ipynb` | ✓ |
+| `05_Modelling and Evaluation Predict SalePrice.ipynb` | ✓ |
 
 Ruff validates code quality; it does not execute the notebooks.
 
@@ -210,11 +210,11 @@ The Heritage Housing application was tested across multiple web browsers to ensu
 <details>
 <summary><strong>View Cross-Browser Testing Results — 3 Browsers ✅</strong></summary>
 
-| Browser | Test Result |
-| --- | --- |
-| Google Chrome | Pass |
-| Safari | Pass |
-| Mozilla Firefox | Pass |
+| Browser | Result |
+| --- | :---: |
+| Google Chrome | ✓ |
+| Safari | ✓ |
+| Mozilla Firefox | ✓ |
 
 </details>
 
