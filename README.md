@@ -234,7 +234,7 @@ This section summarises how the project was implemented and links to the detaile
 | 🧹 **2. Data Cleaning** | Treating missing values and preparing the data | [View Notebook](jupyter_notebooks/02_DataCleaning.ipynb) |
 | 📊 **3. Correlation Analysis** | Identifying relationships with `SalePrice` | [View Notebook](jupyter_notebooks/03_HousePriceStudy.ipynb) |
 | ⚙️ **4. Feature Engineering** | Selecting appropriate data transformations | [View Notebook](jupyter_notebooks/04_FeatureEngineering.ipynb) |
-| 🤖 **5. Model Development** | Comparing, optimising and evaluating regression models | [View Notebook](jupyter_notebooks/05_Modeling%20and%20Evaluation%20Predict%20SalePrice.ipynb) |
+| 🤖 **5. Model Development** | Comparing, optimising and evaluating regression models | [View Notebook](jupyter_notebooks/05_Modelling%20and%20Evaluation%20Predict%20SalePrice.ipynb) |
 
 <details>
 <summary><strong>📥 1. Data Collection</strong></summary>
@@ -336,7 +336,7 @@ A correlation analysis was performed using Pearson and Spearman correlation meth
 | R² Score | 0.925 | 0.825 |
 | Mean Absolute Error (MAE) | $13,488.72 | $19,713.84 |
 
-**📓 Notebook:** [Predict House Prices](jupyter_notebooks/05_Modeling%20and%20Evaluation%20Predict%20SalePrice.ipynb)
+**📓 Notebook:** [Predict House Prices](jupyter_notebooks/05_Modelling%20and%20Evaluation%20Predict%20SalePrice.ipynb)
 
 </details>
 
@@ -452,7 +452,7 @@ I chose a neutral cream background with variations of green for the headings, si
 
 Colour palette created using the colours selected for the dashboard.
 
-![Colour Palette](assets/colourpallette.png)
+![Colour Palette](assets/colourpalette.png)
 
 | Hex Code | Colour |
 |---|---|
@@ -542,7 +542,7 @@ To clone the repository to your local machine:
 
 ## ✅ Testing
 
-Full details of the manual dashboard testing, PEP8 validation and Jupyter notebook Ruff checks are available in the [Testing Documentation](testing.md).
+Full details of the manual dashboard testing, PEP8 validation and Jupyter notebook Ruff checks are available in the [Testing Documentation](TESTING.md).
 
 ---
 
