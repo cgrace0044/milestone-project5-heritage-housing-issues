@@ -9,6 +9,8 @@ def page_project_hypothesis_body():
     st.info(
         "Three hypotheses were tested using Pearson and Spearman "
         "correlation analysis, scatterplots, and heatmaps. "
+        "The correlation coefficients reported below are Spearman "
+        "coefficients. "
         "The **House Sales Price Study** page presents these "
         "findings in detail."
     )
