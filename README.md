@@ -315,7 +315,15 @@ A correlation analysis was performed using Pearson and Spearman correlation meth
 - Multiple regression algorithms were compared to identify a suitable model for predicting house sale prices.
 - The R² score was used to evaluate the various algorithms.
 - Linear Regression and Extra Trees Regression were identified as the top-performing algorithms following an initial model comparison and were investigated further.
-- Feature importances identified the seven most important features, and these were used to train the initial model.
+- Feature importance analysis identified the seven most influential house attributes for predicting `SalePrice`. The following features were selected for the regression model:
+  - `OverallQual`
+  - `GrLivArea`
+  - `YearBuilt`
+  - `GarageArea`
+  - `TotalBsmtSF`
+  - `1stFlrSF`
+  - `YearRemodAdd`
+
 
 <p align="center">
   <img src="assets/featureimportance.png" alt="Feature Importance Plot" width="650">
