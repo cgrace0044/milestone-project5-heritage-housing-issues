@@ -2,11 +2,21 @@
 
 This document records testing carried out for the **Heritage Housing Issues** project.
 
+## Testing Summary
+
+| Testing area | Scope | Result |
+| --- | --- | :---: |
+| Manual Dashboard Testing | 45 checks across 9 test groups | ✅ Pass |
+| PEP8 Code Validation | 11 Python files/components | ✅ Pass |
+| Jupyter Notebook Code Validation | 5 notebooks checked with Ruff | ✅ Pass |
+| CSS Validation | W3C CSS Validator | ✅ Pass |
+| Cross-Browser Compatibility | Chrome, Safari and Firefox | ✅ Pass |
+
 ---
 
 ## Manual Dashboard Testing
 
-Manual testing was completed on the deployed [Heritage Housing Issues Dashboard](https://project5-heritage-housing-25399c2d2f27.herokuapp.com/). All 46 documented checks passed.
+Manual testing was completed on the deployed [Heritage Housing Issues Dashboard](https://project5-heritage-housing-25399c2d2f27.herokuapp.com/). All **45 documented checks** passed.
 
 <details>
 <summary><strong>Test 1 — Dashboard Navigation ✅</strong></summary>
@@ -138,6 +148,9 @@ Responsive layouts were checked using [Responsive Test Tool](https://responsivet
 
 Python files were checked using the [Code Institute PEP8 Validator](https://pep8ci.herokuapp.com/). Reported formatting issues were corrected and retested. All 11 files passed.
 
+<details>
+<summary><strong>View PEP8 Validation Results — 11 Files ✅</strong></summary>
+
 | Python file / component | Result |
 | --- | :---: |
 | `app.py` | ✓ |
@@ -152,11 +165,16 @@ Python files were checked using the [Code Institute PEP8 Validator](https://pep8
 | `src/data_management.py` | ✓ |
 | `src/machine_learning/predictive_analysis_ui.py` | ✓ |
 
+</details>
+
 ---
 
 ## Jupyter Notebook Code Validation
 
 All five Jupyter notebooks were checked using **Ruff** in GitHub Codespaces for common Python code issues and line-length violations. Reported issues were corrected and each notebook passed on retesting.
+
+<details>
+<summary><strong>View Ruff Validation Results — 5 Notebooks ✅</strong></summary>
 
 | Jupyter notebook | Result |
 | --- | :---: |
@@ -168,28 +186,36 @@ All five Jupyter notebooks were checked using **Ruff** in GitHub Codespaces for 
 
 Ruff validates code quality; it does not execute the notebooks.
 
+</details>
+
 ---
 
-### CSS
-No errors were found when passing my CSS file through the official [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+## CSS Validation
 
- <details>
+No errors were found when passing the CSS file through the official [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
 
- <summary>CSS</summary>
+<details>
+<summary><strong>View CSS Validation Screenshot ✅</strong></summary>
 
 ![CSS Validation](assets/cssvalidation.png)
- </details>
+
+</details>
 
 ---
 
-### Cross-Browser Compatibility Testing
+## Cross-Browser Compatibility Testing
 
 The Heritage Housing application was tested across multiple web browsers to ensure consistent functionality, usability, and appearance.
 
+<details>
+<summary><strong>View Cross-Browser Testing Results — 3 Browsers ✅</strong></summary>
+
 | Browser | Test Result |
-|---|---|
+| --- | --- |
 | Google Chrome | Pass |
 | Safari | Pass |
 | Mozilla Firefox | Pass |
+
+</details>
 
 ---
