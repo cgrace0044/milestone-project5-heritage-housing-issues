@@ -180,6 +180,10 @@ Three hypotheses were tested using Pearson and Spearman correlation analysis, sc
 | **Living Area** | Houses with larger living areas are expected to have higher sale prices. | `GrLivArea` showed the second strongest positive correlation with `SalePrice`. | ✓ |
 | **Year Built** | Newer houses are expected to have higher sale prices. | `YearBuilt` showed a positive correlation with `SalePrice`, although weaker than those for overall quality and living area. | ✓ |
 
+The correlation heatmap supports the three project hypotheses by showing the positive relationships between `SalePrice` and `OverallQual`, `GrLivArea` and `YearBuilt`.
+
+![Correlation Heatmap](assets/heatmap.png)
+
 ---
 
 ## 🧩 Rationale for Mapping Business Requirements to Data Visualisations and ML Tasks
