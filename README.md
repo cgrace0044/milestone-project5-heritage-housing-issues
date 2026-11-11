@@ -155,8 +155,8 @@ Click on each epic to view its user stories.
 <summary><strong>🖥️ Epic 4: Dashboard Planning, Design and Development</strong></summary>
 
 - **[User Story 8 — Create Streamlit Dashboard](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/8)** `[BR1] [BR2]` — As a data practitioner, I want to design a Streamlit dashboard so that the client can easily explore the answers to their two business requirements.
-- **[User Story 9 — Develop Project Summary, House Price Study and Hypothesis Pages](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/9)** `[BR1]` — As a data practitioner, I want to develop the Project Summary, House Price Study and Hypothesis pages so that the client can understand the project and how house attributes correlate with sale prices.
-- **[User Story 10 — Create Pages for House Price Prediction and ML Performance](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/10)** `[BR2]` — As a data practitioner, I want to develop the house price prediction and ML performance pages so that the client can estimate property values and understand the model's performance.
+- **[User Story 9 — Develop Project Summary, House Price Study and Hypothesis Pages](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/9)** `[BR1] [BR2]` — As a data practitioner, I want to develop the Project Summary, House Price Study and Hypothesis pages so that the client can understand the project and how house attributes correlate with sale prices.
+- **[User Story 10 — Create Pages for House Price Prediction and ML Performance](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/10)** `[BR1] [BR2]` — As a data practitioner, I want to develop the house price prediction and ML performance pages so that the client can estimate property values and understand the model's performance.
 
 </details>
 
@@ -191,8 +191,6 @@ Three hypotheses were tested using Pearson and Spearman correlation analysis, sc
 - We conducted a correlation study (Pearson and Spearman) to better understand how the variables are correlated with `SalePrice`.
 - We plotted the main variables against `SalePrice` to visualise insights using both scatterplots and heatmaps.
 
-**Related User Stories:** [US2 — Data Collection](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/2), [US3 — Data Cleaning](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/3), [US4 — Correlation Analysis](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/4) and [US9 — Dashboard Analysis Pages](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/9).
-
 ### Business Requirement 2: Supervised Machine Learning Regression Model
 
 - We developed a supervised machine learning regression model capable of predicting house sale prices.
@@ -200,8 +198,6 @@ Three hypotheses were tested using Pearson and Spearman correlation analysis, sc
 - We compared and optimised regression models to identify a suitable model for predicting `SalePrice`.
 - We aimed to achieve an R² score of at least 0.75 on both the training and test sets.
 - We created an interactive dashboard that predicts sale prices for the four inherited houses and allows users to enter house attributes to predict prices for other houses in Ames, Iowa.
-
-**Related User Stories:** [US3 — Data Cleaning](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/3), [US5 — Feature Engineering](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/5), [US6 — Regression Model Development](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/6), [US7 — Model Optimisation](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/7) and [US10 — Prediction and ML Performance Pages](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/10).
 
 ---
 
