@@ -4,28 +4,6 @@ This document records testing carried out for the **Heritage Housing Issues** pr
 
 ---
 
-## User Story Testing
-
-
-### 🧪 User Story 1: Understanding the Business Case
-
-**As a data practitioner, I want to understand the client's
-business problem, objectives, requirements and success criteria
-so that I can plan the project to meet the client's needs.**
-
-- The client's business problem and both business requirements
-  (BR1 and BR2) are documented in the README.
-- The ML Business Case defines the regression objective and
-  success criteria, including an R² score of at least 0.75
-  on both training and test datasets.
-
-**Evidence:** [README — Business Requirements and ML Business Case](README.md)
-
-**Result:** ✅ Complete
-
-[View GitHub Issue #1](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/1)
-
-
 ## Manual Dashboard Testing
 
 Manual testing was completed on the deployed [Heritage Housing Issues Dashboard](https://project5-heritage-housing-25399c2d2f27.herokuapp.com/). All 46 documented checks passed.
