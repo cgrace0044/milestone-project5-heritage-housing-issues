@@ -2,6 +2,8 @@
 
 This document records testing carried out for the **Heritage Housing Issues** project.
 
+---
+
 ## Manual Dashboard Testing
 
 Manual testing was completed on the deployed [Heritage Housing Issues Dashboard](https://project5-heritage-housing-25399c2d2f27.herokuapp.com/). All 46 documented checks passed.
@@ -130,6 +132,8 @@ Responsive layouts were checked using [Responsive Test Tool](https://responsivet
 
 </details>
 
+---
+
 ## PEP8 Code Validation
 
 Python files were checked using the [Code Institute PEP8 Validator](https://pep8ci.herokuapp.com/). Reported formatting issues were corrected and retested. All 11 files passed.
@@ -148,6 +152,8 @@ Python files were checked using the [Code Institute PEP8 Validator](https://pep8
 | `src/data_management.py` | ✓ |
 | `src/machine_learning/predictive_analysis_ui.py` | ✓ |
 
+---
+
 ## Jupyter Notebook Code Validation
 
 All five Jupyter notebooks were checked using **Ruff** in GitHub Codespaces for common Python code issues and line-length violations. Reported issues were corrected and each notebook passed on retesting.
@@ -162,6 +168,8 @@ All five Jupyter notebooks were checked using **Ruff** in GitHub Codespaces for 
 
 Ruff validates code quality; it does not execute the notebooks.
 
+---
+
 ### CSS
 No errors were found when passing my CSS file through the official [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
 
@@ -171,3 +179,17 @@ No errors were found when passing my CSS file through the official [W3C CSS Vali
 
 ![CSS Validation](assets/cssvalidation.png)
  </details>
+
+---
+
+### Cross-Browser Compatibility Testing
+
+The Heritage Housing application was tested across multiple web browsers to ensure consistent functionality, usability, and appearance.
+
+| Browser | Test Result |
+|---|---|
+| Google Chrome | Pass |
+| Safari | Pass |
+| Mozilla Firefox | Pass |
+
+---
