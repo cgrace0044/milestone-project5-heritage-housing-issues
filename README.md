@@ -122,50 +122,39 @@ The [GitHub Project Board](https://github.com/users/cgrace0044/projects/6/views/
 
 ![GitHub Project Board](assets/projectboard.png)
 
-Each user story is labelled according to the business requirement it supports: **BR1** (Data Visualisation), **BR2** (House Price Prediction), or both.
-
 Click on each epic to view its user stories.
 
 <details>
 <summary><strong>📋 Epic 1: Information Gathering and Data Collection</strong></summary>
 
-- **[User Story 1 — Understanding the Business Case](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/1)** `[BR1] [BR2]` — As a data practitioner, I want to understand the client's business problem, objectives, requirements and success criteria so that I can plan the project to meet the client's needs.
-- **[User Story 2 — Collect and Explore the Data](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/2)** `[BR1] [BR2]` — As a data practitioner, I want to collect and explore the Heritage Housing data so that I can assess its suitability for analysing house prices and developing a prediction model.
-
+- **[User Story 1 — Understanding the Business Case](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/1)** — As a data practitioner, I want to understand the client's business problem, objectives, requirements and success criteria so that I can plan the project to meet the client's needs.
+- **[User Story 2 — Collect and Explore the Data](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/2)** — As a data practitioner, I want to collect and explore the Heritage Housing data so that I can assess its suitability for analysing house prices and developing a prediction model.
 </details>
-
 <details>
 <summary><strong>📊 Epic 2: Data Visualisation, Cleaning and Preparation</strong></summary>
 
-- **[User Story 3 — Clean and Prepare Datasets](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/3)** `[BR1] [BR2]` — As a data practitioner, I want to clean and prepare the Heritage Housing datasets so that they are suitable for analysis and regression machine learning.
-- **[User Story 4 — Patterns and Correlations in the Data](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/4)** `[BR1]` — As a data practitioner, I want to perform a correlation analysis and prepare data visualisations so that I can advise the client which house attributes are most strongly associated with sale prices.
-- **[User Story 5 — Feature Engineering](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/5)** `[BR2]` — As a data practitioner, I want to perform feature engineering so that the data is ready for training a regression machine learning model.
-
+- **[User Story 3 — Clean and Prepare Datasets](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/3)** — As a data practitioner, I want to clean and prepare the Heritage Housing datasets so that they are suitable for analysis and regression machine learning.
+- **[User Story 4 — Patterns and Correlations in the Data](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/4)** — As a data practitioner, I want to perform a correlation analysis and prepare data visualisations so that I can advise the client which house attributes are most strongly associated with sale prices.
+- **[User Story 5 — Feature Engineering](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/5)** — As a data practitioner, I want to perform feature engineering so that the data is ready for training a regression machine learning model.
 </details>
-
 <details>
 <summary><strong>🤖 Epic 3: Model Training, Optimisation and Validation</strong></summary>
 
-- **[User Story 6 — Develop a Regression Model](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/6)** `[BR2]` — As a data practitioner, I want to develop and compare regression machine learning models so that I can identify a suitable method for predicting house sale prices.
-- **[User Story 7 — Optimise Regression Machine Learning Model](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/7)** `[BR2]` — As a data practitioner, I want to optimise the machine learning model so that I can improve the selected model's performance.
-
+- **[User Story 6 — Develop a Regression Model](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/6)** — As a data practitioner, I want to develop and compare regression machine learning models so that I can identify a suitable method for predicting house sale prices.
+- **[User Story 7 — Optimise Regression Machine Learning Model](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/7)** — As a data practitioner, I want to optimise the machine learning model so that I can improve the selected model's performance.
 </details>
-
 <details>
 <summary><strong>🖥️ Epic 4: Dashboard Planning, Design and Development</strong></summary>
 
-- **[User Story 8 — Create Streamlit Dashboard](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/8)** `[BR1] [BR2]` — As a data practitioner, I want to design a Streamlit dashboard so that the client can easily explore the answers to their two business requirements.
-- **[User Story 9 — Develop Project Summary, House Price Study and Hypothesis Pages](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/9)** `[BR1] [BR2]` — As a data practitioner, I want to develop the Project Summary, House Price Study and Hypothesis pages so that the client can understand the project and how house attributes correlate with sale prices.
-- **[User Story 10 — Create Pages for House Price Prediction and ML Performance](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/10)** `[BR1] [BR2]` — As a data practitioner, I want to develop the house price prediction and ML performance pages so that the client can estimate property values and understand the model's performance.
-
+- **[User Story 8 — Create Streamlit Dashboard](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/8)** — As a data practitioner, I want to design a Streamlit dashboard so that the client can easily explore the answers to their two business requirements.
+- **[User Story 9 — Develop Project Summary, House Price Study and Hypothesis Pages](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/9)** — As a data practitioner, I want to develop the Project Summary, House Price Study and Hypothesis pages so that the client can understand the project and how house attributes correlate with sale prices.
+- **[User Story 10 — Create Pages for House Price Prediction and ML Performance](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/10)** — As a data practitioner, I want to develop the house price prediction and ML performance pages so that the client can estimate property values and understand the model's performance.
 </details>
-
 <details>
 <summary><strong>🚀 Epic 5: Dashboard Deployment and Release</strong></summary>
 
-- **[User Story 11 — Prepare Streamlit Dashboard for Deployment to Heroku](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/11)** `[BR1] [BR2]` — As a data practitioner, I want to deploy the Streamlit dashboard to Heroku so that the client can access the dashboard online.
-- **[User Story 12 — Complete Project Documentation and Testing](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/12)** `[BR1] [BR2]` — As a data practitioner, I want to complete the project documentation and perform final testing to ensure that the project meets the client's requirements and is ready for submission.
-
+- **[User Story 11 — Prepare Streamlit Dashboard for Deployment to Heroku](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/11)** — As a data practitioner, I want to deploy the Streamlit dashboard to Heroku so that the client can access the dashboard online.
+- **[User Story 12 — Complete Project Documentation and Testing](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/12)** — As a data practitioner, I want to complete the project documentation and perform final testing to ensure that the project meets the client's requirements and is ready for submission.
 </details>
 
 ---
@@ -191,6 +180,8 @@ Three hypotheses were tested using Pearson and Spearman correlation analysis, sc
 - We conducted a correlation study (Pearson and Spearman) to better understand how the variables are correlated with `SalePrice`.
 - We plotted the main variables against `SalePrice` to visualise insights using both scatterplots and heatmaps.
 
+**Related User Stories:** [US2 — Data Collection](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/2), [US3 — Data Cleaning](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/3), [US4 — Correlation Analysis](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/4) and [US9 — Dashboard Analysis Pages](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/9).
+
 ### Business Requirement 2: Supervised Machine Learning Regression Model
 
 - We developed a supervised machine learning regression model capable of predicting house sale prices.
@@ -198,6 +189,8 @@ Three hypotheses were tested using Pearson and Spearman correlation analysis, sc
 - We compared and optimised regression models to identify a suitable model for predicting `SalePrice`.
 - We aimed to achieve an R² score of at least 0.75 on both the training and test sets.
 - We created an interactive dashboard that predicts sale prices for the four inherited houses and allows users to enter house attributes to predict prices for other houses in Ames, Iowa.
+
+**Related User Stories:** [US3 — Data Cleaning](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/3), [US5 — Feature Engineering](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/5), [US6 — Regression Model Development](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/6), [US7 — Model Optimisation](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/7) and [US10 — Prediction and ML Performance Pages](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues/issues/10).
 
 ---
 
@@ -315,7 +308,7 @@ A correlation analysis was performed using Pearson and Spearman correlation meth
 - Multiple regression algorithms were compared to identify a suitable model for predicting house sale prices.
 - The R² score was used to evaluate the various algorithms.
 - Linear Regression and Extra Trees Regression were identified as the top-performing algorithms following an initial model comparison and were investigated further.
-- Feature importance analysis identified the seven most influential house attributes for predicting `SalePrice`. 
+- Feature importances identified the seven most important features, and these were used to train the initial model.
 
 <p align="center">
   <img src="assets/featureimportance.png" alt="Feature Importance Plot" width="650">
@@ -476,7 +469,7 @@ Care was taken to ensure good contrast between the background and text colours, 
 
 - **GitHub repository:** [Heritage Housing Issues](https://github.com/cgrace0044/milestone-project5-heritage-housing-issues)
 - **Live application:** [Heritage Housing Issues](https://project5-heritage-housing-25399c2d2f27.herokuapp.com/)
-- **Python Runtime Configuration** The application uses `.python-version` to specify the Python version for Heroku deployment. This replaces the older `runtime.txt` approach, which caused deployment issues.
+- Set the Python version in `.python-version` to a version supported by the [Heroku-24 stack](https://devcenter.heroku.com/articles/python-support#supported-runtimes).
 
 ### Heroku Configuration
 
